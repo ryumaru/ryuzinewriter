@@ -1,0 +1,59 @@
+/* Surface Pro 3 Tablet Skin	*/
+/* @ Ryuzine Writer 			*/
+/* @ version 1.0				*/
+/* OS: W8M (Windows 8 Metro)	*/
+/* Width: 1440					*/
+/* Height: 960					*/
+/* Note: Surface Pro 3 screen is actually 2160x1440 @ 150% zoom
+		 so the rendered screen size should be 1440x960, however
+		 the screensize tester has not yet been run in the actual
+		 device.  Please verify or fix if you can.
+*/
+
+.simbox {
+	background:#1ba1e2;
+}
+
+#device.portrait {
+	height: 1665px;
+	width: 1154px;
+	position: relative;
+	margin-top: -832px;
+	margin-left: -577px;
+	padding: 0;
+	background: transparent url('surface_pro3_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 88px;
+		top: 118px;
+		width: 960px;
+		height: 1440px;
+	}
+
+#device.landscape {
+	height: 1154px;
+	width: 1665px;
+	position: relative;
+	margin-top: -577px;
+	margin-left: -832px;
+	padding: 0;
+	background: transparent url('surface_pro3_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 108px;
+		left: 115px;
+		width: 1440px;
+		height: 960px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -720px;
+		margin-left: -480px;
+	}
+	#device.landscape.noskin {
+		margin-top: -480px;
+		margin-left: -720px;
+	}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Ryuzine Screen Size</title>
+<style type="text/css">
+/*======================================================*/
+/* 	Media Query Tester for Desktop and Mobile Browser 	*/
+/* 				created by K M. Hansen					*/
+/*		  												*/
+/*	This utility is for checking the rendered screen	*/
+/*	size of the Ryuzine webapps so you can create a		*/
+/*	custom simulator skin of the correct size.			*/
+/* 	The top number is the FULL screen size as reported	*/
+/*	by the device's operating system.  The number on 	*/
+/*	the bottom is the rendered browser window size.		*/
+/*	In between them is whether the screen orientation	*/
+/*	is being read as "Portrait" or "Landscape".			*/
+/*======================================================*/
+
+html, body {
+position: absolute;
+top: 0;
+left: 0;
+width:100%;
+height:100%;
+padding: 0;
+margin: 0;
+}
+
+body {
+	background-color: black;
+}
+
+#splash {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+	#splashcell {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+		#splashblock {
+			position: relative;
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+			#readout {
+				font-family: Arial, sans-serif;
+				font-size: 24px;
+				font-weight: bold;
+				color: #eee;
+			}
+				#readout span {
+					font-size: 12px;
+					font-weight: normal;
+					color: #333;
+				}
+
+
+</style>
+<script type="text/javascript">
+function update() {
+	readout = document.getElementById('readout');
+	H = window.innerHeight;
+	W = window.innerWidth;
+	sim = false;
+	if (window.self != window.top) { // we are in an iFrame!
+		me = window.frameElement;
+		if (me.id == 'preview') {	// we are inside Simulator
+			SH = me.parentNode.parentNode.offsetHeight;
+			SW = me.parentNode.parentNode.offsetWidth;
+			sim = true;
+		} else {
+			SH = me.offsetHeight;
+			SW = me.offsetWidth;
+		}
+	} else {
+	SH = screen.height;
+	SW = screen.width;
+	}
+	if (H>W) {
+		o = "Portrait";
+		X = SW; 
+		Y = SH;
+	} else {
+		o="Landscape";
+		if (sim==true) {
+			X = SW; Y = SH;
+		} else {
+			X = SH; Y = SW;
+		}
+	};
+	readout.innerHTML = X+' x '+Y+'<br/>'+o+'<br/>'+W+' x '+H+'<br/><span>( width x height )</span>';
+}
+</script>
+</head>
+<body onload="update();" onresize="update();" onorientationchange="update();">
+<div id="splash">
+	<div id="splashcell">
+		<div id="splashblock">
+			<p id="readout">Ryuzine<br/>Screen Size<br/>Utility</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

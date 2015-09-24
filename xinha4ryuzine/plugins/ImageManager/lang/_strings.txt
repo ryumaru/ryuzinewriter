@@ -1,0 +1,177 @@
+﻿A:
+
+Absbottom
+
+Absmiddle
+
+Angle:
+
+Baseline
+
+Bottom
+
+Cancel
+
+Clear
+
+Constrain Proportions
+
+Crop
+
+D:
+
+Directory
+
+Directory Up
+
+Edit
+
+Filename:
+
+Flip Horizontal
+
+Flip Image
+
+Flip Vertical
+
+Folder Name:
+
+GIF
+
+GIF format is not supported, image editing not supported.
+
+H:
+
+Height:
+
+Image Editor
+
+Image Format
+
+Image List
+
+Image Manager
+
+Image Selection
+
+Insert Image
+
+Invalid base directory:
+
+JPEG High
+
+JPEG Low
+
+JPEG Medium
+
+Left
+
+Lock
+
+Marker
+
+Measure
+
+Middle
+
+New Folder
+
+No Image Available
+
+No Images Found
+
+Not set
+
+OK
+
+PNG
+
+Positioning of this image
+
+Quality:
+
+Refresh
+
+Resize
+
+Right
+
+Rotate
+
+Rotate 180 &deg;
+
+Rotate 90 &deg; CCW
+
+Rotate 90 &deg; CW
+
+Rotate Image
+
+Save
+
+Start X:
+
+Start Y:
+
+Texttop
+
+Top
+
+Trash
+
+W:
+
+Width:
+
+X:
+
+Y:
+
+Image File
+ 
+Upload
+
+Upload:
+
+Width
+
+Height
+  
+Border
+
+V Space
+
+H Space
+
+Uploading...
+
+File saved.
+
+File was not saved.
+
+Loading
+
+Delete file?
+
+Please delete all files/folders inside the folder you wish to delete first.
+
+Delete folder?
+
+Folder Name:
+
+No Files Found
+
+Invalid folder name, please choose another folder name.
+
+No Image selected.
+
+Description:
+
+Align:
+
+Margin:
+
+Padding:
+
+Border:
+
+Color:

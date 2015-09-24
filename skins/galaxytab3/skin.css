@@ -1,0 +1,65 @@
+/* Samsung Galaxy Tab 3 */
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: TouchWiz 2.x		*/
+/* Width: 1034			*/
+/* Height: 600			*/
+
+.simbox {
+background: rgb(147,206,222);
+background: -moz-linear-gradient(-45deg,  rgb(147,206,222) 0%, rgb(117,189,209) 41%, rgb(73,165,191) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(147,206,222)), color-stop(41%,rgb(117,189,209)), color-stop(100%,rgb(73,165,191)));
+background: -webkit-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -o-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -ms-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: linear-gradient(135deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=1 );
+
+}
+
+
+#device.portrait {
+	height: 1258px;
+	width: 749px;
+	position: relative;
+	margin-top: -629px;
+	margin-left: -375px;
+	padding: 0;
+	background: transparent url('galaxy_tab_3_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 77px;
+		top: 116px;
+		width: 600px;
+		height: 1024px;
+		border-radius: 4px;
+	}
+
+#device.landscape {
+	height: 749px;
+	width: 1258px;
+	position: relative;
+	margin-top: -375px;
+	margin-left: -629px;
+	padding: 0;
+	background: transparent url('galaxy_tab_3_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 77px;
+		left: 116px;
+		width: 1024px;
+		height: 600px;
+		border-radius: 4px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -512px;
+		margin-left: -300px;
+	}
+	#device.landscape.noskin {
+		margin-top: -300px;
+		margin-left: -512px;
+	}

@@ -1,0 +1,62 @@
+/* Kindle Fire HDX 8.9 Skin	 	*/
+/* @ Ryuzine Writer 			*/
+/* @ version 1.0				*/
+/* OS: FireOS					*/
+/* Width: 1024					*/
+/* Height: 768					*/
+/* Note: Kindle display is actually 256x1600 @ 2.0 lcd density */
+
+.simbox {
+background: rgb(255,255,255);
+background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(246,246,246) 47%, rgb(237,237,237) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(47%,rgb(246,246,246)), color-stop(100%,rgb(237,237,237)));
+background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);
+background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);
+background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);
+background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+#device.portrait {
+	height: 1567px;
+	width: 1071px;
+	position: relative;
+	margin-top: -783px;
+	margin-left: -535px;
+	padding: 0;
+	background: transparent url('kindle_portrait.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 136px;
+		top: 140px;
+		width: 800px;
+		height: 1280px;
+	}
+
+#device.landscape {
+	height: 1071px;
+	width: 1567px;
+	position: relative;
+	margin-top: -535px;
+	margin-left: -783px;
+	padding: 0;
+	background: transparent url('kindle_landscape.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 136px;
+		left: 140px;
+		width: 1280px;
+		height: 800px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -640px;
+		margin-left: -400px;
+	}
+	#device.landscape.noskin {
+		margin-top: -400px;
+		margin-left: -640px;
+	}

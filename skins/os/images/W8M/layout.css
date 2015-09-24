@@ -1,0 +1,152 @@
+/*=====================*/
+/* Windows 8.x "Metro" */
+/*=====================*/
+
+#device.portrait.tablet.W8M.appview #simscreen,
+#device.landscape.tablet.W8M.appview #simscreen {
+	top: 0px;
+	bottom: 15px;
+}
+#device.portrait.tablet.W8M.browser #simscreen,
+#device.landscape.tablet.W8M.browser #simscreen {
+	top: 0px;
+	bottom: 128px;
+}
+#device.portrait.tablet.W8M.appview #statusbar,
+#device.landscape.tablet.W8M.appview #statusbar {
+	position: absolute;
+	bottom: 0px;
+	height: 15px;
+	display: block;
+	color: transparent;
+	background: black url('appview_right.png') right center no-repeat;
+}
+#device.portrait.tablet.W8M.browser #statusbar,
+#device.landscape.tablet.W8M.browser #statusbar {
+	display: none;
+}
+#device.portrait.tablet.W8M.appview #navbar,
+#device.landscape.tablet.W8M.appview #navbar {
+	display: none;
+}
+#device.portrait.tablet.W8M.browser #navbar,
+#device.landscape.tablet.W8M.browser #navbar {
+	position: absolute;
+	bottom: 0px;
+	height: 70px;
+	display: block;
+	color: transparent;
+	background: url('navbar_right.png') right center no-repeat,
+				url('navbar_left.png') left center no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				black;
+}
+	#device.tablet.W8M.browser #navbar::after {
+		content: 'writer:simulator';
+		color: white;
+		font-family: 'Segoe UI', Arial, sans-serif;
+		font-weight: 100;
+		font-size: 16px;
+		line-height: 64px;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 150px;
+		right: 408px;
+		height: 100%;
+		display: block;
+		overflow: hidden;
+	}	
+#device.portrait.tablet.W8M.appview #tabbar,
+#device.landscape.tablet.W8M.appview #tabbar {
+	display: none;
+}
+#device.portrait.tablet.W8M.browser #tabbar,
+#device.landscape.tablet.W8M.browser #tabbar {
+	bottom: 70px;
+	height: 58px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_left.png') 10px center no-repeat,
+				url('tabbar_back.png') center center repeat-x,
+				black;
+}
+	/* 	Windows 8.x "Metro" snapped view < 480px wide
+		You normally would never need this but it is
+		included for completeness - and you can use ADD
+		to create a custom profile for testing snap view
+		just choose "Other OS" from the drop-down and enter
+		"W8M_snap" and it will use the settings below instead.
+	*/
+	#device.portrait.tablet.W8M_snap.appview #simscreen,
+	#device.landscape.tablet.W8M_snap.appview #simscreen {
+		top: 0px;
+		bottom: 15px;
+	}
+	#device.portrait.tablet.W8M_snap.browser #simscreen,
+	#device.landscape.tablet.W8M_snap.browser #simscreen {
+		top: 0px;
+		bottom: 185px;
+	}
+	#device.portrait.tablet.W8M_snap.appview #statusbar,
+	#device.landscape.tablet.W8M_snap.appview #statusbar {
+		position: absolute;
+		bottom: 0px;
+		height: 15px;
+		display: block;
+		color: transparent;
+		background: black url('appview_right.png') right center no-repeat;
+	}
+	#device.portrait.tablet.W8M_snap.browser #statusbar,
+	#device.landscape.tablet.W8M_snap.browser #statusbar {
+		position: absolute;
+		bottom: 0px;
+		height: 70px;
+		color: transparent;
+		background: black url('navbar_bottom.png') center center no-repeat;	
+	}
+	#device.portrait.tablet.W8M_snap.appview #navbar,
+	#device.landscape.tablet.W8M_snap.appview #navbar {
+		display: none;
+	}
+	#device.portrait.tablet.W8M_snap.browser #navbar,
+	#device.landscape.tablet.W8M_snap.browser #navbar {
+		position: absolute;
+		bottom: 70px;
+		height: 57px;
+		display: block;
+		color: transparent;
+		background: url('navbar_narrow_right.png') right center no-repeat,
+					url('navbar_narrow_left.png') left center no-repeat,
+					url('navbar_narrow_back.png') center center repeat-x,
+					black;
+	}
+		#device.tablet.W8M_snap.browser #navbar::after {
+			content: 'writer:simulator';
+			color: white;
+			font-family: 'Segoe UI', Arial, sans-serif;
+			font-size: 14px;
+			line-height: 62px;
+			text-align: left;
+			position: absolute;
+			top: 0px;
+			left: 60px;
+			right: 25px;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+		}	
+	#device.portrait.tablet.W8M_snap.appview #tabbar,
+	#device.landscape.tablet.W8M_snap.appview #tabbar {
+		display: none;
+	}
+	#device.portrait.tablet.W8M_snap.browser #tabbar,
+	#device.landscape.tablet.W8M_snap.browser #tabbar {
+		bottom: 127px;
+		height: 58px;
+		display: block;
+		color: transparent;
+		background: url('tabbar_left.png') 20px center no-repeat,
+					url('tabbar_back.png') center center repeat-x,
+					black;
+	}

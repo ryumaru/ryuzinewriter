@@ -1,0 +1,246 @@
+/* 	Samsung TouchWiz Devices
+	"TouchWiz" is the custom skin Samsung applies to
+	Android on their devices.  They changed the look
+	of it between version 2.x and 3.x
+*/
+/****************/
+/* TouchWiz 2.x */
+/****************/
+#device.portrait.phone.TouchWiz2.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+}
+#device.portrait.phone.TouchWiz2.browser #simscreen {
+	top: 73px;
+	bottom: 0px;
+}	
+#device.portrait.phone.TouchWiz2.appview #statusbar,
+#device.portrait.phone.TouchWiz2.browser #statusbar,
+#device.landscape.phone.TouchWiz2.appview #statusbar,
+#device.landscape.phone.TouchWiz2.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_v2_right.jpg') center right no-repeat,
+				url('statusbar_v2_left.jpg') center left no-repeat,
+				url('statusbar_v2_back.jpg') center center repeat-x,
+				black;
+}
+
+#device.portrait.phone.TouchWiz2.appview #navbar,
+#device.portrait.phone.TouchWiz2.browser #navbar,
+#device.landscape.phone.TouchWiz2.appview #navbar,
+#device.landscape.phone.TouchWiz2.browser #navbar {
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: url('navbar_v2_right.jpg') center right no-repeat,
+				url('navbar_v2_left.jpg') center left no-repeat,
+				url('navbar_v2_back.jpg') center center repeat-x,
+				#151515; 
+}
+#device.portrait.phone.TouchWiz2.appview #tabbar,
+#device.portrait.phone.TouchWiz2.browser #tabbar {
+	display: none;
+}
+#device.landscape.phone.TouchWiz2.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.TouchWiz2.browser #simscreen {
+	top: 73px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.TouchWiz2.appview #tabbar,
+#device.landscape.phone.TouchWiz2.browser #tabbar {
+	display: none;
+}
+	/* Tablets */
+#device.portrait.tablet.TouchWiz2.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+}
+#device.portrait.tablet.TouchWiz2.browser #simscreen {
+	top: 139px;
+	bottom: 0px;
+}	
+#device.portrait.tablet.TouchWiz2.appview #statusbar,
+#device.portrait.tablet.TouchWiz2.browser #statusbar,
+#device.landscape.tablet.TouchWiz2.appview #statusbar,
+#device.landscape.tablet.TouchWiz2.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_v2_right.jpg') center right no-repeat,
+				url('statusbar_v2_left.jpg') center left no-repeat,
+				url('statusbar_v2_back.jpg') center center repeat-x,
+				#151515; 
+}
+/* Note: swapping of navbar/tabbar images is on purpose */
+#device.portrait.tablet.TouchWiz2.appview #navbar,
+#device.portrait.tablet.TouchWiz2.browser #navbar,
+#device.landscape.tablet.TouchWiz2.appview #navbar,
+#device.landscape.tablet.TouchWiz2.browser #navbar {
+	height: 56px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_v2_tablet_left.jpg') center left no-repeat,
+				url('tabbar_v2_tablet_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.portrait.tablet.TouchWiz2.appview #tabbar,
+#device.landscape.tablet.TouchWiz2.appview #tabbar {
+	display: none;
+}
+#device.portrait.tablet.TouchWiz2.browser #tabbar,
+#device.landscape.tablet.TouchWiz2.browser #tabbar {
+	position: relative;
+	height: 58px;
+	display: block;
+	color: transparent;
+	background: url('navbar_v2_tablet_right.jpg') center right no-repeat,
+				url('navbar_v2_tablet_left.jpg') center left no-repeat,
+				url('navbar_v2_tablet_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.landscape.tablet.TouchWiz2.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.TouchWiz2.browser #simscreen {
+	top: 139px;
+	bottom: 0px;
+	right: 0px;
+}
+
+/****************/
+/* TouchWiz 3.x */
+/****************/
+#device.portrait.phone.TouchWiz3.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+}
+#device.portrait.phone.TouchWiz3.browser #simscreen {
+	top: 73px;
+	bottom: 48px;
+}	
+#device.portrait.phone.TouchWiz3.appview #statusbar,
+#device.portrait.phone.TouchWiz3.browser #statusbar,
+#device.landscape.phone.TouchWiz3.appview #statusbar,
+#device.landscape.phone.TouchWiz3.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_v3_right.jpg') center right no-repeat,
+				url('statusbar_v3_left.jpg') center left no-repeat,
+				url('statusbar_v3_back.jpg') center center repeat-x,
+				black;
+}
+#device.portrait.phone.TouchWiz3.appview #navbar,
+#device.portrait.phone.TouchWiz3.browser #navbar,
+#device.landscape.phone.TouchWiz3.appview #navbar,
+#device.landscape.phone.TouchWiz3.browser #navbar {
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: url('navbar_v3_right.jpg') center right no-repeat,
+				url('navbar_v3_left.jpg') center left no-repeat,
+				url('navbar_v3_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.portrait.phone.TouchWiz3.appview #tabbar {
+	display: none;
+}
+#device.portrait.phone.TouchWiz3.browser #tabbar {
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_v3_right.jpg') center right no-repeat,
+				url('tabbar_v3_left.jpg') center left no-repeat,
+				url('tabbar_v3_center.jpg') center center no-repeat,
+				url('tabbar_v3_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.landscape.phone.TouchWiz3.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.TouchWiz3.browser #simscreen {
+	top: 73px;
+	bottom: 0px;
+	right: 0px;
+}
+
+#device.landscape.phone.TouchWiz3.appview #tabbar,
+#device.landscape.phone.TouchWiz3.browser #tabbar {
+	display: none;
+}
+	/* Tablets */
+#device.portrait.tablet.TouchWiz3.appview #simscreen {
+	top: 0px;
+	bottom: 48px;
+}
+#device.portrait.tablet.TouchWiz3.browser #simscreen {
+	top: 104px;
+	bottom: 48px;
+}	
+#device.portrait.tablet.TouchWiz3.appview #statusbar,
+#device.portrait.tablet.TouchWiz3.browser #statusbar,
+#device.landscape.tablet.TouchWiz3.appview #statusbar,
+#device.landscape.tablet.TouchWiz3.browser #statusbar {
+	position: absolute;
+	bottom: 0;
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_v3_tablet_right.jpg') center right no-repeat,
+				url('statusbar_v3_tablet_left.jpg') center left no-repeat,
+				url('statusbar_v3_tablet_center.jpg') center center no-repeat,
+				url('statusbar_v3_tablet_back.jpg') center center repeat-x,
+				#151515;
+}
+
+#device.portrait.tablet.TouchWiz3.appview #navbar,
+#device.portrait.tablet.TouchWiz3.browser #navbar,
+#device.landscape.tablet.TouchWiz3.appview #navbar,
+#device.landscape.tablet.TouchWiz3.browser #navbar {
+	height: 56px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_v3_tablet_right.jpg') center right no-repeat,
+				url('tabbar_v3_tablet_left.jpg') center left no-repeat,
+				url('tabbar_v3_tablet_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.portrait.tablet.TouchWiz3.appview #tabbar {
+	display: none;
+}
+#device.portrait.tablet.TouchWiz3.browser #tabbar,
+#device.landscape.tablet.TouchWiz3.browser #tabbar {
+	position: relative;
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: url('navbar_v3_tablet_right.jpg') center right no-repeat,
+				url('navbar_v3_tablet_left.jpg') center left no-repeat,
+				url('navbar_v3_tablet_back.jpg') center center repeat-x,
+				#151515;
+}
+#device.landscape.tablet.TouchWiz3.appview #simscreen {
+	top: 0px;
+	bottom: 48px;
+	right: 0px;
+}
+#device.landscape.tablet.TouchWiz3.browser #simscreen {
+	top: 104px;
+	bottom: 48px;
+	right: 0px;
+}
+
+#device.landscape.tablet.TouchWiz3.appview #tabbar {
+	display: none;
+}

@@ -1,0 +1,19 @@
+#!/bin/bash
+# INSTALL
+# All this file does is copy the index.htm from the /res to the ryuzine_base folder
+
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR=${ROOT%/*}
+if [ ! -f "$DIR/index.htm" ]
+	then
+		echo "Ryuzine Writer is not installed, attempting to install..."
+		cp "$ROOT/res/index.htm" "$DIR"
+# check again...
+		if [ -f "$DIR/index.htm" ]
+			then
+				echo "Installation was successful!"
+			else
+				echo "Installation failed.  Please do it manually."
+				exit
+		fi
+fi

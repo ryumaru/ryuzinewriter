@@ -1,0 +1,62 @@
+/* iPhone 6 Skin	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0		*/
+/* OS: iOS				*/
+/* Width: 667			*/
+/* Height: 375			*/
+
+.simbox {
+background: #c3f0ff;
+background: -moz-linear-gradient(top,  #c3f0ff 0%, #eee5f6 50%, #717ce6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3f0ff), color-stop(50%,#eee5f6), color-stop(100%,#717ce6));
+background: -webkit-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: -o-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: -ms-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: linear-gradient(to bottom,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3f0ff', endColorstr='#717ce6',GradientType=0 );
+background-attachment: fixed; 	/* req by Firefox or white bg */
+
+}
+#device.portrait {
+	height: 900px;
+	width: 444px;
+	position: relative;
+	margin-top: -450px;
+	margin-left: -222px;
+	padding: 0;
+	background: transparent url('iphone6_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 34px;
+		top: 116px;
+		width: 375px;
+		height: 667px;
+	}
+
+#device.landscape {
+	height: 444px;
+	width: 900px;
+	position: relative;
+	margin-top: -222px;
+	margin-left: -450px;
+	padding: 0;
+	background: transparent url('iphone6_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 34px;
+		left: 116px;
+		width: 667px;
+		height: 375px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -334px;
+		margin-left: -186px;
+	}
+	#device.landscape.noskin {
+		margin-top: -186px;
+		margin-left: -334px;
+	}

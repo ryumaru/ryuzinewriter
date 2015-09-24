@@ -1,0 +1,58 @@
+/* Surface 3 Tablet Skin	 	*/
+/* @ Ryuzine Writer 			*/
+/* @ version 1.0				*/
+/* OS: W8M (Windows 8 Metro)	*/
+/* Width: 1280					*/
+/* Height: 853					*/
+/* Note: Display is actually 1920 x 1280 but uses 150% scaling so rendered size is smaller
+		 however the screensize tester has not been loaded in the actual device so it may
+		 not be accurate.  Please verify or fix if you can.
+*/
+
+.simbox {
+	background:#1ba1e2;
+}
+
+#device.portrait {
+	height: 1489px;
+	width: 1033px;
+	position: relative;
+	margin-top: -744px;
+	margin-left: -516px;
+	padding: 0;
+	background: transparent url('surface3_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 85px;
+		top: 108px;
+		width: 853px;
+		height: 1280px;
+	}
+
+#device.landscape {
+	height: 1033px;
+	width: 1489px;
+	position: relative;
+	margin-top: -516px;
+	margin-left: -744px;
+	padding: 0;
+	background: transparent url('surface3_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 96px;
+		left: 108px;
+		width: 1280px;
+		height: 853px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -640px;
+		margin-left: -426px;
+	}
+	#device.landscape.noskin {
+		margin-top: -426px;
+		margin-left: -640px;
+	}

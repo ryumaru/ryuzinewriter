@@ -1,0 +1,70 @@
+/* Windows Phone 7 */
+
+#device.portrait.phone.WP7.appview #simscreen {
+	top: 0px;
+	bottom: 0px;
+}
+#device.portrait.phone.WP7.browser #simscreen {
+	top: 0px;
+	bottom: 53px;
+}	
+#device.portrait.phone.WP7.appview #statusbar {
+	display: none;
+}
+#device.portrait.phone.WP7.browser #statusbar {
+	display: none;
+}
+
+#device.portrait.phone.WP7.appview #navbar {
+	display: none;
+}
+#device.portrait.phone.WP7.browser #navbar {
+	display: none;
+}
+
+#device.portrait.phone.WP7.appview #tabbar {
+	display: none;
+}
+#device.portrait.phone.WP7.browser #tabbar {
+	height: 53px;
+	display: block;
+	color: transparent;
+	background: url('navbar_left.jpg') center left no-repeat,
+				url('navbar_right.jpg') center right no-repeat,
+				url('navbar_back.jpg') center center repeat-x,
+				#333;
+}
+#device.landscape.phone.WP7.appview #simscreen {
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.WP7.browser #simscreen {
+	top: 0px;
+	bottom: 51px;
+	right: 0px;
+}
+#device.landscape.phone.WP7.appview #statusbar {
+	display: none;
+}
+#device.landscape.phone.WP7.browser #statusbar {
+	display: none;
+}
+#device.landscape.phone.WP7.appview #navbar {
+	display: none;
+}
+#device.landscape.phone.WP7.browser #navbar {
+	display: none;
+}
+#device.landscape.phone.WP7.appview #tabbar {
+	display: none;
+}
+#device.landscape.phone.WP7.browser #tabbar {
+	height: 51px;
+	display: block;
+	color: transparent;
+	background: url('navbar_left.jpg') center left no-repeat,
+				url('navbar_right.jpg') center right no-repeat,
+				url('navbar_back.jpg') center center repeat-x,
+				#333;
+}

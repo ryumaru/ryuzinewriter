@@ -1,0 +1,59 @@
+/* iPhone 4s Skin	 	*/
+/* @ Ryuzine Machine 	*/
+/* @ version 0.9.3	 	*/
+/* OS: iOS				*/
+/* Width: 480			*/
+/* Height: 320			*/
+/* Note: iPhone 4 Retina display is actually 960 x 480 but 	*/
+/* it uses 480x320 and scales everything up.				*/
+
+.simbox {
+	background: #808080 url('woodtile.jpg');
+}
+#device.portrait {
+	height: 796px;
+	width: 433px;
+	position: relative;
+	margin-top: -398px;
+	margin-left: -216px;
+	padding: 0;
+	background: transparent url('iphone4_white_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 58px;
+		top: 160px;
+		width: 320px;
+		height: 480px;
+	}
+
+#device.landscape {
+	height: 433px;
+	width: 796px;
+	position: relative;
+	margin-top: -216px;
+	margin-left: -398px;
+	padding: 0;
+	background: transparent url('iphone4_white_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 54px;
+		left: 160px;
+		width: 480px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -240px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -160px;
+		margin-left: -240px;
+	}

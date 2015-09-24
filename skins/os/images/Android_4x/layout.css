@@ -1,0 +1,79 @@
+/* Android 4.x Devices */
+
+#device.portrait.phone.Android4.appview #simscreen {
+	top: 51px;
+	bottom: 48px;
+}
+#device.portrait.phone.Android4.browser #simscreen {
+	top: 76px;
+	bottom: 48px;
+}	
+#device.portrait.phone.Android4.appview #statusbar {
+	display: none;
+}
+#device.portrait.phone.Android4.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('phone_status_right.png') center right no-repeat,
+				url('phone_status_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.phone.Android4.appview #navbar,
+#device.portrait.phone.Android4.browser #navbar {
+	height: 51px;
+	display: block;
+	color: transparent;
+	background: url('phone_navbar_left.png') center left no-repeat,
+				url('phone_navbar_right.png') center right no-repeat,
+				url('phone_navbar_back.png') center center repeat-x,
+				#151515;
+}
+#device.portrait.phone.Android4.appview #tabbar,
+#device.portrait.phone.Android4.browser #tabbar {
+	height: 48px;
+	display: block;
+	color: transparent;
+	background: black url('phone_tabbar_port.png') center center no-repeat;
+}
+#device.landscape.phone.Android4.appview #simscreen {
+	top: 54px;
+	bottom: 0px;
+	right: 41px;
+}
+#device.landscape.phone.Android4.browser #simscreen {
+	top: 79px;
+	bottom: 0px;
+	right: 41px;
+}
+#device.landscape.phone.Android4.appview #statusbar {
+	display: none;
+}
+#device.landscape.phone.Android4.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('phone_status_right.png') right +41px center no-repeat,
+				url('phone_status_back.png') center center repeat-x,
+				black;
+}
+#device.landscape.phone.Android4.appview #navbar,
+#device.landscape.phone.Android4.browser #navbar {
+	height: 53px;
+	display: block;
+	color: transparent;
+	background: url('phone_navbar_left.png') center left no-repeat,
+				url('phone_navbar_right.png') right +41px center no-repeat,
+				url('phone_navbar_back.png') center center repeat-x,
+				#151515;
+}
+#device.landscape.phone.Android4.appview #tabbar,
+#device.landscape.phone.Android4.browser #tabbar {
+	height: 100%;
+	width: 41px;
+	right: 0px;
+	display: block;
+	color: transparent;
+	background: black url('phone_tabbar_land.png') center center no-repeat;
+}

@@ -1,0 +1,2548 @@
+<!DOCTYPE html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<META Http-Equiv="Cache-Control" Content="no-cache">
+<META Http-Equiv="Pragma" Content="no-cache">
+<META Http-Equiv="Expires" Content="0">
+<meta name="msapplication-TileColor" content="#ADDEFA">
+<meta name="msapplication-TileImage" content="ryuzinewriter/images/app/icons/ryuzinewriter-tile.png">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<script type="text/javascript" src="ryuzinewriter/js/writer.config.js"></script>
+<script type="text/javascript" src="ryuzinewriter/xinha4ryuzine/XinhaCore.js"></script>
+<script type="text/javascript">
+if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/Android/i) ) {
+// iOS and Android need this in place now //
+document.write('<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="zooming" >');
+}else{
+document.write('<meta name="viewport" content="height=device-height" id="zooming">');
+}
+</script>
+<title>Ryuzine Writer</title>
+<link rel="shortcut icon" type="images/vnd.microsoft.icon" href="ryuzinewriter/images/app/icons/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128" />
+<link rel="icon" type="images/x-icon" href="ryuzinewriter/images/app/icons/ryuzinewriter-favicon.png" />
+<link rel="apple-touch-icon" href="ryuzinewriter/images/app/icons/ryuzinewriter-icon-03.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="ryuzinewriter/images/app/icons/ryuzinewriter-icon-02.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="ryuzinewriter/images/app/icons/ryuzinewriter-icon-01.png" />
+
+<link rel="stylesheet" type="text/css" href="ryuzinewriter/css/ui.css" id="ui_format"/>
+<link rel="stylesheet" type="text/css" href="ryuzinewriter/css/writer.css" id="writer_layout" />
+<link rel="stylesheet" type="text/css" href="ryuzinewriter/theme/writer/writer.css" id="ui_theme" />
+<link rel="stylesheet" type="text/css" href="ryuzinewriter/skins/os/os.css" id="skin_os"/>
+<link rel="stylesheet" type="text/css" href="ryuzinewriter/skins/iphone5/skin.css" id="skin" />
+
+<script type="text/javascript" src="ryuzinewriter/js/editor.config.js"></script>
+<script type="text/javascript" src="ryuzinewriter/js/writer.js"></script>
+<script src="ryuzinewriter/js/ios-drag-drop.js"></script>
+
+</head>
+<body class="writer" id="ryuzinewriter">
+	<div id="splash" class="splash_in">
+		<div id="splashcell">
+			<div id="splashblock">
+				<p class="splash-title">
+					<img src="ryuzinewriter/images/app/icons/ryuzinewriter-icon-03.png" id="app_logo" alt="RyuzineWriter"/><br/>RyuzineWriter
+				</p>
+				<p class="splash-port l10n">authoring</p>
+			</div>
+			<p class="splash-fineprint">The Ryuzine name, logo, and icons are the property of K.M. Hansen &amp; Ryu Maru - All Rights Reserved</p>
+		</div>
+	</div>
+	
+	<div id="loadicon" class="spinning start"></div>
+	
+	<div id="binder" class="binder_shift">
+		<div id="sheet">
+			<div id="start" class="workspace ws_in">
+
+					<table id="middler"><tr><td>
+					<div id="startup_screen" >
+					<div id="logo"></div>
+					<p class="splash-title">RyuzineWriter</p>
+					<hr />
+					<div id="startbuttons" class="area">
+						<div id="startbutton1" class="button type4"><p><span class="symbol"></span><span class="label l10n">Open Template Wizard</span></p></div>
+						<div id="startbutton2" class="button type4"><p><span class="symbol"></span><span class="label l10n">Open Source File</span></p></div>
+						<div id="startbutton3" class="button type4"><p><span class="symbol"></span><span class="label l10n">Import Old Ryuzine File</span></p></div>
+						<div id="startbutton4" class="button type4"><p><span class="symbol"></span><span class="label l10n">Edit Config File</span></p></div>
+						<div id="startbutton5" class="button type4"><p><span class="symbol"></span><span class="label l10n">Edit Rack Catalog</span></p></div>
+						<div id="startbutton6" class="button type4"><p><span class="symbol"></span><span class="label l10n">Load URL In Simulator</span></p></div>
+					</div>
+					<div class="startbuttons" id="party3buttons_1" style="display:block;">
+					</div>
+					<div class="startbuttons" id="party3buttons_2" style="display:block;">
+					</div>
+					<hr style="clear:both;"/>
+					<p>Ryuzine <span class="l10n">authoring</span> webapp <em>Version 1.0</em></p>
+					<p class="fineprint l10n">This utility is designed for use from a web server in a development environment.<br/>It should not be installed on your live web server.</p>
+					</div>
+					</td></tr></table>
+
+			</div>
+			
+			<div id="editor" class="workspace ws_deck">
+				<div id="edex">
+					<div id="leftbox">
+						<textarea id="inputBox" class="codebox" ontouchstart="RYU.scrollIt(this);">&lt;!--// Enter HTML code in this box //--&gt;</textarea>
+					</div>
+					<div id="rightbox" >
+						<iframe id="sourceframe"  name="sourceframe" scrolling="yes" style="overflow: auto;">You need a browser that supports IFRAMES to use this utility!</iframe>
+						<div id="notice1" class="notice"><p>Updating...<p></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="export" class="workspace ws_deck">
+				<ul class="tabs">
+					<li id="export_tab0" class="tab l10n"  style="z-index:10;">HTML</li>
+					<li id="export_tab1" class="tab l10n"  style="z-index:7;">CSS</li>
+					<li id="export_tab2" class="tab l10n"  style="z-index:4;">Config</li>
+					<li id="export_tab3" class="tab l10n"  style="z-index:1;">Data</li>
+				</ul>
+				<div class="area tabsections">
+					<div id="export_section0" class="tabsection" style="display:block;">
+						<textarea id="outputBox" class="codebox" ontouchstart="RYU.scrollIt(this);">Ryuzine File HTML code will be in this box.</textarea>
+					</div>
+					<div id="export_section1" class="tabsection">
+						<textarea id="stylesBox" class="codebox" ontouchstart="RYU.scrollIt(this);">Custom Styles: Copy &amp; Paste contents into your file thisissue.css</textarea>
+					</div>
+					<div id="export_section2" class="tabsection">
+						<textarea id="configBox" class="codebox" ontouchstart="RYU.scrollIt(this);">// Custom Configuration File Javascript Code: //</textarea>
+					</div>
+					<div id="export_section3" class="tabsection">
+						<textarea id="dataBox" class="codebox" ontouchstart="RYU.scrollIt(this);">RyuzineRack Data Catalog Code will be in this box.</textarea>
+					</div>
+					<p class="smallprint l10n" style="text-align:center;" id="instruct0" >Select all the code in the box, copy to the clipboard, paste into an empty plain-text file, and save with .htm/.html, .js or .css extension</p>
+					<p class="smallprint l10n" style="text-align:center;" id="instruct1" >You can edit code directly in box.  Use "SAVE" menu at top when ready to export or package publication.</p>
+				</div>
+			</div>
+			
+			<div id="simulator" class="workspace ws_deck">
+				<div id="simbox" class="area simbox">
+					<div id="device" class="default portrait phone none appview">
+						<div id="screen" class="screen">
+							<div id="statusbar" class="l10n">Status Bar</div>
+							<div id="navbar" class="l10n">Top Toolbar</div>
+							<div id="simscreen">
+									<iframe id="preview" name="preview" scrolling="no" onunload="for (key in this){delete key};">You need a browser that supports IFRAMES to use this utility!</iframe>
+							</div>
+							<div id="tabbar" class="l10n"><span>Bottom Toolbar</span></div>
+							<div id="notice" class="notice"><p class="l10n">Updating...<p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="configuration" class="workspace ws_deck">
+				<ul class="tabs">
+					<li id="configuration_tab0" class="tab l10n"  style="z-index:10;">Pages</li>
+					<li id="configuration_tab1" class="tab l10n"  style="z-index:7;">Addons</li>
+					<li id="configuration_tab2" class="tab l10n"  style="z-index:4;">Rack</li>
+					<li id="configuration_tab3" class="tab l10n"  style="z-index:1;">Ads</li>
+				</ul>
+				<div class="area tabsections">
+				<form id="config_form" >
+				<div id="configuration_section0" class="tabsection" style="display:block;">
+					<table class="table">
+						<tr>
+							<th>&nbsp;</th><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="l10n">Format</th>
+							<td>
+							<input id="minify" type="checkbox" value="1"/><span>Generate Minified Config File</span><br/>
+							<small class="l10n">Config files are usually generated with comments and spacing to make them easy to understand 
+							and edit.<br/>The minified file is 75% smaller and loads faster but it is harder to read/edit and has no comments.</small>
+							</small>
+							</td>
+						</tr>
+						<tr>
+							<th class="l10n">Binding</th>
+							<td>
+							<input name="binding" type="radio" value="left" checked/> <span class="l10n">Left</span>
+							<input name="binding" type="radio" value="right" /> <span class="l10n">Right</span>
+							</td>
+						</tr>
+						<tr>
+							<th class="l10n">Page Size</th>
+							<td>
+							<input name="fillpad" type="radio" value="0" checked /> <span class="l10n">Magazine (Square)</span>
+							<input name="fillpad" type="radio" value="1" /> <span class="l10n">Comic Book (Tall)</span>
+							<input name="fillpad" type="radio" value="2" /> <span class="l10n">Fill All (for fluid layouts)</span>
+							<br /><small class="l10n">When "Fill All" is enabled pages grow to fill the available space</small>
+							</td>
+						</tr>
+
+					<tr>
+					<td colspan="2">
+						<h3 class="l10n">Zoom and Pan</h3>
+						<p class="l10n">Enables or Disables zooming and panning on load for touch-enabled devices (it is still user selectable in the webapp's Options panel)</p>
+					</td>
+						<tr>    
+						<th class="l10n">Zoomable</th>
+							<td>
+							<input name="zoomable" type="radio" value="0" /> <span class="l10n">Off</span>
+							<input name="zoomable" type="radio" value="1" checked /> <span class="l10n">On</span>
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Maximum Zoom Amount</th>
+							<td>
+							<input type="text" id="maxzoom" name="maxzoom" value="5" /> (<span class="l10n">Value</span> 0 - 10)
+							</td>
+						</tr>
+					<tr>
+					<td colspan="2">
+						<h3 class="l10n">Page Navigation</h3>
+						<p class="l10n">Determines whether the default method of page navigation to any page from any page is via the "Table of Contents" panel or with the "Pages Slider" control.  End users can also enable/disable it in their Options panel preferences.</p>
+					</td>
+					</tr>			
+						<tr>
+							<th class="l10n">Pages Slider</th>
+							<td>
+							<input name="pgslide" type="radio" value="0" checked/> <span  class="l10n">Off</span>
+							<input name="pgslide" type="radio" value="1" /> <span  class="l10n">On</span>
+							</td>
+						</tr>
+					<tr>
+					<td colspan="2">
+						<h3 class="l10n">Animate View Changes</h3>
+						<p class="l10n">When switching between alternative Views (Magazine/Continuous/Grid/Plain) the transition from one View to another can be animated.  The default animation is similar to page changes in the Ryuzine Rack newsstand app, but you can customize it in the <em>ui_dark.css</em> or <em>ui_light.css</em> file.  If the browser does not support the normal page animations or if the user has turned off page animations in the Options Panel the View Animations are also disabled.</p>
+					</td>
+					</tr>
+						<tr>
+							<th class="l10n">View Animations</th>
+							<td>
+							<input name="viewani" type="radio" value="0" /> <span class="l10n">Off</span>
+							<input name="viewani" type="radio" value="1" checked /> <span class="l10n">On</span>
+							</td>
+						</tr>
+					<td colspan="2">
+						<h3 class="l10n">Default Bookmarks</h3>
+						<p class="l10n">The In-App Bookmark Management panel is pre-populated with a couple bookmarks end users cannot delete.</p>
+					</td>
+						<tr>
+						<th class="l10n">Preset Bookmarks</th>
+							<td>
+								<input type="button" value="Add" onclick="RYU.add2ConfigList(0);"/> <span class="l10n">a new bookmark</span>.
+								<ul id="config_bookmarks_list" class="dynlist">
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="configuration_section1" class="tabsection">
+					<table>
+					<tr>
+						<td colspan="2">
+						<h3 class="l10n">Add-On Features</h3>
+						<div id="config_addons_list">
+							<p>Building Add-Ons list...</p>
+						</div>
+						</td>
+					</tr>
+						<td colspan="2">	
+						<h3 class="l10n">User Interface Language Localization</h3>
+						<p class="l10n">If <strong>localize</strong> add-on is included it automatically changes the language on buttons, panels, and help file. Ignored if Localization is disabled.  Localization only supports the languages listed, but you can easily add more or edit the default language.
+						</td>
+					</tr>
+						<tr>
+						<th class="l10n">Language Code</th>
+							<td>
+							 <select id="language" name="language">
+								<option value="da">Danish</option>
+								<option value="de">German</option>
+								<option value="el">Greek</option>
+								<option value="en" selected>English</option>
+								<option value="es">Spanish</option>
+								<option value="fi">Finnish</option>
+								<option value="fr">French</option>
+								<option value="hi">Hindi</option>
+								<option value="it">Italian</option>
+								<option value="ja">Japanese</option>
+								<option value="ko">Korean</option>
+								<option value="no">Norwegian</option>
+								<option value="pt">Portuguese</option>
+								<option value="ru">Russian</option>
+								<option value="sv">Swedish</option>
+								<option value="zh_HANS">Chinese (Simplified)</option>
+								<option value="zh_HANT">Chinese (Traditional)</option>
+								<option value="xx" class="l10n">Custom</option>
+							 </select>
+							 </td>
+						</tr>
+						<tr>
+					<tr>
+						<td colspan="2">
+						<h3 class="l10n">Ryuzine Theme Settings</h3>
+						<p class="l10n">Ryuzine themes change the appearance of the webapp User Interface.  You can also send different themes to different 
+						platforms.</p> 
+						<td>
+						<tr>
+						<th class="l10n">Swap Themes</th>
+							<td>
+							<input name="swapThemes" type="radio" value="0" checked /> <span class="l10n">Off</span>
+							<input name="swapThemes" type="radio" value="1" /> <span class="l10n">On</span>
+							<br /><small class="l10n">If disabled Platform Themes below are ignored and only default theme is used</small>
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Platform Themes</th>
+							<td id="config_themes_list">
+							<input type="text" id="deskTheme" name="deskTheme" value="" /> Desktop General/Fallback Theme
+							<blockquote style="margin-top:0;margin-bottom:0;">
+								<input type="text" id="winTheme" name="winTheme" value="" /> Windows Theme
+								<br/>
+								<input type="text" id="macTheme" name="macTheme" value="" /> Mac OS X Theme
+								<br/>
+								<input type="text" id="nixTheme" name="nixTheme" value="" /> Linux Systems Theme
+							</blockquote>
+							<input type="text" id="iOSTheme" name="iOSTheme" value="" /> iOS Theme
+							<br />
+							<input type="text" id="andTheme" name="andTheme" value="" /> Android Theme
+							<br />
+							<input type="text" id="wp7Theme" name="wp7Theme" value="" /> Windows Phone 7.5
+							<br />
+							<input type="text" id="w8mTheme" name="w8mTheme" value="" /> Windows 8 "Metro" (Modern UI)
+							<br />
+							<input type="text" id="bbtTheme" name="bbtTheme" value="" /> BlackBerry Theme
+							<br />
+						</td>
+					</tr>
+					</table> 
+				</div>
+				<div id="configuration_section2" class="tabsection">
+					<table>
+					<tr>
+						<td colspan="2">
+						<h1 class="l10n">RyuzineRack Configuration</h1>
+						<p class="l10n"><em>If you are not using the RyuzineRack newsstand webapp you can ignore this section.</em> "Data Catalogs" are simple HTML Table files you can create and edit with any HTML or plain text editor, or use the "Rack Data" option here in Ryuzine Writer.  The "Media Types" section lets you decide what label appears on the button for each type of media defined in your Catalog data.</p>
+						</td>
+					</tr>
+						<tr>
+						<th>RyuzineRack <span class="l10n">Title</span></th>
+							<td>
+								<input id="rackTitle" type="text" value="Newsstand" />
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Rack Data Catalogs</th>
+							<td>
+								<input type="button" value="Add" onclick="RYU.add2ConfigList(1);" /> <span class="l10n">a Catalog File</span>
+								<ul id="config_catalogs_list" class="dynlist">
+								</ul>
+								<small class="l10n">(Catalog files need to be placed in /data/cat/ folder)</small>
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Promotion Animation:</th>
+							<td>
+							<input id="autopromo" name="autopromo" value="5" /> <span class="l10n">( 0 = no animation | value = interval in seconds )</span>		
+							</td>
+						</tr>
+						<tr>
+						<tr>
+						<th class="l10n">Maximum Number of Promotions:</th>
+							<td>
+							 <select id="maxpromos" name="maxpromos">
+								<option value="1">1</option>
+								<option value="3">3</option>
+								<option value="5" selected>5</option>
+								<option value="7">7</option>
+								<option value="9">9</option>
+								<option value="11">11</option>
+								<option value="13">13</option>
+								<option value="15">15</option>
+							 </select>
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Links Open in:</th>
+							<td>
+							<select id="linkOpens" name="linkOpens">
+								<option value="0" selected class="l10n">Default</option>
+								<option value="1">_self</option>
+								<option value="2">_blank</option>
+								<option value="3">_parent</option>
+								<option value="4">_top</option>
+								<option value="5">in-app</option>
+							</select>
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Items Per Page:</th>
+							<td>
+							<input id="rackItems" name="rackItems" value="10" /> <span class="l10n">( 0 = no pagination | value = items per page )</span>		
+							</td>
+						</tr>
+						<tr>
+						<th class="l10n">Media Types and Button Text</th>
+							<td>
+								<input type="button" value="Edit Media Types" onclick="RYU.toggleDialog('edittypes',1);" />
+								<ul id="config_mediatypes_list" class="dynlist">
+								</ul>
+								<p class="l10n">Button samples are shown using the theme (if any) currently applied to Ryuzine Writer. The appearance varies depending on which theme is used.</p>
+							</td>
+						</tr>
+					</table>
+				</div>	
+				<div id="configuration_section3" class="tabsection">
+					<table>
+						<tr>
+							<td colspan="2">
+							<h1 class="l10n">Integrated Advertising</h1>
+							<p class="l10n">There are three integrated areas in which you can place advertising and this section of the configuration options lets you control how those ads will display.</p>
+							</td>
+						</tr>
+						<tr>
+							<th class="l10n">Splash Ad</th>
+							<td>
+							<input id="splash_ad" name="splash_ad" value="0" /> <span class="l10n">0 = no splash ad | value = number of seconds to display</span><br />
+							<small class="l10n">This can also be used control how long the splash screen displays whether it has advertising on it or not.</small>
+							</td>
+						</tr>
+						<tr>
+							<th class="l10n">Box Ad</th>
+							<td>
+							<input id="box_ad" name="box_ad" value="0" /> <span class="l10n">0 = no box ad | value = seconds to display ad | "x" = persistent (user must close)</span><br/>
+							<small class="l10n">Lightbox container *must* have "boxad" for the ID</small>
+							</td>
+						</tr>
+						<tr>
+							<th class="l10n">Banner Ad</th>
+							<td>
+							<input id="banner_ad" name="banner_ad" value="0" /> <span class="l10n">0 = no banner ad	| value = display time in seconds | "x" = persistent (user must close)</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				</form>
+				</div>
+			</div>
+			
+			<div id="databuilder" class="workspace ws_deck">
+				<div class="area" style="-webkit-transform:none;">	
+					<table id="rackdata" style="margin-bottom: 100px;">
+					<thead>
+					</thead>
+					<tbody>
+					</tbody>
+					</table>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="dropbar" class="navbars dropbar_hide">
+		<div class="navset nav_in">
+			<div id="back2rack" class="button type1 left" onclick="RYU.toggleDropBar();RYU.popOut(0);"><p><span class="symbol"></span><span class="label l10n">Device View</span></p></div>
+			<div id="fill_refresh" class="button type1 right refresh"><p><span class="symbol"></span><span class="label l10n">Refresh</span></p></div>
+		</div>
+		<div id="droptab"></div>
+	</div>
+	
+	<div id="upbox" style="display none; visibility: hidden;">
+		<div id="under_glass"></div>
+		<div id="addons_panel" class="panel style1 right out">
+			<div id="addons_titlebar" class="titlebar">
+				<h1 id="addons_title" class="title l10n">Add-Ons</h1>
+				<div id="addonsdone" class="button type2 done right">
+					<p><span class="symbol"></span><span class="label l10n">Done</span></p>
+				</div>
+			</div>
+			<div id="addonslist" class="area">
+				<div class="scrollbox">
+					<ul class="opts">
+					</ul>
+				</div>
+			</div>
+			<div class="pointer"></div>
+		</div>
+		<div id="opt_panel" class="panel style1 right out">
+			<div id="opt_titlebar" class="titlebar">
+				<h1 id="opttitle" class="title l10n">Options</h1>
+				<div class="button type1 quarter left" id="helpbutton">
+					<p><span class="symbol"></span><span class="label l10n">Help</span></p>
+				</div>
+				<div id="optdone" class="button type2 done right">
+					<p><span class="symbol"></span><span class="label l10n">Done</span></p>
+				</div>
+			</div>
+			<div id="optlist" class="area">
+				<div class="scrollbox">
+					<ul id="opts" class="opts"></ul>
+				</div>
+			</div>
+			<div class="pointer"></div>
+		</div>
+	</div>
+	
+	<div id="lightbox">
+		<div id="shade"></div>
+	</div>
+	
+	<div id="pan" class="pan_off"></div>
+	
+	<div id="controlbox0" class="navbars_show">
+		<div id="zoom" class="button">
+			<p><span class="symbol"></span><span class="label"></span></p>
+		</div>
+		<div id="b_start1" class="button type1 left">
+			<p><span class="symbol"></span><span class="label l10n">Start</span></p>
+		</div>
+		<div id="navbar0" class="navbars">
+			<!--// 	Start 	//-->
+			<div id="navset0" class="navset nav_in">		
+				<div class="titlebar"><h1 class="title l10n">Start</h1></div>
+			</div>
+			<!--// 	Editor	//-->
+			<div id="navset1" class="navset nav_deck">
+				<div class="titlebar"><h1 class="title l10n">Editor</h1></div>
+				<div id="ed_file" class="button type2 quarter left">
+					<p><span class="symbol"></span><span class="label l10n">File</span></p>
+					<select class="ghostlist" name="ed_file_operations" id="ed_file_operations">
+						<option value="0">---</option>
+						<option value="1" class="l10n">New</option>
+						<option value="2" class="l10n">New from Template</option>
+						<option value="12" class="l10n">Document Properties</option>
+						<option value="3" class="l10n">Open Work File</option>
+						<option value="4" class="l10n">Save Work File As...</option>
+					</select>
+				</div>
+				<div id="splitter" class="button type1 left">
+					<p><span class="symbol"></span><span class="label l10n">View</span></p>
+					<select class="ghostlist" name="ed_splitter" id="ed_splitter">
+						<option value="0">---</option>
+						<option value="1" class="l10n">Split View (Auto)</option>
+						<option value="2" class="l10n">Split Vertical</option>
+						<option value="3" class="l10n">Split Horizontal</option>
+						<option value="4" class="l10n">Reset View</option>
+					</select>
+				</div>
+				<div id="ed_refresh" class="button type1 left" style="display:none;">
+					<p><span class="symbol"></span><span class="label l10n">Refresh</span></p>
+				</div>
+				<div id="ed_opt" class="button type1 left">
+					<p><span class="symbol"></span><span class="label l10n">Format</span></p>
+				</div>
+				<div id="ed_build" class="button type1 right">
+					<p><span class="symbol"></span><span class="label l10n">Build</span></p>
+				</div>
+			</div>
+			<!--//	Export	//-->
+			<div id="navset2" class="navset nav_deck">
+				<div class="titlebar"><h1 class="title l10n">Export</h1></div>
+				<div id="ex_file" class="button type1 quarter left">
+					<p><span class="symbol"></span><span class="label l10n">Save</span></p>
+					<select class="ghostlist" name="ex_file_operations" id="ex_file_operations" onchange="var f=(this.value || this.options[a.selectedIndex].value);RYU.fileOps(f);this.selectedIndex=0;">
+						<option value="0">---</option>
+						<option value="5" class="l10n">Save HTML</option>
+						<option value="6" class="l10n">Save CSS</option>
+						<option value="7" class="l10n">Save Config File</option>
+						<option value="8" class="l10n">Save Rack Catalog</option>
+						<option value="9" class="l10n">Build Package</option>
+					</select>
+				</div>
+				<div id="ed_sim" class="button type1 right">
+					<p><span class="symbol"></span><span class="label l10n">Preview</span></p>
+				</div>
+			</div>
+			<!--//	Simulator	//-->
+			<div id="navset3" class="navset nav_deck">
+				<div class="titlebar"><h1 class="title l10n">Simulator</h1></div>
+				<div id="sim_dev" class="button type1 left">
+					<p><span class="symbol"></span><span id="device_opt_label" class="label l10n">Device</span></p>
+					<select class="ghostlist" name="device_selctor" id="device_selector">
+						<option value="0" selected>iPhone 5</option>
+					</select>
+				</div>
+				<div id="sim_add" class="button type2 left">
+					<p><span class="symbol"></span><span class="label l10n">Add Device</span></p>
+				</div>
+				<div id="sim_rotate" class="button type1 left">
+					<p><span class="symbol"></span><span class="label l10n">Rotate</span></p>
+				</div>
+				<div id="sim_view" class="button type1 left">
+					<p><span class="symbol"></span><span id="view_opt_label" class="label l10n">App View</span></p>
+					<select class="ghostlist" name="view_style" id="view_style">
+						<option value="0" class="l10n">App View</option>
+						<option value="1" class="l10n">Browser View</option>
+						<option value="2" class="l10n">Device View</option>
+						<option value="3" class="l10n">Screen Only</option>
+						<option value="4" class="l10n">Fill View</option>
+					</select>
+				</div>
+				<div id="sim_zoom" class="button type1 left">
+					<p><span class="symbol"></span><span id="zoom_opt_label" class="label l10n">Zoom</span></p>
+					<select class="ghostlist" name="zoom_factor" id="zoom_factor">
+						<option value="1" class="l10n">Zoom</option>
+						<option value=".25">25%</option>
+						<option value=".50">50%</option>
+						<option value=".75">75%</option>
+						<option value="1">100%</option>
+						<option value="1.25">125%</option>
+						<option value="1.5">150%</option>
+						<option value="2">200%</option>
+						<option>-----------</option>
+						<option value="Fit Width" class="l10n">Fit Width</option>
+						<option value="Fit Height" class="l10n">Fit Height</option>
+					</select>
+				</div>
+				<div id="sim_load" class="button type2 right">
+					<p><span class="symbol"></span><span class="label l10n">Load URL</span></p>
+				</div>
+			</div>
+			<!--//	ConfigBuilder	//-->
+			<div id="navset4" class="navset nav_deck">
+				<div class="titlebar"><h1 class="title l10n">Config Builder</h1></div>
+				<div id="cfg_reset" class="button type1 quarter left">
+					<p><span class="symbol"></span><span class="label l10n">Reset</span></p>
+				</div>
+				<div id="cfg_build" class="button type2 quarter right">
+					<p><span class="symbol"></span><span class="label l10n">Build</span></p>
+				</div>
+			</div>
+			<!--//	RackBuilder	//-->
+			<div id="navset5" class="navset nav_deck">
+				<div class="titlebar"><h1 class="title l10n">Rack Builder</h1></div>
+				<div id="rack_file" class="button type1 quarter left">
+					<p><span class="symbol"></span><span class="label l10n">File</span></p>
+					<select class="ghostlist" name="rack_sel_file" id="rack_sel_file">
+						<option value="0">---------</option>
+						<option value="1" class="l10n">New Rack Catalog</option>
+						<option value="2" class="l10n">Load Rack Catalog</option>
+						<option value="3" class="l10n">Save Rack Catalog</option>
+					</select>
+				</div>
+				<div id="db_add" class="button type2 left"><p><span class="symbol"></span><span class="label l10n">Add Item</span></p></div>
+				<div id="rack_edit" class="button type1 quarter left">
+					<p><span class="symbol"></span><span class="label l10n">Edit</span></p>
+					<select class="ghostlist" name="rack_sel_edit" id="rack_sel_edit">
+						<option value="0">----------</option>
+						<option value="1" class="l10n">Add Rows</option>
+						<option value="2" class="l10n">Edit Media Types</option>
+						<option value="3" class="l10n">Edit Categories</option>
+					</select>
+				</div>
+				<div id="rack_build" class="button type2 quarter right">
+					<p><span class="symbol"></span><span class="label l10n">Build</span></p>
+				</div>
+				<div id="rack_preview" class="button type2 quarter right" onclick="RYU.previewRack();">
+					<p><span class="symbol"></span><span class="label l10n">Preview</span></p>
+				</div>
+			</div>
+			<!--//	Add-On Ones get added after here //-->
+		</div>
+	</div>
+	<div id="controlbox1" class="tabbars_show">
+		<div id="tabbar0" class="tabbars">
+			<div id="controlset0" class="controlset_in">
+				<div id="b_start" class="button type1 left">
+					<p><span class="symbol"></span><span class="label l10n">Start</span></p>
+				</div>
+				<div id="b_editor" class="button type1 quarter left" onclick="RYU.slideSpace(1,this);">
+					<p><span class="symbol"></span><span class="label l10n">Editor</span></p>
+				</div>
+				<div id="b_export" class="button type1 quarter left" onclick="RYU.slideSpace(2,this);">
+					<p><span class="symbol"></span><span class="label l10n">Export</span></p>
+				</div>
+				<div id="b_simulator" class="button type1 quarter left" onclick="RYU.slideSpace(3,this);">
+					<p><span class="symbol"></span><span class="label l10n">Simulator</span></p>
+				</div>
+				<div id="optbutton" class="button type1 quarter right">
+					<p><span class="symbol"></span><span class="label l10n">Options</span></p>
+				</div>
+				<div id="addonsbutton" class="button type1 quarter right empty">
+					<p><span class="symbol"></span><span class="label l10n">Add-Ons</span></p>
+				</div>
+				<div id="b_databuilder" class="button type1 quarter right" onclick="RYU.slideSpace(5,this)">
+					<p><span class="symbol"></span><span class="label l10n">RackBuilder</span></p>
+				</div>
+				<div id="b_configuration" class="button type1 quarter right" onclick="RYU.slideSpace(4,this);">
+					<p><span class="symbol"></span><span class="label l10n">ConfigBuilder</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--// Bubble Help container //-->
+	<div id="helper_glass"></div>
+	<div id="helper" class="helper_off">
+		<div id="help_guide">
+			<div id="help_arrow"></div>
+		</div>
+		<div id="help_box"></div>
+	</div>
+	
+	<!--// ======== Dialogs ========== //-->
+
+<!--// file operations //-->
+	<div id="loadzine" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Load Old Ryuzine File</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td width="75"><span class="l10n">File</span>:</td><td><input id="chooser2" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint"><span class="l10n"><strong>Important!</strong> File must be located under the same domain as the Ryuzine Writer and preferably in the same folder or this may not work.</span><br />
+			<strong class="l10n">This loads the data from the file, but you will not be editing the actual file.</strong></p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right file" onclick="RYU.toggleDialog('loadzine',0);RYU.selectFile(1);RYU.slideSpace(2);">
+					<p><span class="symbol"></span><span class="label l10n">Load File</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+
+	<div id="loadpage" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Open Source File</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<div id="scandir" style="display:none;"></iframe></div>
+			<table><tr>
+			<td width="75" class="leader"><span class="l10n">File</span>:</td><td id="file_chooser"><input id="chooser" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint l10n"><strong>Important!</strong> File must be located in your Ryuzine Development folder or it will not work.</p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right file" onclick="RYU.toggleDialog('loadpage',0);RYU.selectFile(0);RYU.slideSpace(1);">
+					<p><span class="symbol"></span><span class="label l10n">Load File</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+
+	<div id="loadrack" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Load Rack Catalog</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td width="75"><span class="l10n">File</span>:</td><td id="file_chooser4"><input id="chooser4" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint l10n">This loads the data from the file, but you will not be editing the actual file.</p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right file" onclick="RYU.toggleDialog('loadrack',0);RYU.cat2data(''+document.getElementById('chooser4').value+'');">
+					<p><span class="symbol"></span><span class="label l10n">Load File</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+	
+	<div id="import_master_styles" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Import Master Styles</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td width="75" class="leader"><span class="l10n">File</span>:</td><td id="file_chooser5"><input id="chooser5" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint"><span class="l10n"><strong>Important!</strong> Your Master Styles stylesheet file must be located in your Ryuzine Development folder and subfolder</span> <em class="foldericon">/css</em></p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right file" onclick="RYU.toggleDialog('import_master_styles',0);RYU.RYUMasterStyles.ryu_import_master_css();">
+					<p><span class="symbol"></span><span class="label l10n">Load File</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+	
+	<div id="import_edition_styles" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Import Edition Styles</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td width="75" class="leader"><span class="l10n">File</span>:</td><td id="file_chooser6"><input id="chooser6" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint"><span class="l10n"><strong>Important!</strong> Your Edition Styles stylesheet file must be located in your Ryuzine Development folder and subfolder</span> <em class="foldericon">/css</em><br/>
+			<strong class="l10n">WARNING: This will clear everything in the Edition Styles panel and cannot be undone!</strong></p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right file" onclick="RYU.toggleDialog('import_edition_styles',0);RYU.RYUStylist.ryu_import_edition_css();">
+					<p><span class="symbol"></span><span class="label l10n">Load File</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+	
+	<div id="save_wip" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Save Work File As...</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td><span class="l10n">File</span>:</td><td><div id="wip_input" style="width:100%;"></div></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint l10n">wip_ and .htm added automatically.  WARNING: overwrites file with the same name!</p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right save" onclick="RYU.toggleDialog('save_wip',0);RYU.submitPHPform('save_wip'); return false;">
+					<p><span class="symbol"></span><span class="label l10n">Save</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+	
+	<div id="save_file" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title"><span class="l10n">Save File</span> <span id="savetype"></span></h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td><span class="l10n">File</span>:</td><td><div id="save_input" style="width:100%;"></div></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint l10n">Correct path and extension added automatically.  WARNING: overwrites file with the same name!</p>
+			</td></tr><tr>
+			<td colspan="2">
+				<div class="button type2 right save" onclick="RYU.toggleDialog('save_file',0);RYU.submitPHPform('save_file'); return false;">
+					<p><span class="symbol"></span><span class="label l10n">Save</span></p>
+				</div>
+			</td></tr></table>
+		</div>
+	</div>
+
+	<div id="package-options" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Build Package</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td id="packtext">
+			<p class="l10n">This will construct a basic ZIP archive package of the current publication. If you want more control over what goes into the package, or to build a package using files already on your server, choose the Custom option below.</p>
+			</td></tr><tr>
+			<td>
+			<p><input type="radio" id="minipack" name="packtype" onchange="if(this.checked){document.getElementById('advsettings').style.display='none';document.getElementById('packtext').style.display='block';};"/> <span class="l10n">Smallest File Size</span> [<a id="pack_card1" href="javascript:if(document.getElementById('aboutmini').style.display=='none'){document.getElementById('aboutmini').style.display='block';document.getElementById('pack_card1').innerHTML='X';}else{document.getElementById('aboutmini').style.display='none';document.getElementById('pack_card1').innerHTML='?';};">?</a>]
+				<div id="aboutmini" style="display:none;">
+				<p style="margin-left:50px;">&#8416; <span class="l10n">No Add-ons</span><br/>
+				&#8416; <span class="l10n">No Themes</span><br />
+				&#8416; <span class="l10n">No Web Fonts</span><br/>
+				&#8416; <span class="l10n">No Source Code</span>
+				</p>
+				</div>
+			</p>
+			<p><input type="radio" id="basicpack" name="packtype" checked onchange="if(this.checked){document.getElementById('advsettings').style.display='none';document.getElementById('packtext').style.display='block';};"/> <span class="l10n">Standard Package</span> [<a id="pack_card2" href="javascript:if(document.getElementById('aboutstandard').style.display=='none'){document.getElementById('aboutstandard').style.display='block';document.getElementById('pack_card2').innerHTML='X';}else{document.getElementById('aboutstandard').style.display='none';document.getElementById('pack_card2').innerHTML='?';};">?</a>]
+				<div id="aboutstandard" style="display:none;">
+				<p style="margin-left:50px;">&#10010; <span class="l10n">Recommended Add-ons</span><br/>
+				&#10010; <span class="l10n">OS-integration Themes</span><br />
+				&#10010; <span class="l10n">All Web Fonts</span><br />
+				&#8416; <span class="l10n">No Source Code</span>
+				</p>
+				</div>
+			</p>
+			<p><input type="radio" id="advpack" name="packtype" onchange="if(this.checked){document.getElementById('advsettings').style.display='block';document.getElementById('packtext').style.display='none';};"/><span class="l10n">Custom Package</span></p>
+			</td></tr><tr>
+			<td><strong class="l10n">Title</strong>:<input type="text" id="pack_title" /></td></tr><tr>
+			<td style="text-align:right;"><input type="checkbox" id="time_stamp" name="time_stamp" value="1" checked/> <small class="l10n">Add Timestamp when Built</small></td>
+			</tr><tr>
+			<td><input type="checkbox" id="zineadd" value="1" checked onchange="if(this.checked){document.getElementById('zine_img').style.display='table-row';}else{if(document.getElementById('rackadd').checked){document.getElementById('zine_img').style.display='none';}else{this.checked=true;alert(RYU._lc('You cannot deselect BOTH Ryuzine and RyuzineRack!'));};};"/> <strong>Include Ryuzine Publication</strong></td>
+			</tr><tr id="zine_img" style="display:table-row;">	
+			<td><strong class="l10n">Image Folder</strong>: <em>/images/</em><select type="text" id="imagefolder_name" /></select></td>
+			</tr><tr>
+			<td>&nbsp;</td>
+			</tr>
+			</table>
+			<table id="advsettings" style="display:none;"><tr>
+			<td colspan="2"><input type="checkbox" id="keepthumbs"/> <span class="l10n">Preserve Editor Thumbnail Images</span></td></tr><tr>
+			<td colspan="2">&nbsp;</td></tr><tr>
+			<td colspan="2"><strong class="l10n">Ryuzine File</strong></td></tr><tr>
+			<td colspan="2"><strong class="l10n">Source</strong> <input type="radio" name="packfile_src" checked onchange="if(this.checked){document.getElementById('add_file_drop').style.display='none';};"/><span class="l10n">Export Box</span> <input type="radio" name="packfile_src" onchange="if(this.checked){document.getElementById('add_file_drop').style.display='table-cell';};"/> <span class="l10n">Server</span></td></tr><tr>
+			<td colspan="2" id="add_file_drop" style="display:none;"><span class="l10n">File</span>: <select id="packfile_drop"></select></td></tr><tr>
+			<td colspan="2" id="add_file_name"><span class="l10n">Save As...</span> :<input type="text" id="packfile_name" value="index.htm" /></td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2"><strong class="l10n">Configuration File</strong></td></tr><tr>
+			<td colspan="2">Source: <input type="radio" name="configfile_src" checked onchange="if(this.checked){document.getElementById('configfile_name').value='ryuzine.config.js';document.getElementById('add_config_drop').style.display='none';};"/><span class="l10n">Default</span> <input type="radio" name="configfile_src" onchange="if(this.checked){document.getElementById('add_config_drop').style.display='none';};"/><span class="l10n">Export Box</span> <input type="radio" name="configfile_src" onchange="if(this.checked){document.getElementById('add_config_drop').style.display='table-cell';};"/> <span class="l10n">Server</span></td></tr><tr>
+			<td colspan="2" id="add_config_drop" style="display:none;"><span class="l10n">File</span>: <select id="configfile_drop"></select></td></tr><tr>
+			<td colspan="2" id="add_config_name"><span class="l10n">Save As...</span> :<input type="text" id="configfile_name" value="ryuzine.config.js"  /></td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2"><strong class="l10n">Issue-Specific Stylesheet</strong></td></tr><tr>
+			<td colspan="2">Source: <input type="radio" name="cssfile_src" checked onchange="if(this.checked){document.getElementById('add_css_drop').style.display='none';document.getElementById('cssfile_name').value='thisissue.css'};"/><span class="l10n">Default</span> <input type="radio" name="cssfile_src" onchange="if(this.checked){document.getElementById('add_css_drop').style.display='none';};"/><span class="l10n">Export Box</span> <input type="radio" name="cssfile_src" onchange="if(this.checked){document.getElementById('add_css_drop').style.display='table-cell';};"/> <span class="l10n">Server</span></td></tr><tr>
+			<td colspan="2" id="add_css_drop" style="display:none;"><span class="l10n">File</span>: <select id="cssfile_drop"></select></td></tr><tr>
+			<td colspan="2" id="add_css_name"><span class="l10n">Save As...</span> :<input type="text" id="cssfile_name" value="thisissue.css" /></td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2" valign="top"><strong class="l10n">Fonts Folder</strong>:
+			<input type="checkbox" id="allfonts" onchange="if(this.checked){document.getElementById('all_fonts').style.display='none';}else{document.getElementById('all_fonts').style.display='table-cell';};" checked /><span class="l10n">Include All Fonts</span>
+			</td></tr><tr>
+			<td colspan="2" id="all_fonts" style="display:none;">
+				<em class="l10n">Font Folders:</em><br/>
+				<div id="fonts_list"></div>
+				<em class="l10n">Loose Fonts:</em><br/>
+				<div id="loose_fonts_list"></div>
+			</td></tr><tr>
+			<td colspan="2">&nbsp;</td></tr><tr>
+			<td colspan="2" valign="top"><strong class="l10n">Add-Ons</strong>: 
+			<input type="checkbox" id="alladdons" onchange="if(this.checked){document.getElementById('addon_list').style.display='none';}else{document.getElementById('addon_list').style.display='table-cell';};" /><span class="l10n">Include All Add-ons</span>
+			</td></tr><tr>
+			<td colspan="2" id="addon_list" style="display:table-cell;">
+			</td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>			
+			<td colspan="2" valign="top"><strong class="l10n">Theme UI</strong>: 
+			<input type="checkbox" id="allthemes" onchange="if(this.checked){document.getElementById('theme_list').style.display='none';}else{document.getElementById('theme_list').style.display='table-cell';}"/><span class="l10n">Include All Themes</span>
+			</td></tr><tr>
+			<td colspan="2" id="theme_list" style="display:table-cell;" >
+			</td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2"><input type="checkbox" id="customJSadd" onchange="if(this.checked){document.getElementById('customJS_src').style.display='table-cell';}else{document.getElementById('customJS_src').style.display='none';};"/>
+			<strong class="l10n">Custom Script</strong> <em class="l10n">(optional)</em></td></tr><tr>
+			<td colspan="2" id="customJS_src" style="display:none;"><span class="l10n">Source</span>: <span class="l10n">file should be in the /js folder</span><br/>
+				<span class="l10n">File Name:</span> <input type="text" id="customJSfile_name" /></td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2"><input type="checkbox" id="customCSSadd" onchange="if(this.checked){document.getElementById('customCSS_src').style.display='table-cell';}else{document.getElementById('customCSS_src').style.display='none';};" />
+			<strong class="l10n">Custom Stylesheet</strong> <em class="l10n">(optional)</em></td></tr><tr>
+			<td colspan="2" id="customCSS_src" style="display:none;"><span class="l10n">Source</span>: <span class="l10n">file should be in the /css folder</span><br />
+				<span class="l10n">File Name:</span> <input type="text" id="customCSSfile_name"/></td></tr><tr>
+			<td colspan="2">&nbsp;<td></tr><tr>
+			<td colspan="2"><input type="checkbox" id="sourceadd" value="1"/> <strong>Include Source Code</strong> <em class="l10n">(optional)</em></td>
+			</tr>
+			<td colspan="2">&nbsp;<td>
+			</tr></table>
+			<table>
+			<tr>
+			<td><input type="checkbox" id="rackadd" onchange="if(this.checked){document.getElementById('rackaddopt').style.display='table-cell';}else{if(document.getElementById('zineadd').checked){document.getElementById('rackaddopt').style.display='none';}else{this.checked=true;alert(RYU._lc('You cannot deselect BOTH Ryuzine and RyuzineRack!'));};};"/> <strong>Include Ryuzine Rack</strong></td></tr><tr>
+			<td id="rackaddopt" style="display:none;">
+				<table><tr>
+				<td><input type="checkbox" id="rackfile" onchange="if(this.checked){document.getElementById('packfile_name').value='issue.htm';}else{document.getElementById('packfile_name').value='index.htm';}"/><span class="l10n">Set Ryuzine Rack webapp as package</span> "index.htm"</td></tr><tr>
+				<td><strong>Ryuzine Rack Catalog</strong></td></tr><tr>
+				<td><span class="l10n">Source</span>: <input type="radio" checked name="catfile_src" onchange="if(this.checked){document.getElementById('add_cat_name').style.display='none';document.getElementById('cats_list').style.display='none';};"/><span class="l10n">All Catalogs in</span> <em>/data/</em> <input type="radio" name="catfile_src" onchange="if(this.checked){document.getElementById('add_cat_name').style.display='table-cell';document.getElementById('cats_list').style.display='none';};"/><span class="l10n">Export Box</span> <input type="radio" name="catfile_src" onchange="if(this.checked){document.getElementById('cats_list').style.display='table-cell';document.getElementById('add_cat_name').style.display='none';};"/> <span class="l10n">Server</span></td></tr><tr>
+				<td id="add_cat_name" style="display:none;"><span class="l10n">Save As...</span> :<input type="text" id="catfile_name" value="catalog1.htm" /></td></tr><tr>
+				<td id="cats_list" style="display:none;"></td></tr>
+				<td><strong class="l10n">Image Folder</strong>: 
+				<input type="checkbox" id="allrackimages" checked onchange="if(this.checked){document.getElementById('rackimg_list').style.display='none';}else{document.getElementById('rackimg_list').style.display='table-cell';};" /><em>/images/rack/*</em></td>
+				</td></tr><tr>
+				<td colspan="2" id="rackimg_list" style="display:none;">
+				</td></tr><tr>
+				<td colspan="2">&nbsp;<td></tr><tr>	
+				</tr>				
+				</table>
+			</td></tr>
+			</table><p></p>
+			<div class="left">
+				<p><input id="skip_zip" type="checkbox" value="1"/> <span class="l10n">Skip ZIP Archiving</span></p>
+			</div>
+			<div class="button type2 right build" onclick="RYU.buildPackage();if(document.getElementById('packaging').style.display=='none'){RYU.toggleDialog('package-options',0);};">
+				<p><span class="symbol"></span><span class="label l10n">Build</span></p>
+			</div>
+			<p style="clear:both;text-align:center;"><span class="smallprint l10n">Note: If your development directory is not writable Build Package will fail.</span></p>
+			<div style="position:relative;top:15px;margin-bottom:15px;" onclick="if(document.getElementById('packaging').style.display=='none'){document.getElementById('packaging').style.display='block';document.getElementById('showserver').style.display='none';document.getElementById('hideserver').style.display='block';}else{document.getElementById('packaging').style.display='none';document.getElementById('showserver').style.display='block';document.getElementById('hideserver').style.display='none';};">
+				<div id="showserver" style="display:none;">+ <span class="l10n">Show</span> <span class="l10n">Output Console</span></div>
+				<div id="hideserver">- <span class="l10n">Hide</span> <span class="l10n">Output Console</span></div>
+			</div>
+			<div id="packaging" style="margin-bottom:20px;"></div>
+		</div>
+	</div>
+
+<!--// Editor Dialogs //-->
+	<div id="add-template" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Template Wizard</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td class="textright"><span class="l10n">Title</span>:</td><td><input id="magtitle" type="text" value="" style="width: 90%"/></td>
+			</tr><tr>
+			<td class="textright"><span class="l10n">Page Count</span>:</td><td><input type="text" id="numpgs" value="2" style="width:10%;"/><em>(required!)</em></td>
+			</tr><tr>
+			<td colspan="2"><input type="checkbox" name="wcyes" id="wcyes" onchange="if(this.checked){document.getElementById('wc0').style.display='table-row';document.getElementById('wc1').style.display='table-row';document.getElementById('wc2').style.display='table-row';}else{document.getElementById('wc0').style.display='none';document.getElementById('wc1').style.display='none';document.getElementById('wc2').style.display='none';};"/><span class="l10n">Show Webcomic Options</span></td><td>
+			</tr>
+			<tr id="wc0" style="display:none;">
+			<td><span class="right l10n">Image Folder</span></td><td>:<i>images/</i><input id="wcfolder" value="" style="width:70%" /></td>
+			</tr>	
+			<tr id="wc1" style="display:none;">		
+			<td valign="top"><span class="right l10n">File Name:</span></td>
+			<td>
+					<table border="0" cellspacing="0" cellpadding="0" width="94%" style="width:94%;margin:0;padding:0;"><tr><td>
+					<input type="text" id="wcprefix" style="width:90%" />
+					</td><td>
+					<select id="wczero">
+						<option value="0" selected>1</option>
+						<option value="1">01</option>
+						<option value="2">001</option>
+						<option value="3">0001</option>
+					</select>
+					</td><td>
+					<input type="text" id="wcsuffix" style="width:90%" />
+					</td><td>
+					<select id="wctype">
+						<option value="jpg" selected>.jpg</option>
+						<option value="jpeg">.jpeg</option>
+						<option value="png">.png</option>
+						<option value="gif">.gif</option>
+						<option value="JPG">.JPG</option>
+						<option value="JPEG">.JPEG</option>
+						<option value="PNG">.PNG</option>
+						<option value="GIF">.GIF</option>
+					</select>
+					</td></tr><tr>
+					<td class="text-center"><span class="smallprint l10n">prefix</span></td>
+					<td class="text-center"><span class="smallprint l10n">count</span></td>
+					<td class="text-center"><span class="smallprint l10n">suffix</span></td>
+					<td class="text-center"><span class="smallprint l10n">type</span></td>
+					</tr>
+					</table>
+			</td>
+			</tr>
+			<tr id="wc2" style="display:none;">
+			<td colspan="2">
+				<table cellpadding="0" cellspacing="0" width="100%" border="0"><tr>
+				<td colspan="2"><input type="checkbox" name="wcmanga" id="wcmanga" /><span class="l10n">Manga Binding (right-side)</span></td>
+				</tr><tr>
+				<td colspan="2"><input type="checkbox" name="wcstyles" id="wcstyles" onchange="if(!this.checked){document.getElementById('wccontain').checked=false;document.getElementById('wccover').checked=false;}"/><span class="l10n">Add Comic Book Styles</span></td>
+				</tr><tr>
+				<td width="15"></td><td><input type="checkbox" name="wccontain" id="wccontain" onchange="if(this.checked){document.getElementById('wcstyles').checked=true;};"/><span class="l10n">Fit Images By BOTH Width and Height to Live Area</span>
+				</tr><tr>
+				<td width="15"></td><td><input type="checkbox" name="wccover" id="wccover" onchange="if(this.checked){document.getElementById('wcstyles').checked=true;};"/><span class="l10n">Fit Front and Back Covers to Page Size</span><br/>
+				<span class="smallprint l10n">Fit sets as background images.  Pages do not scroll!</span></td></td>
+				</tr><tr>
+				<td colspan="2"><input type="checkbox" name="onerun" id="onerun" onchange="if(this.checked){document.getElementById('lb_ask').style.opacity='.5';document.getElementById('signs_ask').style.opacity='.5';document.getElementById('banner_ask').style.opacity='.5';document.getElementById('splash_ask').style.opacity='.5';document.getElementById('lbyes').checked=false;document.getElementById('hellogoodbye').checked=false;document.getElementById('advert').checked=false;document.getElementById('splashad').checked=false;}else{document.getElementById('lb_ask').style.opacity='1';document.getElementById('signs_ask').style.opacity='1';document.getElementById('banner_ask').style.opacity='1';document.getElementById('splash_ask').style.opacity='1';};"/><span style="font-weight: bold;" class="l10n">BUILD COMIC ON SUBMIT</span></td>
+				</tr></table>
+			</td>
+			</tr>
+			<td colspan="2" id="lb_ask"><input type="checkbox" name="lbyes" id="lbyes" onchange="if(document.getElementById('onerun').checked){this.checked=false;};" /><span class="l10n">Lightboxes</span>: <input type="text" id="numlbs" value="" style="width:10%;"/><em>(gallery items)</em></td>
+			</tr><tr>
+			<td><span class="l10n">Social Widget</span>:</td><td><input type="radio" value="builtin" id="swbi" name="socwidget" checked /><span class="l10n">Built-In</span><input type="radio" value="custom" name="socwidget" /><span class="l10n">Custom</span></td>
+			</tr><tr>
+			<td id="templateoffline">Offline URL:</td><td><input type="text" id="urlbox" value="" style="width:90%"/></td>
+			</tr><tr>
+			<td colspan="2" id="applogo_ask"><input type="checkbox" id="applogo" onchange="if(document.getElementById('onerun').checked){this.checked=false;};"/> <span class="l10n">App Logo</span></td>
+			</tr><tr>
+			<td colspan="2" id="signs_ask"><input type="checkbox" id="hellogoodbye" onchange="if(document.getElementById('onerun').checked){this.checked=false;};"/> <span class="l10n">Welcome</span> &amp; <span class="l10n">Exit Message</span></td>
+			</tr><tr>
+			<td colspan="2" id="banner_ask"><input type="checkbox" id="advert" onchange="if(document.getElementById('onerun').checked){this.checked=false;};"/> <span class="l10n">Banner Ad</span></td>
+			</tr><tr>
+			<td colspan="2" id="splash_ask"><input type="checkbox" id="splashad" onchange="if(document.getElementById('onerun').checked){this.checked=false;};"/> <span class="l10n">Splash Ad</span></td>
+			</tr><tr>
+			<td><span class="l10n">Copyright</span>:</td><td><input type="text" value="" id="copynote" style="width:90%;" value="" /></td>
+			</tr></table><p></p>
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('add-template',0);RYU.loadTemplate();RYU.slideSpace(1);">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>
+		</div>
+	</div>
+	
+	<div id="doc-properties" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Document Properties</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table style="width:95%;"><tr>
+				<td><span class="l10n">Title</span>:</td>	<td><input type="text" style="width:100%;" id="my_doc_title" /></td>
+				</tr><tr>
+				<td><span class="l10n">Author</span>:</td><td><input type="text" style="width:100%;" id="my_doc_author" /></td>
+				</tr><tr>
+				<td><span class="l10n">Copyright</span>:</td>	<td><input type="text" style="width:100%;" id="my_doc_copyright" /></td>
+				</tr><tr>
+				<td><span class="l10n">File Format</span>:</td>	<td><span id="my_doc_version"></span></td>
+				</tr><tr>
+				<td><span class="l10n">Page Count</span>:</td>	<td id="my_doc_pagecount"></td>
+				</tr><tr>
+				<td colspan="2"><span class="l10n">Description</span> <em><span id="my_doc_charcount">0</span> <span class="l10n">characters (max 155 recommended)</span></em></td></tr><tr>
+				<td colspan="2"><textarea style="width:100%;resize:vertical;" id="my_doc_summary" 
+				onKeyDown="RYU.countChars('my_doc_summary','my_doc_charcount');" 
+				onKeyUp="RYU.countChars('my_doc_summary','my_doc_charcount');"></textarea></td>
+				</tr><tr>
+				<td colspan="2"><span class="l10n">Keywords</span>: <em class="l10n">(optional comma separated list)</em></td></tr><tr>
+				<td colspan="2"><textarea style="width:100%;resize:vertical;" id="my_doc_keywords"></textarea></td>
+				</tr><tr>
+				<td colspan="2"><hr></td>
+				</tr><tr>
+				<td><input type="checkbox" id="my_app_logo"> <span class="l10n">App Logo</span><br/>
+					<input type="checkbox" id="my_doc_welcome"> <span class="l10n">Welcome</span><br/>
+					<input type="checkbox" id="my_doc_banner"> <span class="l10n">Banner Ad</span><br/>
+					<input type="checkbox" id="my_doc_link"> Permalink			
+				</td>
+				<td><input type="checkbox" id="my_doc_goodbye"> <span class="l10n">Exit Message</span><br/>
+					<input type="checkbox" id="my_doc_splash"> <span class="l10n">Splash Ad</span><br/>
+					<input type="checkbox" id="my_doc_boxad"> <span class="l10n">Box Ad</span></br/>
+					<input type="checkbox" id="my_doc_social"> <span class="l10n">Custom</span> <span class="l10n">Social Widget</span>
+				</td>
+				</tr><tr>
+				<td colspan="2"><hr/><span class="l10n">Import Notes</span>:</td>
+				</tr><tr>
+				<td colspan="2" valign="top" style="vertical-align:top;height: 50px;overflow:auto;background:black;color:white;font-size:10px;font-family: Consolas,Monaco,'Lucida Console','Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New', monospace;" id="doc_report">
+					> this document was not imported.
+				</td>
+				</tr><tr>
+				<td colspan="2"><hr/></td>
+				</tr><tr>
+				<td>
+					<div class="button type2 left refresh" onclick="var c=confirm('This will reload properties from the document in the Editor.  Any recent changes to the Document Properties will be lost.  Refresh?');if(c==true){RYU.getDocProps();};">
+						<p><span class="symbol"></span><span class="label l10n">Refresh</span></p>
+					</div>
+				</td>
+				<td>
+					<div class="button type2 right submit" onclick="RYU.setDocProps();RYU.toggleDialog('doc-properties',0);">
+						<p><span class="symbol"></span><span class="label l10n">Submit</span></p>
+					</div>
+				</td>
+				</tr>
+			</table>
+		</div>
+	</div>	
+
+	<div id="output-options" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Output Format</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td colspan="2">
+
+		 <select id="natLang" onchange="this.options[this.selectedIndex].value;return false;">
+			<option value="aa">aa Afar</option>
+			<option value="ab">ab Abkhazian</option>
+			<option value="af">af Afrikaans</option>
+			<option value="am">am Amharic</option>
+			<option value="ar">ar Arabic</option>
+			<option value="as">as Assamese</option>
+			<option value="ay">ay Aymara</option>
+			<option value="az">az Azerbaijani</option>
+			
+			<option value="ba">ba Bashkir</option>
+			<option value="be">be Byelorussian</option>
+			<option value="bg">bg Bulgarian</option>
+			<option value="bh">bh Bihari</option>
+			<option value="bi">bi Bislama</option>
+			<option value="bn">bn Bengali; Bangla</option>
+			<option value="bo">bo Tibetan</option>
+			<option value="br">br Breton</option>
+			
+			<option value="ca">ca Catalan</option>
+			<option value="co">co Corsican</option>
+			<option value="cs">cs Czech</option>
+			<option value="cy">cy Welsh</option>
+			
+			<option value="da">da danish</option>
+			<option value="de">de german</option>
+			<option value="dz">dz Bhutani</option>
+			
+			<option value="el">el Greek</option>
+			<option value="en" selected>en English</option>
+			<option value="eo">eo Esperanto</option>
+			<option value="es">es Spanish</option>
+			<option value="et">et Estonian</option>
+			<option value="eu">eu Basque</option>
+			
+			<option value="fa">fa Persian</option>
+			<option value="fi">fi Finnish</option>
+			<option value="fj">fj Fiji</option>
+			<option value="fo">fo Faeroese</option>
+			<option value="fr">fr French</option>
+			<option value="fy">fy Frisian</option>
+			
+			<option value="ga">ga Irish</option>
+			<option value="gd">gd Scots Gaelic</option>
+			<option value="gl">gl Galician</option>
+			<option value="gn">gn Guarani</option>
+			<option value="gu">gu Gujarati</option>
+			
+			<option value="en">ha Hausa</option>
+			<option value="en">hi Hindi</option>
+			<option value="en">hr Croatian</option>
+			<option value="en">hu Hungarian</option>
+			<option value="en">hy Armenian</option>
+			
+			<option value="ia">ia Interlingua</option>
+			<option value="ie">ie Interlingue</option>
+			<option value="ik">ik Inupiak</option>
+			<option value="in">in Indonesian</option>
+			<option value="is">is Icelandic</option>
+			<option value="it">it Italian</option>
+			<option value="iw">iw Hebrew</option>
+			
+			<option value="ja">ja Japanese</option>
+			<option value="ji">ji Yiddish</option>
+			<option value="jw">jw Javanese</option>
+			
+			<option value="ka">ka Georgian</option>
+			<option value="kk">kk Kazakh</option>
+			<option value="kl">kl Greenlandic</option>
+			<option value="km">km Cambodian</option>
+			<option value="kn">kn Kannada</option>
+			<option value="ko">ko Korean</option>
+			<option value="ks">ks Kashmiri</option>
+			<option value="ku">ku Kurdish</option>
+			<option value="ky">ky Kirghiz</option>
+			
+			<option value="la">la Latin</option>
+			<option value="ln">ln Lingala</option>
+			<option value="lo">lo Laothian</option>
+			<option value="lt">lt Lithuanian</option>
+			<option value="lv">lv Latvian, Lettish</option>
+			
+			<option value="mg">mg Malagasy</option>
+			<option value="mi">mi Maori</option>
+			<option value="mk">mk Macedonian</option>
+			<option value="ml">ml Malayalam</option>
+			<option value="mn">mn Mongolian</option>
+			<option value="mo">mo Moldavian</option>
+			<option value="mr">mr Marathi</option>
+			<option value="ms">ms Malay</option>
+			<option value="mt">mt Maltese</option>
+			<option value="my">my Burmese</option>
+			
+			<option value="na">na Nauru</option>
+			<option value="ne">ne Nepali</option>
+			<option value="nl">nl Dutch</option>
+			<option value="no">no Norwegian</option>
+			
+			<option value="oc">oc Occitan</option>
+			<option value="om">om (Afan) Oromo</option>
+			<option value="or">or Oriya</option>
+			
+			<option value="pa">pa Punjabi</option>
+			<option value="pl">pl Polish</option>
+			<option value="ps">ps Pashto, Pushto</option>
+			<option value="pt">pt Portuguese</option>
+			
+			<option value="qu">qu Quechua</option>
+			
+			<option value="rm">rm Rhaeto-Romance</option>
+			<option value="rn">rn Kirundi</option>
+			<option value="ro">ro Romanian</option>
+			<option value="ru">ru Russian</option>
+			<option value="rw">rw Kinyarwanda</option>
+			
+			<option value="sa">sa Sanskrit</option>
+			<option value="sd">sd Sindhi</option>
+			<option value="sg">sg Sangro</option>
+			<option value="sh">sh Serbo-Croatian</option>
+			<option value="si">si Singhalese</option>
+			<option value="sk">sk Slovak</option>
+			<option value="sl">sl Slovenian</option>
+			<option value="sm">sm Samoan</option>
+			<option value="sn">sn Shona</option>
+			<option value="so">so Somali</option>
+			<option value="sq">sq Albanian</option>
+			<option value="sr">sr Serbian</option>
+			<option value="ss">ss Siswati</option>
+			<option value="st">st Sesotho</option>
+			<option value="su">su Sudanese</option>
+			<option value="sv">sv Swedish</option>
+			<option value="sw">sw Swahili</option>
+			
+			<option value="ta">ta Tamil</option>
+			
+			<option value="te">te Telugu</option>
+			<option value="tg">tg Tajik</option>
+			<option value="th">th Thai</option>
+			<option value="ti">ti Tigrinya</option>
+			<option value="tk">tk Turkmen</option>
+			<option value="tl">tl Tagalog</option>
+			<option value="tn">tn Setswana</option>
+			<option value="to">to Tonga</option>
+			<option value="tr">tr Turkish</option>
+			<option value="ts">ts Tsonga</option>
+			<option value="tt">tt Tatar</option>
+			<option value="tw">tw Twi</option>
+			
+			<option value="uk">uk Ukrainian</option>
+			<option value="ur">ur Urdu</option>
+			<option value="uz">uz Uzbek</option>
+			
+			<option value="vi">vi Vietnamese</option>
+			<option value="vo">vo Volapuk</option>
+			
+			<option value="ewo">wo Wolof</option>
+			
+			<option value="xh">xh Xhosa</option>
+			
+			<option value="yo">yo Yoruba</option>
+			
+			<option value="zh">zh Chinese</option>
+			<option value="zu">zu Zulu</option>
+		 </select>			
+		 <span class="l10n">Natural Language</span>
+			</td></tr><tr>
+			<td><input type="checkbox" id="inpage_css"/><span class="l10n">Preserve In-Page Styles</span></td></tr><tr>
+			<td id="party3opt" style="padding-left:15px;"></td></tr><tr>
+			<td colspan="2"><strong style="float:left;" class="l10n">Issue Configuration</strong>: <div style="float:left;"><input type="radio" id="configit0" name="configit" onchange="document.getElementById('customConfig').style.display='none';" checked /><span class="l10n">Default</span> <input type="radio" id="configit1" name="configit" onchange="document.getElementById('customConfig').style.display='table-cell';" /><span class="l10n">Custom</span> <input type="radio" id="configit2" name="configit" onchange="document.getElementById('customConfig').style.display='none';"/><span class="l10n">Test</span></div></td></tr><tr>
+			<td colspan="2" id="customConfig" style="display:none;"><span class="leader">File Name:</span> js/<input type="text" id="configName"  /></td></tr><tr>
+			<td colspan="2"><strong class="l10n">Default Theme</strong>: <input type="radio" name="dTheme" value="0" checked onchange="document.getElementById('custotheme').style.display='none';" /><span class="l10n">Dark</span> <input type="radio" name="dTheme" value="1" onchange="document.getElementById('custotheme').style.display='none';" /><span class="l10n">Light</span> <input type="radio" name="dTheme" value="2" onchange="document.getElementById('custotheme').style.display='table-cell';" /><span class="l10n">Custom</span></td></tr><tr>
+			<td colspan="2" id="custotheme" style="display:none;"><span class="l10n">Theme Name</span>: <input type="text" id="dThemeName"  /></td></tr><tr>
+			<td colspan="2"><strong style="float:left;" class="l10n">Issue Styles</strong>: <div style="float:left;"><input type="radio" id="edition0" name="edition" onchange="document.getElementById('customFile').style.display='none';" checked />thisissue.css <input type="radio" id="edition1" name="edition" onchange="document.getElementById('customFile').style.display='table-cell';" /><span class="l10n">Custom</span> <input type="radio" id="edition2" name="edition" onchange="document.getElementById('customFile').style.display='none';alert('This if fine while working on your publication, however these styles should be moved to an external stylesheet before disribution.');" /><span class="l10n">CSS Export Box</span></div></td></tr><tr>
+			<td colspan="2" id="customFile" style="display:none;"><span class="l10n">File Name:</span> css/<input type="text" id="editionName"  /></td></tr><tr>
+			<td colspan="2"><input type="checkbox" id="custCSS" onchange="if(this.checked){document.getElementById('custCSS_li').style.display='table-cell';}else{document.getElementById('custCSS_li').style.display='none';};"/><strong class="l10n">Custom External Stylesheet</strong></td></tr><tr>
+			<td colspan="2" id="custCSS_li" style="display:none;"><span class="l10n">File Name:</span> <input type="text" id="custCSSName"  /><br/><span class="smallprint" style="display:block;float:right;">(full/relative path + filename.css)</span></td></tr><tr>
+			<td colspan="2"><input type="checkbox" id="custJS" onchange="if(this.checked){document.getElementById('custJS_li').style.display='table-cell';document.getElementById('custJL_li').style.display='table-cell';}else{document.getElementById('custJS_li').style.display='none';document.getElementById('custJL_li').style.display='none';};" /><strong class="l10n">Custom Additional Script</strong></td></tr><tr>
+			<td colspan="2" id="custJS_li" style="display:none;"><span class="l10n">File Name:</span> <input type="text" id="custJSName"  /><br/><span class="smallprint"  style="display:block;float:right;">(full/relative path + filename.js)</span></td></tr><tr>
+			<td colspan="2" id="custJL_li" style="display:none;"><strong class="l10n">Load Script</strong>:
+			<input type="radio" id="loadwhen0" name="loadwhen" value="0" /><span class="l10n">First</span>
+			<input type="radio" id="loadwhen1" name="loadwhen" value="1" /><span class="l10n">Last</span>
+			<input type="radio" id="loadwhen2" name="loadwhen" value="2" /><span class="l10n">End of Page</span></td></tr><tr>
+			<td colspan="2"><span class="smallprint l10n">Note: Configuration file setting can override some of these options.</span></td>
+			</tr></table><p></p>
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('output-options',0);RYU.outputOptions();">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>		
+		</div>
+	</div>	
+	
+	<div id="insert_pages_dialog" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Insert Pages</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+				<td><span class="l10n">Insert</span> <input type="number" value="1" id="insert_pages_count" min="1"/> <span class="l10n">pages</span><br/>
+						<select id="insert_pages_where" onchange="if(this.value==0||this.value==1){document.getElementById('insert_at_index').style.opacity=.5;}else{document.getElementById('insert_at_index').style.opacity=1.0;};">
+							<option value="0" class="l10n" selected>at end of document</option>
+							<option value="1" class="l10n">at start of document</option>
+							<option value="2" class="l10n">after page</option>
+							<option value="3" class="l10n">before page</option>
+						   </select> <input type="number" value="0" id="insert_at_index" min="0" style="opacity:.5;" onfocus="RYU.setMax(this);"/></td>
+			</tr></table>
+			<div style="clear:both;"></div>		
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('insert_pages_dialog',0);RYU.insert_pages();">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>		
+		</div>
+	</div>
+
+	<div id="newstyle" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Add New Style</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<ul class="tabs">
+			<li id="newstyle_tab0" class="tab l10n"  style="z-index:10;">Font</li>
+			<li id="newstyle_tab1" class="tab l10n"  style="z-index:7;">Object</li>
+			<li id="newstyle_tab2" class="tab l10n"  style="z-index:4;">Effects</li>
+		</ul>
+		<div class="area action tabsections">
+			<form class="left">
+				<label class="l10n">Style Code</label>
+				<textarea id="newcss_style"></textarea>
+				<span class="smallprint l10n">Generated code appears above. You can also enter/edit code in this box before submission.</span>
+			</form>
+			<form class="right">
+				<fieldset id="newstyle_section0" class="stylesection" style="display:block;">
+					<legend class="l10n">Font Styles</legend>
+					<hr/>
+					<fieldset class="boxed">
+						<legend class="l10n">General</legend>
+						<label class="qtr left l10n">Style Name</label><div class="half left" style="margin-left:10px;"><input type="text" id="css_classname" title="include '.' for classnames"/></div>
+						<label class="qtr left clear l10n">Based On</label>
+						<div class="half left" style="margin-left: 10px;">
+							<select id="css_basedon"><!--// auto generated list of existing styles? //-->
+								<option value="">None</option>
+							</select>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Basic Font Styles</legend>
+						<label class="qtr left l10n">Font Family</label><div class="half left"><input type="text" id="css_family"/></div>
+						<div class="half left">
+							<label class="half left l10n">Font Weight</label>
+							<div class="half">
+								<select id="css_weight">
+									<option value="" class="l10n">Default</option>
+									<option value="normal" class="l10n">Normal</option>
+									<option value="bold" class="l10n">Light</option>
+									<option value="light" class="l10n">Lighter</option>
+									<option value="lighter" class="l10n">Bold</option>
+									<option value="bolder" class="l10n">Bolder</option>
+									<option value="initial" class="l10n">Initial</option>
+									<option value="inherit" class="l10n">Inherit</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="half left l10n">Font Style</label>
+							<div class="half">
+								<select id="css_style">
+									<option value="" class="l10n">Default</option>
+									<option value="normal"  class="l10n">Normal</option>
+									<option value="oblique" class="l10n">Oblique</option>
+									<option value="italic"  class="l10n">Italic</option>
+									<option value="light"   class="l10n">Light</option>
+									<option value="initial" class="l10n">Initial</option>
+									<option value="inherit" class="l10n">Inherit</option>
+								</select>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="half left l10n">Size</label>
+							<div class="half">
+								<input id="css_fontsize" type="number" min="0" max="150" value=""/>
+								<select id="css_fontsize_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="half left l10n">Line Height</label>
+							<div class="half">
+								<input id="css_lineheight" type="number" value=""/>
+								<select id="css_lineheight_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>	
+							</div>
+						</div>
+						<div class="half left">
+							<label class="half left l10n">Decoration</label>
+							<div class="half">
+								<select id="css_decoration">
+									<option value="" class="l10n">Default</option>
+									<option value="none" class="l10n">None</option>
+									<option value="underline" class="l10n">Underline</option>
+									<option value="overline" class="l10n">Overline</option>
+									<option value="line-through" class="l10n">Line-Through</option>
+									<option value="initial" class="l10n">Initial</option>
+									<option value="inherit" class="l10n">Inherit</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="half left l10n">Text Wrap</label>
+							<div class="half">
+								<select id="css_textwrap">
+									<option value="">Default</option>
+									<option value="white-space: normal">Normal White Space</option>
+									<option value="white-space: nowrap">No-Wrap White Space</option>
+									<option value="white-space: pre">Preformat White Space</option>
+									<option value="white-space: pre-line">Preformat Line</option>
+									<option value="white-space: pre-wrap">Preformat Wrap</option>
+									<option value="white-space: initial">Initial White Space</option>
+									<option value="white-space: inherit">Inherit White Space</option>
+									<option value="word-wrap: normal">Normal Word Wrap</option>
+									<option value="word-wrap: break-word">Force Word Breaks</option>
+									<option value="word-wrap: initial">Initial Word Wrap</option>
+									<option value="word-wrap: inherit">Inherit Word Wrap</option>
+									<option value="word-break: normal">Normal Word Breaks Words</option>
+									<option value="word-break: break-all">Allow Letter Pair Breaks</option>
+									<option value="word-break: keep-all">Prohibit Letter Pair Breaks</option>
+									<option value="word-break: initial">Initial Word Breaks</option>
+									<option value="word-break: inherit">Inherit Word Breaks</option>
+								</select>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="half left l10n">Text Color</label>
+							<div class="half">
+								<input id="css_fontcolor" name="css_fontcolor" type="text" class="colorpicker" value=""/><input type="text" id="css_fontcolor_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+								callback:function(color){document.getElementById('css_fontcolor').value=color;RYU.buildCustomCSS();},
+								zindex:9999
+								});myPicker.open('bottom,right',this);" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:transparent;color:transparent;"/>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="half left l10n">Text Highlight</label>
+							<div class="half">
+								<input id="css_fontbackcolor" name="css_fontbackcolor" type="text" class="colorpicker" value=""/><input type="text" id="css_fontbackcolor_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+								callback:function(color){document.getElementById('css_fontbackcolor').value=color;RYU.buildCustomCSS();},
+								zindex:9999
+								});myPicker.open('bottom,right',this);" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:transparent;color:transparent;"/>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Advanced Font Styles</legend>
+							<label class="third left l10n">Case</label>
+							<div class="half left">
+								<select id="css_texttransform">
+									<option value="" class="l10n">Default</option>
+									<option value="none" class="l10n">None</option>
+									<option value="uppercase" class="l10n">UPPERCASE</option>
+									<option value="lowercase" class="l10n">lowercase</option>
+									<option value="capitalize" class="l10n">Capitalize</option>
+								</select>
+							</div>
+							<label class="third left l10n">Align</label>
+							<div class="half left">
+								<select id="css_textalign">
+									<option value="" class="l10n">Default</option>
+									<option value="left"  class="l10n">Left</option>
+									<option value="right" class="l10n">Right</option>
+									<option value="center" class="l10n">Center</option>
+									<option value="justify" class="l10n">Justify</option>
+								</select>								
+							</div>
+							<label class="third left l10n">Letter Spacing</label>
+							<div class="left">
+								<select id="css_letterspace">
+									<option value="" class="l10n">Default</option>
+									<option value="normal" class="l10n">Normal</option>
+									<option value="length" class="l10n">Length</option>
+									<option value="initial" class="l10n">Initial</option>
+									<option value="inherit" class="l10n">Inherit</option>
+								</select>					
+							</div>
+							<div class="left">
+								<input id="css_letterspace_length" type="number"/>
+								<select id="css_letterspace_units" class="css_units">
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+							<label class="third left l10n">Word Spacing</label>
+							<div class="left">
+								<select id="css_wordspace">
+									<option value="" class="l10n">Default</option>
+									<option value="normal" class="l10n">Normal</option>
+									<option value="length" class="l10n">Length</option>
+									<option value="initial" class="l10n">Initial</option>
+									<option value="inherit" class="l10n">Inherit</option>
+								</select>					
+							</div>
+							<div class="left">
+								<input id="css_wordspace_length" type="number" min="0"/>
+								<select id="css_wordspace_units" class="css_units">
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+					</fieldset>
+				</fieldset>
+				
+				<fieldset id="newstyle_section1" class="stylesection">
+					<legend class="l10n">Object Styles</legend>
+					<hr/>
+					<fieldset class="boxed">
+						<legend class="l10n">Size</legend>
+						<div class="half left">
+							<label class="third l10n">Height</label>
+							<div class="half">
+								<input id="css_object_height" type="number" min="0"/>
+								<select id="css_object_height_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Width</label>
+							<div class="half">
+								<input id="css_object_width" type="number" min="0"/>
+								<select id="css_object_width_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend><input type="checkbox" id="css_object_bg"/> <span class="l10n">Background</span></legend>
+						<div class="half left">
+							<label class="third l10n">Color</label>
+							<div class="half">
+								<input id="css_object_bgcolor" name="css_object_bgcolor" type="text" class="colorpicker" value=""/>
+								<input type="text" id="css_object_bgcolor_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+								callback:function(color){document.getElementById('css_object_bgcolor').value=color;RYU.buildCustomCSS();},
+								zindex:9999
+								});myPicker.open('bottom,right',this);" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:transparent;color:transparent;"/>
+							</div>
+						</div>
+						<div class="half right">
+							<label class="third l10n">Image</label>
+							<div class="half">
+								<input id="css_object_bgimage" type="text"/>
+							</div>
+						</div>
+						<div class="half left l10n">Background Position</div>
+						<div class="half right">
+							<select id="css_object_bgpos">
+								<option value="0 0" selected class="l10n">Default</option>
+								<option value="custom" class="l10n">Custom (enter values below)</option>
+								<option value="top left">Top Left</option>
+								<option value="bottom left">Bottom Left</option>
+								<option value="top center">Top Center</option>
+								<option value="bottom center">Bottom Center</option>
+								<option value="center center">Center Center</option>
+								<option value="center left">Center Left</option>
+								<option value="center right">Center Right</option>
+								<option value="top right">Top Right</option>
+								<option value="bottom right">Bottom Right</option>
+							</select>
+						</div>
+						<div class="half left">
+							<label class="third l10n">Horizontal</label>
+							<div class="half">
+								<input  id="css_object_bgpos_x" type="number"/>
+								<select id="css_object_bgpos_x_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Vertical</label>
+							<div class="half">
+								<input  id="css_object_bgpos_y" type="number"/>
+								<select id="css_object_bgpos_y_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="half left l10n">Background Size</div>
+						<div class="half right">
+							<select id="css_object_bgsize">
+								<option value="" selected class="l10n">Default</option>
+								<option value="custom" class="l10n">Custom (enter values below)</option>
+								<option value="auto auto">auto auto</option>
+								<option value="cover">Cover</option>
+								<option value="contain">Contain</option>
+								<option value="100% 100%" class="l10n">Fill By Width and Height</option>
+								<option value="100% auto" class="l10n">Fill By Width</option>
+								<option value="auto 100%" class="l10n">Fill By Height</option>
+							</select>
+						</div>
+						<div class="half left">
+							<label class="third l10n">Horizontal</label>
+							<div class="half">
+								<input  id="css_object_bgsize_x" type="number"/>
+								<select id="css_object_bgsize_x_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Vertical</label>
+							<div class="half">
+								<input  id="css_object_bgsize_y" type="number"/>
+								<select id="css_object_bgsize_y_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Position</legend>
+						<div class="half left">
+							<label class="third l10n">Position</label>
+							<div class="half">
+								<select id="css_object_pos">
+									<option value="">Default</option>
+									<option value="relative">Relative</option>
+									<option value="absolute">Absolute</option>
+									<option value="fixed">Fixed</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Display</label>
+							<div class="half">
+								<select id="css_object_display">
+									<option value="">Default</option>
+									<option value="inline">Inline</option>
+									<option value="block">Block</option>
+									<option value="inline-block">Inline-Block</option>
+									<option value="none">None (Hidden)</option>
+								</select>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="third l10n">Top</label>
+							<div class="half">
+								<input  id="css_object_pos_top" type="number"/>
+								<select id="css_object_pos_top_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Left</label>
+							<div class="half">
+								<input  id="css_object_pos_left" type="number"/>
+								<select id="css_object_pos_left_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="textcenter linker clear"><label class="l10n">Link</label><input id="css_object_pos_linked" type="checkbox" checked/></div>
+						<div class="half left">
+							<label class="third l10n">Bottom</label>
+							<div class="half">
+								<input  id="css_object_pos_bottom" type="number"/>
+								<select id="css_object_pos_bottom_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="quarter l10n">Right</label>
+							<div class="half">
+								<input  id="css_object_pos_right" type="number"/>
+								<select id="css_object_pos_right_units" class="css_units">
+									<option value="auto">auto</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">															
+						<legend><input type="checkbox" id="css_object_pad"/> <span class="l10n">Padding</span></legend>
+						<div class="half left">
+							<label class="third l10n">Top</label>
+							<div class="half">
+								<input  id="css_object_pad_top" type="number" min="0"/>
+								<select id="css_object_pad_top_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Left</label>
+							<div class="half">
+								<input  id="css_object_pad_left" type="number" min="0"/>
+								<select id="css_object_pad_left_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="textcenter linker clear"><label class="l10n">Link</label><input id="css_object_pad_linked" type="checkbox" checked/></div>
+						<div class="half left">
+							<label class="third l10n">Bottom</label>
+							<div class="half">
+								<input  id="css_object_pad_bottom" type="number" min="0"/>
+								<select id="css_object_pad_bottom_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Right</label>
+							<div class="half">
+								<input  id="css_object_pad_right" type="number" min="0"/>
+								<select id="css_object_pad_right_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend><input id="css_object_margin" type="checkbox"/> <span class="l10n">Margin</span></legend>
+						<div class="half left">
+							<label class="third l10n">Top</label>
+							<div class="half">
+								<input  id="css_object_margin_top" type="number"/>
+								<select id="css_object_margin_top_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Left</label>
+							<div class="half">
+								<input  id="css_object_margin_left" type="number"/>
+								<select id="css_object_margin_left_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="textcenter linker clear"><label class="l10n">Link</label><input id="css_object_margin_linked" type="checkbox" checked/></div>
+						<div class="half left">
+							<label class="third l10n">Bottom</label>
+							<div class="half">
+								<input  id="css_object_margin_bottom" type="number"/>
+								<select id="css_object_margin_bottom_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Right</label>
+							<div class="half">
+								<input  id="css_object_margin_right" type="number"/>
+								<select id="css_object_margin_right_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Borders</legend>
+						<div class="half left">
+							<label class="left l10n">Line</label>
+							<div class="half">
+								<select id="css_object_borderstyle">
+									<option value="none">None</option>
+									<option value="solid">Solid</option>
+									<option value="dashed">Dashed</option>
+									<option value="dotted">Dotted</option>
+									<option value="double">Double</option>
+									<option value="groove">Groove</option>
+									<option value="ridge">Ridge</option>
+									<option value="inset">Inset</option>
+									<option value="outset">Outset</option>
+									<option value="initial">Initial</option>
+									<option value="inherit">Inherit</option>
+									<option value="hidden">Hidden</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Color</label>
+							<div class="half">
+								<input id="css_object_bordercolor" name="css_object_bordercolor" type="text" class="colorpicker" value=""/>
+								<input type="text" id="css_object_bordercolor_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+							callback:function(color){document.getElementById('css_object_bordercolor').value=color;RYU.buildCustomCSS();},
+							zindex:9999
+							});myPicker.open('bottom,right',this,'#000000');" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:transparent;color:transparent;"/>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="third l10n">Top</label>
+							<div class="half">
+								<input  id="css_object_bordersize_top" type="number" min="0"/>
+								<select id="css_object_bordersize_top_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Left</label>
+							<div class="half">
+								<input  id="css_object_bordersize_left" type="number" min="0"/>
+								<select id="css_object_bordersize_left_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="textcenter linker clear"><label>Link</label><input id="css_object_bordersize_linked" type="checkbox" checked/></div>
+						<div class="half left">
+							<label class="third l10n">Bottom</label>
+							<div class="half">
+								<input  id="css_object_bordersize_bottom" type="number" min="0"/>
+								<select id="css_object_bordersize_bottom_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Right</label>
+							<div class="half">
+								<input  id="css_object_bordersize_right" type="number" min="0"/>
+								<select id="css_object_bordersize_right_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Columns</legend>
+						<div class="half left">
+							<label class="third l10n">Number</label>
+							<div class="half"><input id="css_column_count" type="number" min="0" value="0"/></div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Gutter</label>
+							<div class="half">
+								<input  id="css_column_gutter" type="number" min="0"/>
+								<select id="css_column_gutter_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="third l10n">Width</label>
+							<div class="half">
+								<input  id="css_column_width" type="number" min="0"/>
+								<select id="css_column_width_units" class="css_units">
+									<option value="auto" selected>auto</option>
+									<option value="px">px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+				</fieldset>
+				<fieldset id="newstyle_section2" class="stylesection">
+					<legend class="l10n">CSS3 Effects</legend>
+					<hr/>
+					<fieldset class="boxed">
+						<legend><input type="checkbox" id="css_showhide"/><span class="l10n">Show/Hide</span></legend>
+						<div class="half left">
+							<label class="third l10n">Visibility</label>
+							<div class="half">
+								<select id="css_object_visibility">
+									<option value="">Default</option>
+									<option value="visible">Visible</option>
+									<option value="hidden">Hidden</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Opacity</label>
+							<div class="half">
+								<input id="css_object_opacity" type="number" value="0.5" min="0" max="1" step=".1"/>
+							</div>
+						</div>
+						<div class="clear" style="padding: 20px 0;">
+							<img id="css_showhide_example" class="center" src="ryuzinewriter/images/app/help/ryuzine_logo.png" width="199" height="71" style="opacity:0.5;" />
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend class="l10n">Shadow/Glow</legend>
+							<fieldset class="boxed">
+								<legend><input id="css_textshadow" type="checkbox"/><span class="l10n">Text Shadow/Glow</span></legend>
+									<div class="half left">
+										<label class="third l10n">Offset X</label>
+										<div class="half">
+											<input  id="css_textshadow_x" type="number" value="5"/>
+											<select id="css_textshadow_x_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>
+									</div>
+									<div class="half right textright">
+										<label class="third l10n">Offset Y</label>
+										<div class="half">
+											<input  id="css_textshadow_y" type="number" value="5"/>
+											<select id="css_textshadow_y_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>									
+									</div>
+									<div class="half left">
+										<label class="third l10n">Blur</label>
+										<div class="half">
+											<input  id="css_textshadow_blur" type="number" min="0" value="5"/>
+											<select id="css_textshadow_blur_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>										
+									</div>
+									<div class="half right textright">
+										<label class="third l10n">Color</label>
+										<div class="half">
+											<input id="css_textshadow_color" name="css_textshadow_color" type="text" class="colorpicker" value="#000000"/>
+											<input type="text" id="css_textshadow_color_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+										callback:function(color){document.getElementById('css_textshadow_color').value=color;RYU.buildCustomCSS();},
+										zindex:9999
+										});myPicker.open('bottom,right',this,'#000000');" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:#000000;color:transparent;"/>
+										</div>									
+									</div>
+									<div class="half left">
+										<div id="css_textshadow_example" style="-webkit-textshadow:5px 5px 5px #000000;-moz-textshadow:5px 5px 5px #000000;-ms-textshadow:5px 5px 5px #000000;text-shadow:5px 5px 5px #000000;"><span class="l10n">Example Text <strong>Bold</strong> <em>Italic</em></span></div>
+									</div>
+									<div class="half right textright">
+										<label class="half left l10n">Effect Type</label>
+										<div class="half right">
+											<select id="css_textshadow_effect">
+												<option value="drop" selected class="l10n">Drop Shadow</option>
+												<option value="outerglow" class="l10n">Outer Glow</option>
+											</select>
+										</div>
+									</div>
+							</fieldset>
+							<fieldset class="boxed">
+								<legend><input id="css_boxshadow" type="checkbox"/><span class="l10n">Box Shadow/Glow</span></legend>
+									<div class="half left">
+										<label class="third l10n">Offset X</label>
+										<div class="half">
+											<input  id="css_boxshadow_x" type="number" value="5"/>
+											<select id="css_boxshadow_x_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>
+									</div>
+									<div class="half right textright">
+										<label class="third l10n">Offset Y</label>
+										<div class="half">
+											<input  id="css_boxshadow_y" type="number" value="5"/>
+											<select id="css_boxshadow_y_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>									
+									</div>
+									<div class="half left">
+										<label class="third l10n">Blur</label>
+										<div class="half">
+											<input  id="css_boxshadow_blur" type="number" min="0" value="5"/>
+											<select id="css_boxshadow_blur_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>										
+									</div>
+									<div class="half right textright">
+										<label class="third l10n">Color</label>
+										<div class="half">
+											<input id="css_boxshadow_color" name="css_boxshadow_color" type="text" class="colorpicker" value="#000000"/>
+											<input type="text" id="css_boxshadow_color_button" class="buttonColor" onclick="var myPicker=new Xinha.colorPicker({
+										callback:function(color){document.getElementById('css_boxshadow_color').value=color;RYU.buildCustomCSS();},
+										zindex:9999
+										});myPicker.open('bottom,right',this,'#000000');" style="height:15px;width:15px;display:inline-block;border:1px solid black;background-color:#000000;color:transparent;"/>
+										</div>									
+									</div>
+									<div class="half left">
+										<label class="third l10n">Spread</label>
+										<div class="half">
+											<input  id="css_boxshadow_spread" type="number" value="5"/>
+											<select id="css_boxshadow_spread_units" class="css_units">
+												<option value="px" selected>px</option>
+												<option value="%">%</option>
+												<option value="em">em</option>
+												<option value="pt">pt</option>											
+											</select>
+										</div>
+									</div>
+									<div class="half right textright">
+										<label class="half left l10n">Effect Type</label>
+										<div class="half right">
+											<select id="css_boxshadow_effect">
+												<option value="drop" selected>Drop Shadow</option>
+												<option value="inset">Inner Shadow</option>
+												<option value="outerglow">Outer Glow</option>
+												<option value="innerglow">Inner Glow</option>
+											</select>
+										</div>
+									</div>
+									<div class="clear" style="padding: 20px 0;">
+										<div class="half" id="css_boxshadow_example" style="border: 1px solid black;padding:5px;margin:5px auto;-webkit-box-shadow:5px 5px 5px 5px #000000;-moz-box-shadow:5px 5px 5px 5px #000000;-ms-box-shadow:5px 5px 5px 5px #000000;box-shadow:5px 5px 5px 5px #000000;">Example Box</div>
+									</div>
+							</fieldset>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend><input id="css_transition" type="checkbox"/><span class="l10n">CSS3 Transition</span></legend>
+						<div class="half left">
+							<label class="third left l10n">Property</label>
+							<div class="half left">
+								<input type="text" id="css_transition_property" value="all"/>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Duration</label>
+							<div class="half">
+								<input id="css_transition_duration" type="number" value="0" min="0"/>
+								<select id="css_transition_duration_units" class="css_units">
+									<option value="s" selected>seconds</option>
+									<option value="ms">milliseconds</option>
+								</select>
+							</div>
+						</div>
+						<div class="half left">
+							<label class="third left l10n">Timing</label>
+							<div class="half left">
+								<select id="css_transition_timing">
+									<option value="ease" selected>Ease</option>
+									<option value="linear">Linear</option>
+									<option value="ease-in">Ease In</option>
+									<option value="ease-out">Ease Out</option>
+									<option value="ease-in-out">Ease In/Out</option>
+									<option value="initial">Initial</option>
+									<option value="inherit">Inherit</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Delay</label>
+							<div class="half">
+								<input id="css_transition_delay" type="number" value="0" min="0"/>
+								<select id="css_transition_delay_units" class="css_units">
+									<option value="s" selected>seconds</option>
+									<option value="ms">milliseconds</option>
+								</select>
+							</div>						
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend><input type="checkbox" id="css_transform"/><span class="l10n">CSS3 Transform</span></legend>
+						<div class="half left">
+							<label class="half left l10n">Property</label>
+							<div class="half left">
+								<select id="css_transform_property">
+									<option value="none" selected>None</option>
+									<option value="translate">Translate</option>
+									<option value="translate3d">Translate 3D</option>
+									<option value="translateX">Translate X</option>
+									<option value="translateY">Translate Y</option>
+									<option value="translateZ">Translate Z</option>
+									<option value="scale">Scale</option>
+									<option value="scale3d">Scale 3D</option>
+									<option value="scaleX">Scale X</option>
+									<option value="scaleY">Scale Y</option>
+									<option value="scaleZ">Scale Z</option>
+									<option value="rotate">Rotate</option>
+									<option value="rotateX">Rotate X</option>
+									<option value="rotateY">Rotate Y</option>
+									<option value="rotateZ">Rotate Z</option>
+									<option value="skew">Skew</option>
+									<option value="skewX">Skew X</option>
+									<option value="skewY">Skew Y</option>
+									<option value="initial">Initial</option>
+									<option value="inherit">Inherit</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">X Value</label>
+							<div class="half">
+								<input  id="css_transform_x" type="number" value="5"/>
+								<select id="css_transform_x_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+									<option value="deg">deg</option>											
+								</select>
+							</div>						
+						</div>
+						<div class="half left">
+							<label class="third l10n">Y Value</label>
+							<div class="half">
+								<input  id="css_transform_y" type="number" value="5"/>
+								<select id="css_transform_y_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+									<option value="deg">deg</option>											
+								</select>
+							</div>							
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Z Value</label>
+							<div class="half">
+								<input  id="css_transform_z" type="number" value="5"/>
+								<select id="css_transform_z_units" class="css_units">
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+									<option value="deg">deg</option>											
+								</select>
+							</div>	
+						</div>
+					</fieldset>
+					<fieldset class="boxed">
+						<legend><input type="checkbox" id="css_filter"/><span class="l10n">CSS3 Filter</span></legend>
+						<div class="half left">
+							<label class="half left l10n">Filter</label>
+							<div class="half left">
+								<select id="css_filter_property">
+									<option value="blur" selected>Blur</option>
+									<option value="grayscale">Grayscale</option>
+									<option value="sepia">Sepia</option>
+									<option value="saturate">Saturate</option>
+									<option value="hue-rotate">Hue Rotate</option>
+									<option value="invert">Invert Colors</option>
+									<option value="opacity">Opacity</option>
+									<option value="brightness">Brightness</option>
+									<option value="contrast">Contrast</option>
+								</select>
+							</div>
+						</div>
+						<div class="half right textright">
+							<label class="third l10n">Value</label>
+							<div class="half">
+								<input  id="css_filter_value" type="number" min="0" step=".1" value="5"/>
+								<select id="css_filter_value_units" class="css_units">
+									<option value="">none</option>
+									<option value="px" selected>px</option>
+									<option value="%">%</option>
+									<option value="em">em</option>
+									<option value="pt">pt</option>
+									<option value="deg">deg</option>											
+								</select>
+							</div>						
+						</div>
+						<div class="clear" style="padding: 20px 0;">
+							<img id="css_filter_example" class="center" src="ryuzinewriter/images/app/help/ryuzine_logo.png" width="199" height="71" style="-webkit-filter:blur(5px);-moz-filter:blur(5px);-ms-filter:blur(5px);blur(5px);" />
+						</div>
+					</fieldset>	
+					<p class="smallprint l10n">Note: Some browsers cannot show CSS3 effects.</p>		
+				</fieldset>
+			</form>
+		</div>
+		<div class="actionbar">
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('newstyle',0);RYU.addCustomCSS();"><p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>
+		</div>
+	</div>
+	
+<!--// Simulator Dialogs //-->
+	<div id="customize" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Add Device</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+		<table width="100%"><tr>
+			<td class="l10n">Device Name</td>
+			<td><input type="text" id="custom_name" /></td>
+			</tr><tr>
+			<td class="l10n">Device Profile</td>
+			<td>
+				<input type="radio" id="device_profile" name="device_profile" value="phone" checked onclick="RYU.customProfile(this.value);" /><span id="adddeviceprofile0">Phone</span> 
+				<input type="radio" name="device_profile" value="tablet" onclick="RYU.customProfile(this.value);"/><span id="adddeviceprofile1">Tablet</span>
+			</td>
+			</tr><tr>
+			<td class="l10n">Device OS</td>
+			<td>
+				<select name="os_select" id="os_select" onchange="if(this.value=='other'){document.getElementById('os_name').style.display='table-row';}else{document.getElementById('os_name').style.display='none';};RYU.customOS(this.options[this.selectedIndex].value);return false;">
+						<option value="iOS">iOS 8.x</option>
+						<option value="Android4">Android 4.x</option>
+						<option value="W8M">Windows 8.x Metro</option>
+						<option value="WP7">Windows Phone 7</option>
+						<option value="other">Other OS</option>
+					</select>
+			</td></tr>
+			<tr id="os_name" style="display:none;">
+			<td colspan="2">
+				<table style="width:95%;border:1px solid #ccc"><tr>
+					<td class="l10n">OS Name</td><td><input type="text" id="custom_os"/></td>
+					</tr><tr>
+					<td for="os_sizes" class="l10n">Set OS Elements</td>
+					<td>
+						<input type="radio" id="os_sizes" name="os_sizes" checked onclick="if(this.checked){document.getElementById('os_elements').style.display='table-cell';}"/><span class="l10n">Yes</span> 
+						<input type="radio" name="os_sizes" onclick="if(this.checked){document.getElementById('os_elements').style.display='none';}"/><span class="l10n">No</span>
+					</td>
+					</tr><tr>
+					<td id="os_elements" colspan="2">
+						<table width="100%"><tr>
+							<td class="l10n">Status Bar Height</td><td><input type="number" id="custom_status"/></td>
+							</tr><tr>
+							<td class="l10n">Top Toolbar</td><td><input type="number" id="custom_navbar"/></td>
+							</tr><tr>
+							<td class="l10n">Bottom Toolbar</td><td><input type="number" id="custom_tabbar"/></td>
+						</tr></table>
+					</td>
+					</tr>
+				</table>	
+			</td>
+			</tr>
+			<tr id="skinopt">
+				<td class="l10n">Custom Skin</td>
+				<td>
+					<input type="radio" id="toskin" name="toskin" value="0" checked onclick="if(this.checked){document.getElementById('custoskin').style.display='table-row';document.getElementById('noskin').style.display='none';}"/><span class="l10n">Yes</span> 
+					<input type="radio" name="toskin" onclick="if(this.checked){document.getElementById('custoskin').style.display='none';document.getElementById('noskin').style.display='table-row';};"/><span class="l10n">No</span>
+				</td>
+			</tr>
+			<tr id="custoskin">
+				<td class="l10n">Skin Folder</td><td><input type="text" id="custom_skin" /></td>		
+			</tr>
+			<tr id="noskin" style="display:none;">
+				<td colspan="2">
+					<table style="width:95%;border:1px solid #ccc"><tr>
+					<td class="l10n">Screen Width</td><td><input type="number" id="custom_width"/></td>
+					</tr><tr>
+					<td class="l10n">Screen Height</td><td><input type="number" id="custom_height"/></td>
+					</tr><tr>
+					<td colspan="2"><span class="smallprint ">Enter screen size in pixels in landscape orientation</span></td>
+					</tr></table>
+				</td>
+			</tr>
+			</table>
+			<div class="button type2 right submit" onclick="RYU.customPreview();RYU.toggleDialog('customize',0);"><p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>
+		</form>
+			<hr style="clear:both;"/>
+			<p class="smallprint l10n">Device and OS profiles added with this dialog are only available to the current browser and are stored in a browser cookie file.  If you clear browser data ALL custom device profiles and OS profiles will be lost.  If you need access to your custom profiles from other browsers or want them to be persistent you will need to create a skin file instead.</p>
+		</div>
+	</div>
+
+	<div id="loadurl" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Load URL In Simulator</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<table><tr>
+			<td width="75">URL:</td><td><input id="chooser3" type="text" value=""></td></tr><tr>
+			<td colspan="2">
+			<p class="smallprint l10n"><strong>Important!</strong> You will not be able to load or edit the source code! This if for viewing in the Simulator only.</p>
+			</td></tr><tr>
+			<td colspan="2"><div class="button type2 right globe" onclick="RYU.toggleDialog('loadurl',0);RYU.loadURL2Sim();">
+				<p><span class="symbol"></span><span class="label l10n">Load URL</span></p></div>
+			</td></tr></table>
+		</div>
+	</div>	
+<!--// Rack Catalog Data Editor //-->
+	<div id="editcats" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Edit Categories</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<ul id="edit_categories_list" class="dynlist" style="display:table;margin:0 auto;">
+			</ul>
+			<small style="display:block;padding:7px 10px 7px 20px;" class="l10n">Note: Do not use Unicode symbols, they will not be preserved.</small>
+			<div style="clear:both;"></div>
+			<div id="cat_add" class="button type1 left add" onclick="RYU.add2ConfigList(3,0);" style="display:table;">
+				<p><span class="symbol"></span><span class="label l10n">Add Item</span></p>
+			</div>
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('editcats',0);RYU.add2ConfigList(3,1,1);">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p>
+			</div>			
+		</div>
+	</div>
+	
+	<div id="edittypes" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Edit Media Types</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<ul id="edit_mediatypes_list" class="dynlist" style="display:table;margin:0 auto;">
+			</ul>
+			<small style="display:block;padding:7px 10px 7px 20px;" class="l10n">Note: Do not use Unicode symbols, they will not be preserved.</small>
+			<div style="clear:both;"></div>	
+			<div id="media_add" class="button type1 left add"  onclick="RYU.add2ConfigList(2,0);" style="display:table;">
+				<p><span class="symbol"></span><span class="label l10n">Add Item</span></p>
+			</div>
+			<div class="button type2 right submit" onclick="RYU.toggleDialog('edittypes',0);RYU.add2ConfigList(2,1,1);">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p>
+			</div>	
+		</div>
+	</div>
+	
+	<div id="addrows" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Add Rack Rows</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<p><span class="l10n">Append</span> <input id="addrowscount" type="number" min="0" value="0" style="width:50px;"/> <span class="l10n">Rows to current Rack Catalog table</span></p>
+			<div class="button type2 right submit" onclick="RYU.addRackRows(document.getElementById('addrowscount').value);RYU.toggleDialog('addrows',0);">
+				<p><span class="symbol"></span><span class="label l10n">Submit</span></p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="file_manager" class="ryudialog out">
+		<div class="titlebar">
+			<h1 class="title l10n">Insert Image</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div class="area">
+			<iframe  id="fileManager" scrolling="no" style="height: 600px;" src="" height="600" width="100%" border="0"></iframe>
+		</div>
+	</div>
+	
+	<div id="picker_dialog" class="ryudialog out">
+		<div class="titlebar">
+			<h1 id="ryu_picker_title" class="title l10n">Ryuzine Elements</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+			<div class="area action">
+				<form>
+					<fieldset id="lightbox_link" style="display: block;">
+						<legend class="qtr left clear"><span class="l10n">Link URL*</span>:</legend><div class="half left"><input id="link_href" type="text" value="#"/></div>
+						<legend class="qtr left clear"><span class="l10n">Link REL*</span>:</legend><div class="half left"><input id="link_rel"  type="text" value="lightbox"/></div>
+						<legend class="qtr left clear"><span class="l10n">Layout</span>:</legend><div id="lb_layout" class="half left"><input type="radio" name="lb_layout" value="" checked>Auto <input id="link_land" type="radio" name="lb_layout" value="landscape"/>Landscape <input type="radio" name="lb_layout" value="portrait">Portrait</div>
+						<legend class="qtr left clear"><span class="l10n">Link Type*</span>:</legend>
+						<div class="left">
+							<select id="link_type">
+								<option value="lb_plus" class="l10n">Default</option>
+								<option value="lb_larger" class="l10n">Expand</option>
+								<option value="lb_magnify" class="l10n">Magnify</option>
+								<option value="lb_photo" class="l10n">Photo</option>
+								<option value="lb_video" class="l10n">Video</option>
+								<option value="lb_movie" class="l10n">Movie</option>
+								<option value="lb_info" class="l10n">Information</option>
+								<option vlaue="lb_3d" class="l10n">3D Content</option>
+								<option value="lb_website" class="l10n">Website</option>
+								<option value="lb_document" class="l10n">Document</option>
+							</select>
+						</div>
+						<legend class="qtr left clear"><span class="l10n">Class Name(s)</span>:</legend><div class="half left"><input type="text" id="plus_class"/></div><span class="l10n smallprint left">(space-separated list)</span>
+						<legend class="qtr left clear"><span class="editable"><input type="text" id="data_target" value="data-linkid"/></span>:</legend><div class="half left"><input id="link_target" type="text"/></div><span class="l10n smallprint left">(optional)</span>
+						<legend class="qtr left clear"><span class="editable"><input type="text" id="data_gallery" value="data-gallery"/></span>:</legend><div class="half left"><input id="link_gallery" type="text"/></div><span class="l10n smallprint left">(optional)</span>
+						<legend class="qtr left clear"><span class="editable"><input type="text" id="data_title" value="title"/></span>:</legend><div class="half left"><input id="link_title" type="text"/></div><span class="l10n smallprint left">(optional)</span>
+						<legend class="qtr left clear"><span class="editable"><input type="text" id="data_caption" value="data-caption"/></span>:</legend><div class="half left"><input id="link_caption" type="text"/></div><span class="l10n smallprint left">(optional)</span>
+					</fieldset>	
+					<fieldset id="light_boxed" style="display: block;">
+						<legend class="qtr left clear"><span class="l10n">Lightbox ID*:</span></legend><div class="half left"><input id="lb_id" type="text" value=""/></div>
+						<p class="smallprint l10n">This will embed a lightbox in the document.  You can open the lightboxed content by creating a lightbox link targeting this same ID.</p>
+					</fieldset>
+					<fieldset id="dyn_thumb" style="display: block;">
+						<legend class="qtr left clear"><span class="l10n">Thumbnail ID*:</span></legend><div class="half left"><input id="dyn_thumb_id" type="text" value=""/></div>
+						<p class="smallprint l10n">This will only insert an empty &lt;DIV&gt; or wrap the selected image in one.  In your issue-specific stylesheet you would then need to target this dynamic thumbnail with CSS Media Queries.  If you wrapped an image it should be the fallback (lowest resolution) version of the thumbnail.</p>
+					</fieldset>
+					<fieldset id="dyn_img" style="display: block;">
+						<legend class="qtr left clear"><span class="l10n">Image ID*:</span></legend><div class="half left"><input id="dyn_img_id" type="text" value=""/></div>
+						<p class="smallprint l10n">This will only insert an empty &lt;DIV&gt; or wrap the selected image in one.  In your issue-specific stylesheet you would then need to target this dynamic image with CSS Media Queries.  If you wrapped an image it should be the fallback (lowest resolution) version of the image.</p>
+					</fieldset>
+					<fieldset id="ovr" style="display: block;">
+						<legend class="qtr left clear"><span class="l10n">OVR Frames*:</span></legend><div class="half left"><input id="ovr_frames" type="number" min="4" value="4"/></div>
+						<legend class="qtr left clear"><span class="l10n">OVR ID:</span></legend><div class="half left"><input id="ovr_id" type="text"/></div><span class="smallprint left l10n">(optional)</span>
+						<p class="smallprint clear l10n"><strong>OVR</strong> rotations work best with at least eight (8) frames and best with sixty-four (64) or more. You will also need to add the OVR Add-On to the publication's configuration file or it will simply show a single, static image.</p>
+					</fieldset>			
+				</form>	
+				<p class="smallprint l10n">* required parameters</p>		
+			</div>
+			<div class="actionbar">
+				<div class="button type2 right submit" onclick="RYU.toggleDialog('picker_dialog',0);RYU.RYUPicker.wrapStyle();"><p><span class="symbol"></span><span class="label l10n">Submit</span></p></div>
+			</div>
+	</div>
+	
+	<div id="pop_notice" class="ryudialog out">
+		<div class="titlebar">
+			<h1 id="pop_title" class="title l10n">Notice</h1>
+			<div class="xdialog button type2 right">
+				<p><span class="symbol"></span><span class="label l10n">Close</span></p>
+			</div>
+		</div>
+		<div id="pop_area" class="area"></div>
+	</div>
+
+<!--// used for theme load checking //-->
+<div id="tcheck"></div><div id="vcheck"></div>	
+</body>
+</html>

@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Set your host and port here:
+HOST="localhost"
+PORT="8088"
+
+# If HOST is a custom IP address make sure you add it to the $WHITE_LIST
+# in "ryuzinewriter/php/functions.php" file or you will have no file ops
+
+# ----- (you shouldn't need to touch anything below this line) -----#
+
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR=${ROOT%/*}
+if [ ! -f "$DIR/index.htm" ]
+	then
+		echo "Ryuzine Writer is not installed, attempting to install..."
+		cp "$ROOT/res/index.htm" "$DIR"
+		if [ -f "$DIR/index.htm" ]
+			then
+				echo "Installation was successful!"
+			else
+				echo "Installation failed.  Please do it manually."
+				exit
+		fi
+	else
+		echo "Ryuzine Writer installed, attempting to start PHP server and open browser..."
+fi
+
+CURRENT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT=${CURRENT%/*}
+INDEX="$ROOT/index.htm"
+
+PHP=$(which php)
+if [ $? !=  0 ] ; then
+	echo “Unable to find PHP”
+	exit 1
+fi
+
+function osbrowser {
+	echo "Attempting to automatically open webapp in default browser..."
+	case "$OSTYPE" in
+	  solaris*) echo "Solaris"; sdtwebclient "http://"$HOST":"$PORT"/index.htm";;
+	  darwin*)  echo "OSX"; open "http://"$HOST":"$PORT"/index.htm";; 
+	  linux*)   echo "LINUX"; xdg-open "http://"$HOST":"$PORT"/index.htm";;
+	  bsd*)     echo "BSD"; xdg-open "http://"$HOST":"$PORT"/index.htm";;
+	  *)        echo "unknown: $OSTYPE" ;;
+	esac
+}
+
+echo "Starting PHP Web Server";
+echo "If app does not open automatically, open a browser and direct it to:";
+echo "http://"$HOST":"$PORT"/index.htm"
+
+$PHP -S $HOST:$PORT -t $ROOT & osbrowser
+
+

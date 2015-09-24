@@ -1,0 +1,65 @@
+/* Samsung S5 		*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: TouchWiz 3.x		*/
+/* Width: 640			*/
+/* Height: 360			*/
+
+.simbox {
+background: rgb(147,206,222);
+background: -moz-linear-gradient(-45deg,  rgb(147,206,222) 0%, rgb(117,189,209) 41%, rgb(73,165,191) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(147,206,222)), color-stop(41%,rgb(117,189,209)), color-stop(100%,rgb(73,165,191)));
+background: -webkit-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -o-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -ms-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: linear-gradient(135deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=1 );
+
+}
+
+
+#device.portrait {
+	height: 824px;
+	width: 436px;
+	position: relative;
+	margin-top: -412px;
+	margin-left: -218px;
+	padding: 0;
+	background: transparent url('Samsung_S5_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 38px;
+		top: 92px;
+		width: 360px;
+		height: 640px;
+		border-radius: 4px;
+	}
+
+#device.landscape {
+	height: 436px;
+	width: 824px;
+	position: relative;
+	margin-top: -218px;
+	margin-left: -412px;
+	padding: 0;
+	background: transparent url('Samsung_S5_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 38px;
+		left: 92px;
+		width: 640px;
+		height: 360px;
+		border-radius: 4px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -320px;
+		margin-left: -180px;
+	}
+	#device.landscape.noskin {
+		margin-top: -180px;
+		margin-left: -320px;
+	}

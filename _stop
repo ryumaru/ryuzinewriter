@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# this actually kills ALL PHP processes
+killall -9 php

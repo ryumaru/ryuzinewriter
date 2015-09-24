@@ -1,0 +1,61 @@
+/* Nokia Lumia 920	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0		*/
+/* OS: Windows Phone 7.5*/
+/* Width: 568			*/
+/* Height: 320			*/
+
+.simbox {
+background: #023262;
+background: -moz-linear-gradient(top,  #023262 22%, #2c6c9c 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,#023262), color-stop(100%,#2c6c9c));
+background: -webkit-linear-gradient(top,  #023262 22%,#2c6c9c 100%);
+background: -o-linear-gradient(top,  #023262 22%,#2c6c9c 100%);
+background: -ms-linear-gradient(top,  #023262 22%,#2c6c9c 100%);
+background: linear-gradient(to bottom,  #023262 22%,#2c6c9c 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023262', endColorstr='#2c6c9c',GradientType=0 );
+}
+
+#device.portrait {
+	height: 798px;
+	width: 443px;
+	position: relative;
+	margin-top: -399px;
+	margin-left: -222px;
+	padding: 0;
+	background: transparent url('lumia_920_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 59px;
+		top: 90px;
+		width: 320px;
+		height: 568px;
+	}
+
+#device.landscape {
+	height: 443px;
+	width: 798px;
+	position: relative;
+	margin-top: -222px;
+	margin-left: -399px;
+	padding: 0;
+	background: transparent url('lumia_920_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 64px;
+		left: 90px;
+		width: 568px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -284px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		margin-top: -160px;
+		margin-left: -284px;
+	}

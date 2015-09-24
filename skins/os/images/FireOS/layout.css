@@ -1,0 +1,143 @@
+/* FireOS (Kindle Fire HDX and Fire Phone) */
+#device.portrait.phone.FireOS.appview #simscreen,
+#device.landscape.phone.FireOS.appview #simscreen {
+	top: 0;
+	bottom: 0;
+}
+#device.portrait.phone.FireOS.browser #simscreen,
+#device.landscape.phone.FireOS.browser #simscreen {
+	top: 65px;
+	bottom: 0px;
+}
+#device.portrait.phone.FireOS.appview #statusbar,
+#device.portrait.phone.FireOS.browser #statusbar,
+#device.landscape.phone.FireOS.appview #statusbar,
+#device.landscape.phone.FireOS.browser #statusbar {
+	display: none;
+}
+#device.portrait.phone.FireOS.appview #navbar,
+#device.landscape.phone.FireOS.appview #navbar {
+	display: none;
+}
+#device.portrait.phone.FireOS.browser #navbar,
+#device.landscape.phone.FireOS.browser #navbar {
+	height: 65px;
+	display: block;
+	color: transparent;
+	background: url('phone_navbar_right.png') center right no-repeat,
+				url('phone_navbar_left.png') center left no-repeat,
+				url('phone_navbar_back.png') center center repeat-x,
+				white;
+}
+#device.portrait.phone.FireOS.appview #tabbar,
+#device.landscape.phone.FireOS.appview #tabbar {
+	display: none;
+}
+#device.portrait.phone.FireOS.browser #tabbar,
+#device.landscape.phone.FireOS.browser #tabbar {
+	height: 68px;
+	display: block;
+	color: transparent;
+	background: url('phone_tabbar_right.png') center right no-repeat,
+				url('phone_tabbar_left.png') center left no-repeat,
+				transparent;
+}
+#device.portrait.tablet.FireOS.appview #simscreen {
+	top: 0px;
+	bottom: 0px;
+}
+#device.portrait.tablet.FireOS.browser #simscreen {
+	top: 145px;
+	bottom: 61px;
+}	
+#device.portrait.tablet.FireOS.appview #statusbar {
+	display: none;
+}
+#device.portrait.tablet.FireOS.browser #statusbar {
+	height: 26px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_right.png') center right no-repeat,
+				url('statusbar_left.png') center left no-repeat,
+				url('statusbar_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.tablet.FireOS.appview #navbar {
+	display: none;
+}
+#device.portrait.tablet.FireOS.browser #navbar {
+	height: 119px;
+	display: block;
+	color: transparent;
+	background: url('navbar_right.png') center right no-repeat,
+				url('navbar_left.png') center left no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.tablet.FireOS.appview #tabbar {
+	display: none;
+}
+#device.portrait.tablet.FireOS.browser #tabbar {
+	height: 61px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_right.png') center right no-repeat,
+				url('tabbar_search_right.png') 75% center no-repeat,
+				url('tabbar_center.png') center center no-repeat,
+				url('tabbar_left.png') 25% center no-repeat,
+				url('tabbar_back.png') center center repeat-x,
+				black;
+}
+#device.landscape.tablet.FireOS.appview #simscreen {
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.FireOS.browser #simscreen {
+	top: 138px;
+	bottom: 0px;
+	right: 61px;
+}
+#device.landscape.tablet.FireOS.appview #statusbar {
+	display: none;
+}
+#device.landscape.tablet.FireOS.browser #statusbar {
+	height: 26px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_right.png') center right no-repeat,
+				url('statusbar_left.png') center left no-repeat,
+				url('statusbar_back.png') center center repeat-x,
+				black;
+}
+#device.landscape.tablet.FireOS.appview #navbar {
+	display: none;
+}
+#device.landscape.tablet.FireOS.browser #navbar {
+	height: 112px;
+	display: block;
+	color: transparent;
+	background: url('navbar_right.png') right +60px center no-repeat,
+				url('navbar_left.png') center left no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				black;
+}
+#device.landscape.tablet.FireOS.appview #tabbar {
+	display: none;
+}
+#device.landscape.tablet.FireOS.browser #tabbar {
+	height: auto;
+	width: 61px;
+	top: 26px;
+	right: 0px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_right.png') 16px top no-repeat,
+				url('tabbar_search_right.png') top +75% center no-repeat,
+				url('tabbar_center.png') center center no-repeat,
+				url('tabbar_left.png') top +25% center no-repeat,
+				url('tabbar_back.png') center center repeat,
+				black;
+}

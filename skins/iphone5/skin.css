@@ -1,0 +1,56 @@
+/* iPhone 5 Skin	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0		*/
+/* OS: iOS				*/
+/* Width: 568			*/
+/* Height: 320			*/
+/* Note: iPhone 5 Retina display is actually 1136x640 but 	*/
+/* it uses 568x320 and scales everything up.				*/
+
+.simbox {
+	background: #808080 url('ios7.jpg');
+	background-size: cover;
+}
+#device.portrait {
+	height: 818px;
+	width: 399px;
+	position: relative;
+	margin-top: -398px;
+	margin-left: -216px;
+	padding: 0;
+	background: transparent url('iphone5_black_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 41px;
+		top: 128px;
+		width: 320px;
+		height: 568px;
+	}
+
+#device.landscape {
+	height: 399px;
+	width: 818px;
+	position: relative;
+	margin-top: -216px;
+	margin-left: -398px;
+	padding: 0;
+	background: transparent url('iphone5_black_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 38px;
+		left: 128px;
+		width: 568px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -284px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		margin-top: -160px;
+		margin-left: -284px;
+	}

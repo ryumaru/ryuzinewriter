@@ -1,0 +1,27 @@
+#device #statusbar {
+	width: 100%;
+}
+#device #screen {
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	-webkit-box-shadow: 0 0 0 3px #111;
+	box-shadow: 0 0 0 3px #111;
+}
+#device #simscreen {
+	position: absolute;
+	top: 0px; left: 0px;
+	bottom: 0px; right: 0px;
+	display: block;
+	height: auto;
+	width: auto;
+	background: black;
+}
+	#preview {
+		height: 100% !important;
+		width: 100% !important;
+	}
+#device #tabbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

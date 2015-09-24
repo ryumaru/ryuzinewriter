@@ -1,0 +1,65 @@
+/* Samsung Galaxy Tab 4 */
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: TouchWiz 3.x		*/
+/* Width: 1280			*/
+/* Height: 800			*/
+
+.simbox {
+background: rgb(147,206,222);
+background: -moz-linear-gradient(-45deg,  rgb(147,206,222) 0%, rgb(117,189,209) 41%, rgb(73,165,191) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(147,206,222)), color-stop(41%,rgb(117,189,209)), color-stop(100%,rgb(73,165,191)));
+background: -webkit-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -o-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: -ms-linear-gradient(-45deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+background: linear-gradient(135deg,  rgb(147,206,222) 0%,rgb(117,189,209) 41%,rgb(73,165,191) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=1 );
+
+}
+
+
+#device.portrait {
+	height: 1593px;
+	width: 926px;
+	position: relative;
+	margin-top: -796px;
+	margin-left: -463px;
+	padding: 0;
+	background: transparent url('galaxy_tab_4_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 62px;
+		top: 150px;
+		width: 800px;
+		height: 1280px;
+		border-radius: 4px;
+	}
+
+#device.landscape {
+	height: 926px;
+	width: 1593px;
+	position: relative;
+	margin-top: -463px;
+	margin-left: -796px;
+	padding: 0;
+	background: transparent url('galaxy_tab_4_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 62px;
+		left: 150px;
+		width: 1280px;
+		height: 800px;
+		border-radius: 4px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -640px;
+		margin-left: -400px;
+	}
+	#device.landscape.noskin {
+		margin-top: -400px;
+		margin-left: -640px;
+	}

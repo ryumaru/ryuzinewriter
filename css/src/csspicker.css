@@ -1,0 +1,42 @@
+.CSSPickerOption {
+    background-color: white;
+    border: 2px solid steelblue;
+    margin: 0.1em;
+    padding: 0.1em;
+}
+.CSSPickerOptionOver {
+    border: 2px solid red;
+}
+.CSSPickerOptionActive {
+    border: 2px solid orange;
+}
+
+.xinhaIssueNoticeRed {
+    padding: 0.3em;
+    border: 1px solid maroon;
+    margin: 0.3em;
+    background-color: #ffc6c6;
+    font-family: Arial;
+    color: red;
+    font-weight: bold;
+}
+.xinhaIssueNoticeGreen {
+    padding: 0.3em;
+    border: 1px solid green;;
+    margin: 0.3em;
+    background-color: #d5f3be;
+    font-family: Arial;
+    color: green;
+    font-weight: bold;
+}
+.XinhaSubHeadline {
+    border-bottom: 1px dotted gray;
+    font-size: 1.2em;
+    font-family: Trebuchet;
+}
+.XinhaFancyText {
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}

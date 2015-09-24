@@ -1,0 +1,184 @@
+/* Default Skin 		*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+
+#device.portrait.phone {
+	width: 320px;
+	height: 568px;
+	margin-top: -389px;
+	margin-left: -180px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 15px;
+	padding-right: 15px;
+background: #000000; 
+background: -moz-linear-gradient(-40deg, #2c2c2c 35%, #141414 35%, #000000 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(35%,#2c2c2c), color-stop(35%,#141414), color-stop(100%,#000000)); 
+background: -webkit-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+background: -o-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+background: -ms-linear-gradient(top left, #2c2c2c 35%,#141414 35%,#000000 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#000000',GradientType=0 ); 
+background: linear-gradient(-45deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	border: 5px solid #990000;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-ms-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	}
+	
+
+	#device.portrait.phone #screen {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 320px;
+		height: 568px;
+	}
+
+#device.landscape.phone {
+	width: 568px;
+	height: 320px;
+	margin-top: -180px;
+	margin-left: -389px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #000000; 
+	background: -moz-linear-gradient(-40deg, #2c2c2c 35%, #141414 35%, #000000 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(35%,#2c2c2c), color-stop(35%,#141414), color-stop(100%,#000000)); 
+	background: -webkit-linear-gradient(-40deg, #2c2c2c 50%,#141414 50%,#000000 100%); 
+	background: -o-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	background: -ms-linear-gradient(top left, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#000000',GradientType=0 ); 
+	background: linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	border: 5px solid #990000;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-ms-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+}
+
+
+	#device.landscape.phone #screen {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 568px;
+		height: 320px;
+	}
+
+#device.portrait.tablet {
+	width: 768px; 
+	height: 1024px;
+	margin-top: -562px;
+	margin-left: -434px;
+	padding: 50px;
+background: #000000; 
+background: -moz-linear-gradient(-40deg, #2c2c2c 35%, #141414 35%, #000000 100%); 
+background: -webkit-gradient(linear, left top, right bottom, color-stop(35%,#2c2c2c), color-stop(35%,#141414), color-stop(100%,#000000)); 
+background: -webkit-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+background: -o-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+background: -ms-linear-gradient(top left, #2c2c2c 35%,#141414 35%,#000000 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#000000',GradientType=0 ); 
+background: linear-gradient(-45deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	border: 5px solid #0556A5;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-ms-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	}
+	
+
+	#device.portrait.tablet #screen {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 768px;
+		height: 1024px;
+	}
+
+	
+#device.landscape.tablet {
+	height: 768px; 
+	width: 1024px;
+	margin-top: -434px;
+	margin-left: -562px;
+	padding: 50px;
+background: #000000; 
+background: -moz-linear-gradient(-40deg, #2c2c2c 35%, #141414 35%, #000000 100%); 
+background: -webkit-gradient(linear, left top, right bottom, color-stop(35%,#2c2c2c), color-stop(35%,#141414), color-stop(100%,#000000)); 
+background: -webkit-linear-gradient(-40deg, #2c2c2c 50%,#141414 50%,#000000 100%); 
+background: -o-linear-gradient(-40deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+background: -ms-linear-gradient(top left, #2c2c2c 35%,#141414 35%,#000000 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#000000',GradientType=0 ); 
+background: linear-gradient(-45deg, #2c2c2c 35%,#141414 35%,#000000 100%); 
+	border: 5px solid #0556A5;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	-ms-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.50);
+	}
+
+
+	#device.landscape.tablet #screen {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 768px;
+		width: 1024px;
+	}
+	
+/* Screen Only Centering */
+	#device.portrait.phone.noskin {
+		margin-top: -284px;
+		margin-left: -160px;
+		border: 0;
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		border-radius: 0;
+	}
+	#device.landscape.phone.noskin {
+		margin-top: -160px;
+		margin-left: -284px;
+		border: 0;
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		border-radius: 0;
+	}
+	#device.portrait.tablet.noskin {
+		margin-top: -512px;
+		margin-left: -384px;
+		border: 0;
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		border-radius: 0;
+	}
+	#device.landscape.tablet.noskin {
+		margin-top: -384px;
+		margin-left: -512px;
+		border: 0;
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		border-radius: 0;
+	}

@@ -1,0 +1,55 @@
+/* Fill View Skin 		*/
+/* @ Ryuzine Writer 1.0 */
+
+#simulator {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	z-index: 2000;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-mos-transition-duration: 1s;
+	transition-duration: 1s;
+}
+	#dropbar { display: block; }
+
+#simbox.simbox_fill {
+	height: 100%;
+	background: #808080;
+	overflow: hidden;
+}
+
+#device.portrait.noskin,
+#device.landscape.noskin {
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	-webkit-transform: scale(1) !important;
+	-moz-transform: scale(1)	!important;
+	-ms-transform: scale(1)		!important;
+	transform: scale(1)			!important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+	#device.portrait.noskin #screen,
+	#device.landscape.noskin #screen {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-ms-box-shadow: none;
+		box-shadow: none;
+	}
+
+	#device #statusbar,
+	#device #navbar, #device #tabbar {
+		display: none;
+	}
+

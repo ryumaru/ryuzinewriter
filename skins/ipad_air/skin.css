@@ -1,0 +1,63 @@
+/* iPad Air Skin	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	*/
+/* OS: iOS				*/
+/* Width: 1024			*/
+/* Height: 768			*/
+/* Note: iPad Air display is actually 2048x1738 @ 2.0 lcd density */
+
+.simbox {
+background: #c3f0ff;
+background: -moz-linear-gradient(top,  #c3f0ff 0%, #eee5f6 50%, #717ce6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3f0ff), color-stop(50%,#eee5f6), color-stop(100%,#717ce6));
+background: -webkit-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: -o-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: -ms-linear-gradient(top,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+background: linear-gradient(to bottom,  #c3f0ff 0%,#eee5f6 50%,#717ce6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3f0ff', endColorstr='#717ce6',GradientType=0 );
+background-attachment: fixed; 	/* req by Firefox or white bg */
+}
+
+#device.portrait {
+	height: 1280px;
+	width: 910px;
+	position: relative;
+	margin-top: -640px;
+	margin-left: -455px;
+	padding: 0;
+	background: transparent url('iPad_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 70px;
+		top: 128px;
+		width: 768px;
+		height: 1024px;
+	}
+
+#device.landscape {
+	height: 910px;
+	width: 1280px;
+	position: relative;
+	margin-top: -455px;
+	margin-left: -640px;
+	padding: 0;
+	background: transparent url('iPad_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 70px;
+		left: 128px;
+		width: 1024px;
+		height: 768px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -512px;
+		margin-left: -384px;
+	}
+	#device.landscape.noskin {
+		margin-top: -384px;
+		margin-left: -512px;
+	}

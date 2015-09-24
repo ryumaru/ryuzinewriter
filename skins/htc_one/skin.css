@@ -1,0 +1,85 @@
+/* HTC One M7	 		*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: Android 4.x		*/
+/* Width: 640			*/
+/* Height: 360			*/
+
+.simbox {
+background: #190000; /* Old browsers */
+background: -moz-linear-gradient(top,  #190000 0%, #8f0222 30%, #ff0509 49%, #8f0222 70%, #260002 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#190000), color-stop(30%,#8f0222), color-stop(49%,#ff0509), color-stop(70%,#8f0222), color-stop(100%,#260002)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* IE10+ */
+background: linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#190000', endColorstr='#260002',GradientType=0 ); /* IE6-9 */
+}
+
+/* HTC One M7 Has Hardware Buttons, remove on-screen system bar */
+#device.phone.landscape.Android4.browser #statusbar {
+	background-position: center right, center center;
+}
+#device.phone.landscape.Android4.appview #navbar,
+#device.phone.landscape.Android4.browser #navbar {
+	background-position: center left, center right, center center;
+}
+#device.phone.landscape.Android4.appview #simscreen,
+#device.phone.landscape.Android4.browser #simscreen {
+	right: 0px;
+}
+#device.phone.portrait.Android4.appview #simscreen,
+#device.phone.portrait.Android4.browser #simscreen {
+	bottom: 0px;
+}
+#device.phone.portrait.Android4.appview #tabbar,
+#device.phone.portrait.Android4.browser #tabbar,
+#device.phone.landscape.Android4.appview #tabbar,
+#device.phone.landscape.Android4.browser #tabbar {
+	display: none;
+}
+
+
+#device.portrait {
+	height: 886px;
+	width: 444px;
+	position: relative;
+	margin-top: -443px;
+	margin-left: -222px;
+	padding: 0;
+	background: transparent url('HTC_One_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 42px;
+		top: 112px;
+		width: 360px;
+		height: 640px;
+	}
+
+#device.landscape {
+	height: 444px;
+	width: 886px;
+	position: relative;
+	margin-top: -222px;
+	margin-left: -443px;
+	padding: 0;
+	background: transparent url('HTC_One_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 42px;
+		left: 112px;
+		width: 640px;
+		height: 360px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -320px;
+		margin-left: -180px;
+	}
+	#device.landscape.noskin {
+		margin-top: -180px;
+		margin-left: -320px;
+	}
