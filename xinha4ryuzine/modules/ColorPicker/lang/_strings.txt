@@ -1,9 +1,0 @@
-﻿Click a color...
-
-Close
-
-Color: 
-
-Sample
-
-Web Safe:
