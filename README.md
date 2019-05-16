@@ -95,6 +95,12 @@ $AUTO_DOWNLOAD = 0;
 
 ZIP archived packages can be offered on your website as file downloads for offline reading.  Publications packaged into folders are ready to be uploaded to a web server for online reading.
 
+### Code Contributions
+
+**THIS REPOSITORY USES SUBTREES!**  The "addons," "themes," and "xinha4ryuzine" folders are imported as subtrees from the "ryuzine-addons," "ryuzine-themes," and "xinha4ryuzine" repositories, respectively.  The first two, however, are entirely made up of subtrees imported from the individual add-on and theme repositories.  You should make changes to the repository for the specific add-on or theme instead of editing files in this repository. Then pull the commits from that repository into either the "ryuzine-addons" or "ryuzine-themes" repository, and finally pull those repositories into this one.
+
+See also *Open Source Porject Contributions* at http://www.ryumaru.com/contributing-code/ and *Open Source Code of Conduct* at http://www.ryumaru.com/open-source-code-conduct/ for more details.
+
 ### License
 
 “Ryuzine” and “Ryuzine Writer” are released under the Mozilla Public License (MPL) 2.0, the full text of which is bundled with the webapps. “Ryuzine Press” is released under the GNU General Public License version 3 (GPLv3).  Add-ons, Themes, Skins or other components may be under other licenses.
