@@ -1,0 +1,192 @@
+/* iOS 5.x Phones */
+
+#device.portrait.phone.iOS_5.appview #simscreen {
+	top: 20px;
+	bottom: 0px;
+}
+#device.portrait.phone.iOS_5.browser #simscreen {
+	top: 84px;
+	bottom: 44px;
+}	
+#device.portrait.phone.iOS_5.appview #statusbar,
+#device.landscape.phone.iOS_5.appview #statusbar,
+#device.portrait.phone.iOS_5.browser #statusbar,
+#device.landscape.phone.iOS_5.browser #statusbar {
+	height: 20px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_right.png') center right no-repeat,
+				url('statusbar_left.png') center left no-repeat,
+				url('statusbar_center.png') center center no-repeat,
+				url('statusbar_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.phone.iOS_5.appview #navbar {
+	display: none;
+}
+#device.portrait.phone.iOS_5.browser #navbar,
+#device.landscape.phone.iOS_5.browser #navbar {
+	height: 60px;
+	display: block;
+	color: transparent;
+	background: url('navbar_right.png') center right no-repeat,
+				url('navbar_left.png') center left no-repeat,
+				url('navbar_center.png') 65% center no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				#ccc;
+}
+	#device.phone.iOS_5.browser #navbar::before {
+		content: 'Search';
+		font-size: 18px;
+		line-height: 72px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 70%;
+		width: 100%;
+		height: 100%;
+		color: #333;
+	}
+	#device.phone.iOS_5.browser #navbar::after {
+		content: 'writer:simulator';
+		font-size: 18px;
+		line-height: 72px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 15px;
+		width: 100%;
+		height: 100%;
+		color: black;
+	}
+#device.portrait.phone.iOS_5.appview #tabbar {
+	display: none;
+}
+#device.portrait.phone.iOS_5.browser #tabbar,
+#device.landscape.phone.iOS_5.browser #tabbar {
+	height: 44px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_left.png') left center no-repeat,
+				url('tabbar_left2.png') 25% center no-repeat,
+				url('tabbar_center.png') center center no-repeat,
+				url('tabbar_right2.png') 75% center no-repeat,
+				url('tabbar_right.png') center right no-repeat,
+				url('tabbar_back.png') center center repeat-x,
+				#ccc;
+}
+#device.landscape.phone.iOS_5.appview #simscreen {
+	top: 20px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.iOS_5.browser #simscreen {
+	top: 84px;
+	bottom: 44px;
+	right: 0px;
+}
+#device.landscape.phone.iOS_5.appview #navbar {
+	display: none;
+}
+#device.landscape.phone.iOS_5.appview #tabbar {
+	display: none;
+}	
+/* iOS 5.x iPad	 */
+#device.portrait.tablet.iOS_5.appview #simscreen {
+	top: 20px;
+	bottom: 0px;
+}
+#device.portrait.tablet.iOS_5.browser #simscreen {
+	top: 96px;
+	bottom: 0px;
+}	
+#device.portrait.tablet.iOS_5.appview #statusbar,
+#device.landscape.tablet.iOS_5.appview #statusbar,
+#device.portrait.tablet.iOS_5.browser #statusbar,
+#device.landscape.tablet.iOS_5.browser #statusbar {
+	height: 20px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_tablet_right.png') center right no-repeat,
+				url('statusbar_tablet_left.png') center left no-repeat,
+				url('statusbar_tablet_center.png') center center no-repeat,
+				url('statusbar_tablet_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.tablet.iOS_5.appview #navbar {
+	display: none;
+}
+#device.portrait.tablet.iOS_5.browser #navbar,
+#device.landscape.tablet.iOS_5.browser #navbar {
+	height: 44px;
+	display: block;
+	color: transparent;
+	background: url('navbar_tablet_left.png') left center no-repeat,
+				url('navbar_tablet_right.png') right center no-repeat,
+				url('navbar_tablet_center.png') 65% center no-repeat,
+				url('navbar_tablet_back.png') center center repeat-x,
+				white;
+}
+	#device.tablet.iOS_5.browser #navbar::before {
+		content: 'Search';
+		font-size: 18px;
+		line-height: 44px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 67%;
+		width: 100%;
+		height: 100%;
+		color: #333;
+	}
+	#device.tablet.iOS_5.browser #navbar::after {
+		content: 'writer:simulator';
+		font-size: 18px;
+		line-height: 44px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 200px;
+		width: 100%;
+		height: 100%;
+		color: black;
+	}
+#device.portrait.tablet.iOS_5.appview #tabbar {
+	display: none;
+}
+#device.portrait.tablet.iOS_5.browser #tabbar,
+#device.landscape.tablet.iOS_5.browser #tabbar {
+	position: relative;
+	height: 32px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_tablet_left.png') left center no-repeat,
+				url('tabbar_tablet_back.png') center center repeat-x,
+				#eee;
+}
+#device.landscape.tablet.iOS_5.appview #simscreen {
+	top: 20px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.iOS_5.browser #simscreen {
+	top: 96px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.iOS_5.appview #navbar {
+	display: none;
+}
+#device.landscape.tablet.iOS_5.appview #tabbar {
+	display: none;
+}

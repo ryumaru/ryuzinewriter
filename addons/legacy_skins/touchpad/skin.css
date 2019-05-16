@@ -1,0 +1,66 @@
+/* HP TouchPad Skin	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: iOS				*/
+/* Width: 1024			*/
+/* Height: 768			*/
+
+
+.simbox {
+background: #3b679e; /* Old browsers */
+background: -moz-linear-gradient(left,  #3b679e 0%, #246be5 10%, #2b88d9 21%, #246be5 35%, #6897e2 50%, #246be5 65%, #207cca 80%, #246be5 90%, #207cca 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3b679e), color-stop(10%,#246be5), color-stop(21%,#2b88d9), color-stop(35%,#246be5), color-stop(50%,#6897e2), color-stop(65%,#246be5), color-stop(80%,#207cca), color-stop(90%,#246be5), color-stop(100%,#207cca)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #3b679e 0%,#246be5 10%,#2b88d9 21%,#246be5 35%,#6897e2 50%,#246be5 65%,#207cca 80%,#246be5 90%,#207cca 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #3b679e 0%,#246be5 10%,#2b88d9 21%,#246be5 35%,#6897e2 50%,#246be5 65%,#207cca 80%,#246be5 90%,#207cca 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #3b679e 0%,#246be5 10%,#2b88d9 21%,#246be5 35%,#6897e2 50%,#246be5 65%,#207cca 80%,#246be5 90%,#207cca 100%); /* IE10+ */
+background: linear-gradient(left,  #3b679e 0%,#246be5 10%,#2b88d9 21%,#246be5 35%,#6897e2 50%,#246be5 65%,#207cca 80%,#246be5 90%,#207cca 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#207cca',GradientType=1 ); /* IE6-9 */
+
+}
+#device.portrait {
+	height: 1297px;
+	width: 1031px;
+	position: relative;
+	margin-top: -648px;
+	margin-left: -515px;
+	padding: 0;
+	background: transparent url('TouchPad_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 130px;
+		top: 140px;
+		width: 768px;
+		height: 1024px;
+	}
+
+#device.landscape {
+	height: 1031px;
+	width: 1297px;
+	position: relative;
+	margin-top: -515px;
+	margin-left: -648px;
+	padding: 0;
+	background: transparent url('TouchPad_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 130px;
+		left: 140px;
+		width: 1024px;
+		height: 768px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -512px;
+		margin-left: -384px;
+	}
+	#device.landscape.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -384px;
+		margin-left: -512px;
+	}

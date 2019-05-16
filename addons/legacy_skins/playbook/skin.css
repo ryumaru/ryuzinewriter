@@ -1,0 +1,48 @@
+/* BlackBerry Playbook	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: BB Tablet OS		*/
+/* Width: 1024			*/
+/* Height: 600			*/
+
+
+.simbox {
+	background: #808080 url('carbonfiber.jpg');
+}
+#device.portrait {
+	height: 1354px;
+	width: 928px;
+	margin-top: -677px;
+	margin-left: -464px;
+	background: transparent url('PlayBook_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		left: 165px;
+		top: 165px;
+		width: 600px;
+		height: 1024px;
+	}
+
+#device.landscape {
+	height: 928px;
+	width: 1354px;
+	margin-top: -464px;
+	margin-left: -677px;
+	background: transparent url('PlayBook_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		top: 165px;
+		left: 168px;
+		width: 1024px;
+		height: 600px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -512px;
+		margin-left: -300px;
+	}
+	#device.landscape.noskin {
+		margin-top: -300px;
+		margin-left: -512px;
+	}

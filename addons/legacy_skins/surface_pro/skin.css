@@ -1,0 +1,57 @@
+/* Surface Pro Tablet Skin	 	*/
+/* @ Ryuzine Writer 			*/
+/* @ version 1.0				*/
+/* OS: FireOS					*/
+/* Width: 1371					*/
+/* Height: 771					*/
+/* 	Device screen is actually 1920x1080 but UI is magnified 140%
+	which renders it at a virtual size of 1371x771
+*/
+
+.simbox {
+	background:#1ba1e2;
+}
+
+#device.portrait {
+	height: 1593px;
+	width: 1001px;
+	position: relative;
+	margin-top: -796px;
+	margin-left: -500px;
+	padding: 0;
+	background: transparent url('surface_pro_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 115px;
+		top: 113px;
+		width: 771px;
+		height: 1371px;
+	}
+
+#device.landscape {
+	height: 1001px;
+	width: 1593px;
+	position: relative;
+	margin-top: -500px;
+	margin-left: -796px;
+	padding: 0;
+	background: transparent url('surface_pro_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 115px;
+		left: 113px;
+		width: 1371px;
+		height: 771px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -685px;
+		margin-left: -385px;
+	}
+	#device.landscape.noskin {
+		margin-top: -385px;
+		margin-left: -685px;
+	}

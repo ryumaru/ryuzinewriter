@@ -1,0 +1,20 @@
+/* 	Ryuzine Writer Legacy OS Skins		
+
+	This stylesheet loads the on-screen
+	operating system elements such as the
+	mobile device status bar, browser bar,
+	tab/system bar and their typical sizes.
+	
+	You can over-ride any or all of these 
+	with custom styles in your device skin.
+	
+	These are obsolete operating systems.
+	Newer or current ones are in the main
+	os.css file in /ryuzine/skins
+
+*/
+
+@import url('images/iOS_5/layout.css');
+@import url('images/Android_2x/layout.css');
+@import url('images/webOS/layout.css');
+@import url('images/BBOS/layout.css');

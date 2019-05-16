@@ -1,0 +1,58 @@
+/* Original iPad Skin	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: iOS				*/
+/* Width: 1024			*/
+/* Height: 768			*/
+
+
+.simbox {
+	background: #808080 url('woodtile.jpg');
+}
+#device.portrait {
+	height: 1303px;
+	width: 1030px;
+	position: relative;
+	margin-top: -651px;
+	margin-left: -515px;
+	padding: 0;
+	background: transparent url('iPad_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 130px;
+		top: 140px;
+		width: 768px;
+		height: 1024px;
+	}
+
+#device.landscape {
+	height: 1030px;
+	width: 1303px;
+	position: relative;
+	margin-top: -515px;
+	margin-left: -651px;
+	padding: 0;
+	background: transparent url('iPad_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 130px;
+		left: 140px;
+		width: 1024px;
+		height: 768px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -512px;
+		margin-left: -384px;
+	}
+	#device.landscape.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -384px;
+		margin-left: -512px;
+	}

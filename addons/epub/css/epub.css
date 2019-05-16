@@ -1,0 +1,21 @@
+#epub_form .config_page {
+	width: 90%;height: 90%;margin: 2% auto;resize: none;
+}
+#epub_form table { 
+	background: url("../epub_logo_greyscale.png") right 50px no-repeat;
+}
+#epub_form td { 
+	vertical-align: top; 
+}
+#epub_auto { 
+	text-align: right;
+}
+#epub_auto input { 
+	margin-right: 8px;
+}
+@media only screen and (max-width: 599px) {
+	#epub_form table { background: none; }
+	#epub_form .config_page {
+		height: 100%;width: 100%;padding-bottom: 100px;
+	}
+}

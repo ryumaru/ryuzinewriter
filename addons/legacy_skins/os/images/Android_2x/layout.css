@@ -1,0 +1,78 @@
+/* Android 2.3.x */
+#device.portrait.phone.Android2.appview #simscreen,
+#device.landscape.phone.Android2.appview #simscreen,
+#device.portrait.tablet.Android2.appview #simscreen,
+#device.landscape.tablet.Android2.appview #simscreen {
+	top: 25px;
+	bottom: 0px;
+	background: #fff;
+}
+#device.portrait.phone.Android2.browser #simscreen,
+#device.landscape.phone.Android2.browser #simscreen,
+#device.portrait.tablet.Android2.browser #simscreen,
+#device.landscape.tablet.Android2.browser #simscreen {
+	top: 81px;
+	bottom: 0px;
+	background: #fff;
+}
+#device.portrait.phone.Android2.appview #statusbar,
+#device.landscape.phone.Android2.appview #statusbar,
+#device.portrait.phone.Android2.browser #statusbar,
+#device.landscape.phone.Android2.browser #statusbar,	
+#device.portrait.tablet.Android2.appview #statusbar,
+#device.landscape.tablet.Android2.appview #statusbar,
+#device.portrait.tablet.Android2.browser #statusbar,
+#device.landscape.tablet.Android2.browser #statusbar {
+	height: 25px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_right.png') center right no-repeat,
+				url('statusbar_left.png') center left no-repeat,
+				url('statusbar_back.png') center center repeat-x,
+				black;
+}
+#device.portrait.phone.Android2.appview #navbar,
+#device.landscape.phone.Android2.appveiw #navbar,
+#device.portrait.tablet.Android2.appview #navbar,
+#device.landscape.tablet.Android2.appview #navbar {
+	display: none;
+}
+#device.portrait.phone.Android2.browser #navbar,
+#device.landscape.phone.Android2.browser #navbar,
+#device.portrait.tablet.Android2.browser #navbar,
+#device.landscape.tablet.Android2.browser #navbar {
+	height: 56px;
+	display: block;
+	color: transparent;
+	background: url('navbar_left.png') left center no-repeat,
+				url('navbar_right.png') right center no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				white;
+}
+	#device.phone.Android2.browser #navbar::after,
+	#device.tablet.Android2.browser #navbar::after {
+		content: 'http://writer:simulator';
+		font-size: 18px;
+		line-height: 56px;
+		font-family: Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 58px;
+		width: auto;
+		right: 68px;
+		height: 100%;
+		color: #000;
+		overflow: hidden;
+	}
+#device.portrait.phone.Android2.appview #tabbar,
+#device.landscape.phone.Android2.appview #tabbar,
+#device.portrait.phone.Android2.browser #tabbar,
+#device.landscape.phone.Android2.browser #tabbar,
+#device.portrait.tablet.Android2.appview #tabbar,
+#device.portrait.tablet.Android2.browser #tabbar,
+#device.landscape.tablet.Android2.appview #tabbar,
+#device.landscape.tablet.Android2.browser #tabbar {
+	display: none;
+}

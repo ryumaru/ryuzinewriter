@@ -1,0 +1,139 @@
+/* HTC One Marvel Skin		*/
+/* for Ryuzine Writer 1.0	*/
+/* Width: 640				*/
+/* Height: 360				*/
+
+@import url("../devices.css-master/assets/devices.min.css");
+
+.marvel-device {
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+/* This device is not the right size for Simulator, make adjustments */
+.marvel-device.htc-one {
+	padding: 94px 25px 90px 25px;
+	width: 360px;
+	height: 640px;
+}
+.marvel-device.htc-one .top-bar {
+	width: calc(100% - 8px);
+	height: 712px;
+	top: 57px;
+	left: 4px;
+}
+.marvel-device.htc-one .sensor {
+	left: 40px;
+	width: 10px;
+	height: 10px;
+}
+.marvel-device.htc-one .sensor::after {
+	right: 14px;
+	width: 10px;
+	height: 10px;
+}
+.marvel-device.htc-one .speaker {
+	height: 20px;
+	width: 240px;
+	top: 22px;
+	margin-left: -120px;
+	background-size: 5px 5px;
+}
+.marvel-device.htc-one .speaker::after {
+	height: 20px;
+	width: 240px;
+	top: 760px;
+	margin-left: -120px;
+}
+.marvel-device.htc-one.landscape {
+	padding: 25px 94px 25px 90px;
+	height: 360px;
+	width: 640px;
+}
+.marvel-device.htc-one.landscape .top-bar {
+	height: calc(100% - 8px);
+	width: 713px;
+	left: calc(100% - 771px);
+	top: 4px;
+}
+.marvel-device.htc-one.landscape .sensor {
+	left: calc(100% - 38px);
+	top: 24px;
+}
+.marvel-device.htc-one.landscape .sensor::after {
+	right: 0px;
+	top: 14px;
+}
+.marvel-device.htc-one.landscape .speaker {
+	width: 20px;
+	height: 240px;
+	left: calc(100% - 42px);
+	margin-top: -120px;
+}
+.marvel-device.htc-one.landscape .speaker::after {
+	width: 20px;
+	height: 240px;
+	left: calc(100% - 780px);
+	margin-top: -120px;
+}
+.marvel-device.htc-one.landscape .camera {
+	right: 20px;
+	top: calc(100% - 54px);
+}
+/* HTC One M7 Has Hardware Buttons, remove on-screen system bar */
+#device.phone.landscape.Android4.browser #statusbar {
+	background-position: center right, center center;
+}
+#device.phone.landscape.Android4.appview #navbar,
+#device.phone.landscape.Android4.browser #navbar {
+	background-position: center left, center right, center center;
+}
+#device.phone.landscape.Android4.appview #simscreen,
+#device.phone.landscape.Android4.browser #simscreen {
+	right: 0px;
+}
+#device.phone.portrait.Android4.appview #simscreen,
+#device.phone.portrait.Android4.browser #simscreen {
+	bottom: 0px;
+}
+#device.phone.portrait.Android4.appview #tabbar,
+#device.phone.portrait.Android4.browser #tabbar,
+#device.phone.landscape.Android4.appview #tabbar,
+#device.phone.landscape.Android4.browser #tabbar {
+	display: none;
+}
+#simulator, #simbox {
+	background: rgba(255,255,255,.4);
+}
+#device.portrait {
+	margin-top:  -412px;
+	margin-left: -205px;
+}
+
+#device.landscape {
+	margin-top: -205px;
+	margin-left: -412px;
+}
+
+/* Screen Only Centering */
+#device.noskin .top-bar,	#device.noskin .sleep,	#device.noskin .volume, 
+#device.noskin .camera,	#device.noskin .sensor, 	#device.noskin .speaker, 
+#device.noskin .home, 	#device.noskin .bottom-bar {
+	display: none;
+}
+	/* Note: Marvel Device skins need height and width declared for unskinned screen */
+	#device.portrait.noskin {
+		height: 640px;
+		width: 360px;
+		margin-top: -320px;
+		margin-left: -180px;
+		padding: 0;
+	}
+	#device.landscape.noskin {
+		height: 360px;
+		width: 640px;
+		margin-top: -180px;
+		margin-left: -320px;
+		padding: 0;
+	}

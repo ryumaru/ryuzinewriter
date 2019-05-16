@@ -1,0 +1,73 @@
+Version 1.0
+===========
+
+ADD-ONS PACK FOR RYUZINE WRITER
+
+MANIFEST
+========
+
+* brand_catalog
+* demo
+* epub
+* iscroll
+* legacy_skins
+* localize
+* marvel_skins
+* sample
+* themeset
+
+DETAILS
+=======
+
+* brand_catalog
+..+ adds back catalog masthead image field to Ryuzine Writer RackBuilder.
+
+* demo
+..+ automated, animated tour of Ryuzine Writer features.
+
+* epub
+..+ updated to version 0.3
+..+ added experimental option to build EPUB 2.0 files
+
+* iscroll
+..+ updated to iScroll 5.1.3
+
+* legacy_skins
+..+ adds device profiles back to Ryuzine Writer Simulator including:
+..- Samsung Focus S
+..- HTC Droid
+..- iPad (original)
+..- iPhone 3
+..- Blackberry Playbook
+..- Surface Pro (original)
+..- Surface RT
+..- HP Touchpad
+
+* localize (new)
+..+ "localization" add-on name changed to "localize"
+..+ "ryuzine.localization.js" deprecated, replaced by "localization.js"
+..+ parse and merge functions added for contributing translations
+..+ now supports custom css based on language.  For example German and Japanese may require a font-size reduction to fit text.
+..+ now uses separate translation files for each language code.
+..+ added translations for Ryuzine Writer
+
+* marvel_skins
+..+ adds pure CSS Marvelapp device profiles to Ryuzine Writer Simulator including:
+..- HTC One
+..- iPad (original)
+..- iPhone 4s
+..- iPhone 5c
+..- iPhone 5s
+..- iPhone 6
+..- iPhone 6 Plus
+..- Nokia Lumia 920
+..- Google Nexus 5
+..- Samsung S5
+
+* sample
+..+ add-on showing how to use add-on options.  Can be used as a starting point for making your own add-ons for Ryuzine webapps.
+
+* themeset (new)
+..+ renamed "themeshow" add-on to "themeset"
+..+ added support for more themes
+

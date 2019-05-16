@@ -1,0 +1,58 @@
+/* iPhone 3gs Skin	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: iOS				*/
+/* Width: 480			*/
+/* Height: 320			*/
+
+
+.simbox {
+	background: #808080 url('woodtile.jpg');
+}
+#device.portrait {
+	height: 771px;
+	width: 442px;
+	position: relative;
+	margin-top: -385px;
+	margin-left: -221px;
+	padding: 0;
+	background: transparent url('iphone3_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 63px;
+		top: 145px;
+		width: 320px;
+		height: 480px;
+	}
+
+#device.landscape {
+	height: 442px;
+	width: 771px;
+	position: relative;
+	margin-top: -221px;
+	margin-left: -385px;
+	padding: 0;
+	background: transparent url('iphone3_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 60px;
+		left: 146px;
+		width: 480px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -240px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		top: 50%;
+		left: 50%;
+		margin-top: -160px;
+		margin-left: -240px;
+	}

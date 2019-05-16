@@ -1,0 +1,55 @@
+/* Surface RT Tablet Skin	 	*/
+/* @ Ryuzine Writer 			*/
+/* @ version 1.0				*/
+/* OS: FireOS					*/
+/* Width: 1366					*/
+/* Height: 768					*/
+
+
+.simbox {
+	background:#1ba1e2;
+}
+
+#device.portrait {
+	height: 1593px;
+	width: 1001px;
+	position: relative;
+	margin-top: -796px;
+	margin-left: -500px;
+	padding: 0;
+	background: transparent url('Surface_RT_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		position: relative;
+		left: 115px;
+		top: 114px;
+		width: 768px;
+		height: 1366px;
+	}
+
+#device.landscape {
+	height: 1001px;
+	width: 1593px;
+	position: relative;
+	margin-top: -500px;
+	margin-left: -796px;
+	padding: 0;
+	background: transparent url('Surface_RT_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 115px;
+		left: 114px;
+		width: 1366px;
+		height: 768px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -683px;
+		margin-left: -384px;
+	}
+	#device.landscape.noskin {
+		margin-top: -384px;
+		margin-left: -683px;
+	}

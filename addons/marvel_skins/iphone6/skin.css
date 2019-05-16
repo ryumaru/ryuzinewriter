@@ -1,0 +1,47 @@
+/* iPhone 6 Marvel Skin	*/
+/* for Ryuzine Writer 1.0	*/
+/* Width: 667				*/
+/* Height: 375				*/
+
+@import url("../devices.css-master/assets/devices.min.css");
+
+.marvel-device {
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+#simulator, #simbox {
+	background: rgba(255,255,255,.4);
+}
+#device.portrait {
+	margin-top:  -439px;
+	margin-left: -212px;
+}
+
+#device.landscape {
+	margin-top: -212px;
+	margin-left: -439px;
+}
+
+/* Screen Only Centering */
+#device.noskin .top-bar,	#device.noskin .sleep,	#device.noskin .volume, 
+#device.noskin .camera,	#device.noskin .sensor, 	#device.noskin .speaker, 
+#device.noskin .home, 	#device.noskin .bottom-bar {
+	display: none;
+}
+	#device.portrait.noskin {
+		height: 667px;
+		width: 375px;
+		margin-top: -334px;
+		margin-left: -186px;
+		padding: 0;
+	}
+	#device.landscape.noskin {
+		height: 375px;
+		width: 667px;
+		margin-top: -186px;
+		margin-left: -334px;
+		padding: 0;
+	}

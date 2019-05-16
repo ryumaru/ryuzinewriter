@@ -1,0 +1,226 @@
+/* BlackBerry 10 Phones */
+
+#device.portrait.phone.BBOS.appview #simscreen {
+	top: 42px;
+	bottom: 0px;
+}
+#device.portrait.phone.BBOS.browser #simscreen {
+	top: 144px;
+	bottom: 0px;
+}	
+
+#device.portrait.phone.BBOS.appview #statusbar,
+#device.landscape.phone.BBOS.appview #statusbar,
+#device.landscape.phone.BBOS.browser #statusbar {
+	display: none;
+}
+#device.portrait.phone.BBOS.browser #statusbar {
+	height: 51px;
+	top: 51px;
+	display: block;
+	color: transparent;
+	background: url('phone_port_left.png') left center no-repeat,
+				url('phone_port_right.png') right center no-repeat,
+				url('statusbar_phone_back.png') center center repeat-x,
+				#333;
+}
+
+#device.portrait.phone.BBOS.appview #navbar {
+	display: none;
+}
+#device.portrait.phone.BBOS.browser #navbar {
+	height: 51px;
+	margin-top: -51px;
+	display: block;
+	color: transparent;
+	background: url('navbar_phone_port_left.png') left center no-repeat,
+				url('navbar_phone_port_right.png') right center no-repeat,
+				url('navbar_phone_port_back.png') center center repeat-x,
+				#333;
+}
+#device.landscape.phone.BBOS.browser #navbar {
+	height: 51px;
+	display: block;
+	color: transparent;
+	background: url('navbar_phone_land_right.png') right center no-repeat,
+				url('navbar_phone_land_left.png') left center no-repeat,
+				url('navbar_phone_back.png') center center repeat-x,
+				#333;
+}
+	#device.phone.BBOS.browser #navbar::after {
+		content: 'writer:simulator';
+		font-size: 18px;
+		line-height: 51px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 128px;
+		right: 43px;
+		width: auto;
+		height: 100%;
+		color: black;
+		overflow: hidden;
+	}
+	#device.landscape.phone.BBOS.browser #navbar::after {
+		left: 224px;
+		right: 238px;
+	}
+#device.portrait.phone.BBOS.appview #tabbar,
+#device.landscape.phone.BBOS.appview #tabbar {
+	position: relative;
+	height: 42px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_phone_left.png') left center no-repeat,
+				url('tabbar_phone_back.png') center center repeat-x,
+				#333;
+}
+#device.portrait.phone.BBOS.browser #tabbar,
+#device.landscape.phone.BBOS.browser #tabbar {
+	position: relative;
+	height: 42px;
+	margin-top: 51px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_phone_back.png') center center repeat-x,
+				#333;
+}
+	#device.landscape.phone.BBOS.browser #tabbar {
+		margin-top: 0px;
+	}
+	#device.phone.BBOS.appview #tabbar::after,
+	#device.phone.BBOS.browser #tabbar::after {
+		content: 'Active Tab';
+		font-size: 16px;
+		line-height: 42px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: center;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+	}
+#device.landscape.phone.BBOS.appview #simscreen {
+	top: 42px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.BBOS.browser #simscreen {
+	top: 93px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.phone.BBOS.appview #navbar {
+	display: none;
+}	
+
+
+/* BlackBerry Tablet OS	 */
+
+
+#device.portrait.tablet.BBOS.appview #simscreen {
+	top: 31px;
+	bottom: 0px;
+}
+#device.portrait.tablet.BBOS.browser #simscreen {
+	top: 88px;
+	bottom: 0px;
+}	
+#device.portrait.tablet.BBOS.appview #statusbar,
+#device.landscape.tablet.BBOS.appview #statusbar,
+#device.portrait.tablet.BBOS.browser #statusbar,
+#device.landscape.tablet.BBOS.browser #statusbar {
+	display: none;
+}
+
+#device.portrait.tablet.BBOS.appview #navbar {
+	display: none;
+}
+#device.portrait.tablet.BBOS.browser #navbar {
+	height: 57px;
+	display: block;
+	color: transparent;
+	background: url('navbar_tablet_left.png') left center no-repeat,
+				url('navbar_tablet_port_right.png') right center no-repeat,
+				url('navbar_tablet_back.png') center center repeat-x,
+				#333;
+}
+#device.landscape.tablet.BBOS.browser #navbar {
+	height: 57px;
+	display: block;
+	color: transparent;
+	background: url('navbar_tablet_left.png') left center no-repeat,
+				url('navbar_tablet_right.png') right center no-repeat,
+				url('navbar_tablet_back.png') center center repeat-x,
+				#333;
+}
+	#device.tablet.BBOS.browser #navbar::after {
+		content: 'writer:simulator';
+		font-size: 18px;
+		line-height: 57px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 250px;
+		right: 289px;
+		width: auto;
+		height: 100%;
+		color: black;
+		overflow: hidden;
+	}
+		#device.portrait.tablet.BBOS.browser #navbar::after {
+			right: 166px;
+		}
+#device.portrait.tablet.BBOS.appview #tabbar,
+#device.landscape.tablet.BBOS.appview #tabbar {
+	position: relative;
+	height: 31px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_left.png') left center no-repeat,
+				url('tabbar_back.png') center center repeat-x,
+				#333;
+}
+#device.portrait.tablet.BBOS.browser #tabbar,
+#device.landscape.tablet.BBOS.browser #tabbar {
+	position: relative;
+	height: 31px;
+	display: block;
+	color: transparent;
+	background: #333 url('tabbar_back.png') center center repeat-x;
+}
+	#device.tablet.BBOS.appview #tabbar::after,
+	#device.tablet.BBOS.browser #tabbar::after {
+		content: 'Active Tab';
+		font-size: 16px;
+		line-height: 31px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: center;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+	}
+#device.landscape.tablet.BBOS.appview #simscreen {
+	top: 31px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.BBOS.browser #simscreen {
+	top: 88px;
+	bottom: 0px;
+	right: 0px;
+}
+#device.landscape.tablet.BBOS.appview #navbar {
+	display: none;
+}

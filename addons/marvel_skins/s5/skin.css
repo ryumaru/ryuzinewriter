@@ -1,0 +1,133 @@
+/* Samsung S5 Marvel Skin		*/
+/* for Ryuzine Writer 1.0	*/
+/* Width: 640				*/
+/* Height: 360				*/
+
+@import url("../devices.css-master/assets/devices.min.css");
+
+.marvel-device {
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+/* This device is not the right size for Simulator, make adjustments */
+.marvel-device.s5 {
+	width: 360px;
+	height: 640px;
+}
+.marvel-device.s5.landscape {
+	width: 640px;
+	height: 360px;
+}
+.marvel-device.s5 .speaker {
+	width: 80px;
+	top: 25px;
+	margin-left: -40px;
+}
+.marvel-device.s5 .sensor {
+	top: 25px;
+}
+.marvel-device.s5::before {
+	top: -9px;
+}
+.marvel-device.s5 .top-bar::before {
+	top: -9px;
+}
+.marvel-device.s5::after {
+	bottom: -9px;
+}
+.marvel-device.s5 .top-bar::after {
+	bottom: -9px;
+}
+.marvel-device.s5.landscape::before {
+	right: -9px;
+}
+.marvel-device.s5.landscape .top-bar::before {
+	right: -9px;
+}
+.marvel-device.landscape.s5::after {
+	right: -9px;
+}
+.marvel-device.s5.landscape .top-bar::after {
+	left: -9px;
+}
+.marvel-device.s5.landscape .sensor {
+	right: 25px;
+}
+.marvel-device.s5.landscape .sensor::after {
+	left: 0px;
+	top: -12px;
+}
+.marvel-device.s5.landscape .speaker {
+	height: 80px;
+	left: calc(100% - 32px);
+	margin-top: -40px;
+}
+/* Samsung S5 Has Hardware Buttons, remove on-screen system bar */
+
+#device.phone.landscape.Android4.appview #navbar::after {
+	right: 0px;
+}
+#device.phone.landscape.Android4.browser #navbar::after {
+	right: 0px;
+}
+#device.phone.landscape.Android4.appview #simscreen {
+	right: 0px;
+}
+#device.phone.landscape.Android4.browser #simscreen {
+	right: 0px;
+}
+#device.phone.portrait.Android4.appview #simscreen {
+	bottom: 0px;
+}
+#device.phone.portrait.Android4.browser #simscreen {
+	bottom: 0px;
+}
+
+#device.phone.portrait.Android4.appview #tabbar,
+#device.phone.portrait.Android4.browser #tabbar,
+#device.phone.landscape.Android4.appview #tabbar,
+#device.phone.landscape.Android4.browser #tabbar {
+	display: none;
+}
+#simulator, #simbox {
+	background: rgba(255,255,255,.4);
+}
+#device.portrait {
+	margin-top:  -380px;
+	margin-left: -194px;
+}
+
+#device.landscape {
+	margin-top: -194px;
+	margin-left: -380px;
+}
+
+/* Screen Only Centering */
+#device.noskin .top-bar,	#device.noskin .sleep,	#device.noskin .volume, 
+#device.noskin .camera,	#device.noskin .sensor, 	#device.noskin .speaker, 
+#device.noskin .home, 	#device.noskin .bottom-bar {
+	display: none;
+}
+	/* Note: Marvel Device skins need height and width declared for unskinned screen */
+	#device.portrait.noskin {
+		height: 640px;
+		width: 360px;
+		margin-top: -320px;
+		margin-left: -180px;
+		padding: 0;
+	}
+	#device.portrait.noskin.marvel-device.nexus5::before {
+		display: none;
+	}
+	#device.landscape.noskin {
+		height: 360px;
+		width: 640px;
+		margin-top: -180px;
+		margin-left: -320px;
+		padding: 0;
+	}
+	#device.landscape.noskin.marvel-device.nexus5::before {
+		display: none;
+	}
