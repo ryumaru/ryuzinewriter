@@ -1,0 +1,47 @@
+/* iPhone 5c Marvel Skin	*/
+/* for Ryuzine Writer 1.0	*/
+/* Width: 568				*/
+/* Height: 320				*/
+
+@import url("../devices.css-master/assets/devices.min.css");
+
+.marvel-device {
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+#simulator, #simbox {
+	background: rgba(255,255,255,.4);
+}
+#device.portrait {
+	margin-top:  -389px;
+	margin-left: -182px;
+}
+
+#device.landscape {
+	margin-top: -182px;
+	margin-left: -389px;
+}
+
+/* Screen Only Centering */
+#device.noskin .top-bar,	#device.noskin .sleep,	#device.noskin .volume, 
+#device.noskin .camera,	#device.noskin .sensor, 	#device.noskin .speaker, 
+#device.noskin .home, 	#device.noskin .bottom-bar {
+	display: none;
+}
+	#device.portrait.noskin {
+		height: 568px;
+		width: 320px;
+		margin-top: -284px;
+		margin-left: -160px;
+		padding: 0;
+	}
+	#device.landscape.noskin {
+		height: 320px;
+		width: 568px;
+		margin-top: -160px;
+		margin-left: -284px;
+		padding: 0;
+	}

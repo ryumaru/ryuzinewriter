@@ -1,0 +1,58 @@
+/* Samsung Focus S	 	*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: Windows Phone 7.5*/
+/* Width: 533			*/
+/* Height: 320			*/
+
+.simbox {
+background: #2989d8; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #2989d8 0%, #8086c9 31%, #207cca 40%, #1fc464 54%, #2d95e5 71%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#2989d8), color-stop(31%,#8086c9), color-stop(40%,#207cca), color-stop(54%,#1fc464), color-stop(71%,#2d95e5), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #2989d8 0%,#8086c9 31%,#207cca 40%,#1fc464 54%,#2d95e5 71%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #2989d8 0%,#8086c9 31%,#207cca 40%,#1fc464 54%,#2d95e5 71%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #2989d8 0%,#8086c9 31%,#207cca 40%,#1fc464 54%,#2d95e5 71%,#7db9e8 100%); /* IE10+ */
+background: linear-gradient(45deg,  #2989d8 0%,#8086c9 31%,#207cca 40%,#1fc464 54%,#2d95e5 71%,#7db9e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+#device.portrait {
+	height: 776px;
+	width: 442px;
+	position: relative;
+	margin-top: -388px;
+	margin-left: -221px;
+	background: transparent url('Samsung-Focus-S_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		left: 61px;
+		top: 117px;
+		width: 320px;
+		height: 533px;
+	}
+
+#device.landscape {
+	height: 442px;
+	width: 776px;
+	position: relative;
+	margin-top: -221px;
+	margin-left: -388px;
+	background: transparent url('Samsung-Focus-S_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		position: relative;
+		top: 61px;
+		left: 117px;
+		width: 533px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -266px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		margin-top: -160px;
+		margin-left: -266px;
+	}

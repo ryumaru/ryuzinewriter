@@ -1,0 +1,84 @@
+/* webOS Tablet	 */
+#device.portrait.tablet.webOS.appview #simscreen,
+#device.portrait.tablet.webOS.browser #simscreen,
+#device.landscape.tablet.webOS.appview #simscreen,
+#device.landscape.tablet.webOS.browser #simscreen {
+	top: 66px;
+	bottom: 32px;
+	background: #fff;
+}	
+#device.portrait.tablet.webOS.appview #statusbar,
+#device.landscape.tablet.webOS.appview #statusbar,
+#device.portrait.tablet.webOS.browser #statusbar,
+#device.landscape.tablet.webOS.browser #statusbar {
+	height: 24px;
+	display: block;
+	color: transparent;
+	background: url('statusbar_right.png') center right no-repeat,
+				url('statusbar_left.png') center left no-repeat,
+				url('statusbar_center.png') center center no-repeat,
+				url('statusbar_back.png') center center repeat-x,
+				black;
+}
+
+#device.portrait.tablet.webOS.appview #navbar,
+#device.portrait.tablet.webOS.browser #navbar,
+#device.landscape.tablet.webOS.appview #navbar,
+#device.landscape.tablet.webOS.browser #navbar {
+	height: 42px;
+	display: block;
+	color: transparent;
+	background: url('navbar_left.png') left center no-repeat,
+				url('navbar_right.png') right center no-repeat,
+				url('navbar_center.png') center center no-repeat,
+				url('navbar_back.png') center center repeat-x,
+				white;
+}
+	#device.tablet.webOS.browser #navbar::after {
+		content: 'http://writer:simulator';
+		font-size: 18px;
+		line-height: 42px;
+		font-family: 'Helvetica',Arial,sans-serif;
+		font-weight: normal;
+		text-align: left;
+		position: absolute;
+		top: 0px;
+		left: 100px;
+		width: auto;
+		right: 150px;
+		height: 100%;
+		color: #ccc;
+	}
+#device.portrait.tablet.webOS.appview #tabbar,
+#device.portrait.tablet.webOS.browser #tabbar,
+#device.landscape.tablet.webOS.appview #tabbar,
+#device.landscape.tablet.webOS.browser #tabbar {
+	position: absolute;
+	bottom: 0px;
+	height: 34px;
+	display: block;
+	color: transparent;
+	background: url('tabbar_center.png') center center no-repeat,
+				url('tabbar_back.png') center center repeat-x,
+				transparent;
+}
+	#device.tablet.webOS.appview #tabbar::before,
+	#device.tablet.webOS.browser #tabbar::before {
+		content: '';
+		position: absolute;
+		left: -1px;
+		bottom: 0px;
+		height: 47px;
+		width: 15px;
+		background: transparent url('tabbar_left.png') left center no-repeat;
+	}
+	#device.tablet.webOS.appview #tabbar::after,
+	#device.tablet.webOS.browser #tabbar::after {
+		content: '';
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		height: 47px;
+		width: 15px;
+		background: transparent url('tabbar_right.png') left center no-repeat;
+	}

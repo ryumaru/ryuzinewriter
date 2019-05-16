@@ -1,0 +1,57 @@
+/* HTC Droid	 		*/
+/* @ Ryuzine Writer 	*/
+/* @ version 1.0	 	*/
+/* OS: Android 2.x		*/
+/* Width: 533			*/
+/* Height: 320			*/
+
+.simbox {
+background: #190000; /* Old browsers */
+background: -moz-linear-gradient(top,  #190000 0%, #8f0222 30%, #ff0509 49%, #8f0222 70%, #260002 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#190000), color-stop(30%,#8f0222), color-stop(49%,#ff0509), color-stop(70%,#8f0222), color-stop(100%,#260002)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* IE10+ */
+background: linear-gradient(top,  #190000 0%,#8f0222 30%,#ff0509 49%,#8f0222 70%,#260002 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#190000', endColorstr='#260002',GradientType=0 ); /* IE6-9 */
+
+}
+#device.portrait {
+	height: 829px;
+	width: 441px;
+	position: relative;
+	margin-top: -414px;
+	margin-left: -220px;
+	background: transparent url('droid_port.png') 0 0 no-repeat;
+}
+	#device.portrait #screen {
+		left: 63px;
+		top: 128px;
+		width: 320px;
+		height: 533px;
+	}
+
+#device.landscape {
+	height: 441px;
+	width: 829px;
+	position: relative;
+	margin-top: -220px;
+	margin-left: -414px;
+	background: transparent url('droid_land.png') 0 0 no-repeat;
+}
+	#device.landscape #screen {
+		top: 57px;
+		left: 128px;
+		width: 533px;
+		height: 320px;
+	}
+
+/* Screen Only Centering */
+	#device.portrait.noskin {
+		margin-top: -266px;
+		margin-left: -160px;
+	}
+	#device.landscape.noskin {
+		margin-top: -160px;
+		margin-left: -266px;
+	}

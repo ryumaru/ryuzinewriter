@@ -1,0 +1,84 @@
+/* iPad Mini Marvel Skin		*/
+/* for Ryuzine Writer 1.0	*/
+/* Width: 568				*/
+/* Height: 320				*/
+
+@import url("../devices.css-master/assets/devices.min.css");
+
+.marvel-device {
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+/* This device is not the right size for Simulator, make adjustments */
+.marvel-device.ipad {
+	width: 768px;
+	height: 1024px;
+	padding: 117px 33px;
+}
+.marvel-device.ipad .camera {
+	width: 14px;
+	height: 14px;
+	top: 62px;
+	margin-left: -7px
+}
+.marvel-device.ipad .home {
+	border-radius: 65px;
+	width: 65px;
+	height: 65px;
+	margin-left: -33px;
+}
+	.marvel-device.ipad .home::after {
+		width: 20px;
+		height: 20px;
+		margin-top: -10px;
+		margin-left: -10px;	
+	}
+.marvel-device.ipad.landscape {
+	width: 1024px;
+	height: 768px;
+	padding: 33px 117px;
+}
+.marvel-device.ipad.landscape .camera {
+	left: calc(100% - 68px);
+	margin-top: -7px;
+}
+.marvel-device.ipad.landscape .home {
+	left: 33px;
+}
+
+#simulator, #simbox {
+	background: rgba(255,255,255,.4);
+}
+#device.portrait {
+	margin-top:  -629px;
+	margin-left: -417px;
+}
+
+#device.landscape {
+	margin-top: -417px;
+	margin-left: -629px;
+}
+
+/* Screen Only Centering */
+#device.noskin .top-bar,	#device.noskin .sleep,	#device.noskin .volume, 
+#device.noskin .camera,	#device.noskin .sensor, 	#device.noskin .speaker, 
+#device.noskin .home, 	#device.noskin .bottom-bar {
+	display: none;
+}
+	/* Note: Marvel Device skins need height and width declared for unskinned screen */
+	#device.portrait.noskin {
+		height: 1024px;
+		width: 768px;
+		margin-top: -512px;
+		margin-left: -384px;
+		padding: 0;
+	}
+	#device.landscape.noskin {
+		height: 768px;
+		width: 1024px;
+		margin-top: -384px;
+		margin-left: -512px;
+		padding: 0;
+	}
