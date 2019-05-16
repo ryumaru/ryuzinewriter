@@ -1,0 +1,287 @@
+Bold
+
+Italic
+
+Underline
+
+Strikethrough
+
+Subscript
+
+Superscript
+
+Justify Left
+
+Justify Center
+
+Justify Right
+
+Justify Full
+
+Ordered List
+
+Bulleted List
+
+Decrease Indent
+
+Increase Indent
+
+Font Color
+
+Background Color
+
+Horizontal Rule
+
+Insert Web Link
+
+Insert/Modify Image
+
+Insert Table
+
+Toggle HTML Source
+
+Enlarge Editor
+
+About this editor
+
+Help using editor
+
+Current style
+
+Undoes your last action
+
+Redoes your last action
+
+Cut selection
+
+Copy selection
+
+Paste from clipboard
+
+Direction left to right
+
+Direction right to left
+
+Remove formatting
+
+Select all
+
+Print document
+
+Clear MSOffice tags
+
+Clear Inline Font Specifications
+
+Would you like to clear font typefaces?
+
+Would you like to clear font sizes?
+
+Would you like to clear font colours?
+
+Split Block
+
+Toggle Borders
+
+Save as
+
+Insert/Overwrite
+
+&#8212; format &#8212;
+
+Heading 1
+
+Heading 2
+
+Heading 3
+
+Heading 4
+
+Heading 5
+
+Heading 6
+
+Normal
+
+Address
+
+Formatted
+
+OK
+
+Cancel
+
+Path
+
+You are in TEXT MODE.  Use the [<>] button to switch back to WYSIWYG.
+
+The Paste button does not work in Mozilla based web browsers (technical security reasons). Press CTRL-V on your keyboard to paste directly.
+
+You need to select some text before create a link
+
+Your Document is not well formed. Check JavaScript console for details.
+
+Alignment:
+
+Not set
+
+Left
+
+Right
+
+Texttop
+
+Absmiddle
+
+Baseline
+
+Absbottom
+
+Bottom
+
+Middle
+
+Top
+
+Layout
+
+Spacing
+
+Horizontal:
+
+Horizontal padding
+
+Vertical:
+
+Vertical padding
+
+Border thickness:
+
+Leave empty for no border
+
+Insert/Modify Link
+
+None (use implicit)
+
+New window (_blank)
+
+Same frame (_self)
+
+Top frame (_top)
+
+Other
+
+Target:
+
+Title (tooltip):
+
+URL:
+
+You must enter the URL where this link points to
+
+Insert Table
+
+Rows:
+
+Number of rows
+
+Cols:
+
+Number of columns
+
+Width:
+
+Width of the table
+
+Percent
+
+Pixels
+
+Em
+
+Width unit
+
+Fixed width columns
+
+Positioning of this table
+
+Cell spacing:
+
+Space between adjacent cells
+
+Cell padding:
+
+Space between content and border in cell
+
+You must enter a number of rows
+
+You must enter a number of columns
+
+Insert Image
+
+Image URL
+
+Enter the image URL here
+
+Preview
+
+Preview the image in a new window
+
+Alternate text:
+
+For browsers that don't support images
+
+Positioning of this image
+
+Image Preview:
+
+You must enter the URL
+
+Keyboard shortcuts
+
+The editor provides the following key combinations:
+
+new paragraph
+
+insert linebreak
+
+Set format to paragraph
+
+Clean content pasted from Word
+
+Headings
+
+Close
+
+Loading in progress. Please wait!
+
+Loading plugin $plugin
+
+Register plugin $plugin
+ 
+Constructing object
+
+Generate Xinha framework
+
+Init editor size
+ 
+Create Toolbar
+
+Create Statusbar
+
+Register right panel
+ 
+Register left panel
+ 
+Register bottom panel
+ 
+Register top panel
+ 
+Finishing
+
+Click a color...
+
+Sample
+
+Web Safe: 
+
+Color:

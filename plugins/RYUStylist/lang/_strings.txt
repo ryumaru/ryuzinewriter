@@ -1,0 +1,27 @@
+Edition Styles
+
+New Edition Class
+
+Load Stylesheet
+
+Delete Classes
+
+Import stylesheet (located in /css) WARNING: This will clear anything in the Edition Styles panel and cannot be undone!
+
+Nothing is selected for deletion.
+
+Are you sure you want to permanently DELETE the following class(es)?
+
+This will also delete ALL compound or multiple selectors that use this class!\nTHIS CANNOT BE UNDONE
+
+Missing Class Name
+
+#ID declarations not supported
+
+Parent-Child declarations are preserved, but are also split with any new declarations added to list so they can be applied individually.
+
+Nested Rules found but cannot be imported.
+
+Rules inside @media blocks were not imported.
+
+Compound selectors found, only importing the first selector from each

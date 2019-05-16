@@ -1,0 +1,220 @@
+File Manager
+
+Insert Image
+
+Directory
+
+Directory Up
+
+New Folder
+
+Trash
+
+Edit
+
+Image File
+
+Upload
+
+Width
+
+Height
+
+Width:
+
+Height:
+
+Constrain Proportions
+
+Border
+
+Margin
+
+Padding
+
+Refresh
+
+Uploading...
+
+Uploading
+
+Crop
+
+Resize
+
+Rotate
+
+Measure
+
+Marker
+
+Toggle marker color
+
+Save
+
+Filename:
+
+Image Format
+
+Quality:
+
+JPEG High
+
+JPEG Medium
+
+JPEG Low
+
+File saved.
+
+File was not saved.
+
+Start X:
+
+Start Y:
+
+Lock
+
+Flip Image
+
+Flip Horizontal
+
+Flip Vertical
+
+Rotate Image
+
+Rotate 180°
+
+Rotate 90° CW
+
+Rotate 90° CCW
+
+Angle:
+
+W:
+
+Clear
+
+Loading
+
+Invalid base directory:
+
+Delete file "$file"?
+
+Please delete all files/folders inside the folder you wish to delete first.
+
+Delete folder "$dir"?
+
+Folder Name:
+
+No Files Found
+
+Invalid folder name, please choose another folder name.
+
+GIF format is not supported, image editing not supported.
+
+No Image Available
+
+No Image selected.
+
+Description:
+
+Align
+
+Margin
+
+Padding
+
+Border
+
+Color
+
+Border Color
+
+Upload
+
+Alt
+
+File Name
+
+Thumbnail View
+
+List View
+
+Title (tooltip)
+
+Target Window
+
+Name
+
+Size
+
+Date Modified
+
+Total Size
+
+Free Space
+
+Positioning of this image
+
+Insert File Link
+
+Untitled
+
+Please enter name for new folder...
+
+You must select some text before making a new link.
+
+Folder is not empty. Please delete all Files and Subfolders inside.
+
+Image Size
+
+Other
+
+Rename
+
+Please enter new name for this file...
+
+Unable to rename file. File of the same name already exists or folder doesn't have write permission.
+  
+Cancelled rename.
+
+File "$file" successfully uploaded.
+
+Cannot upload. Maximum folder size reached. Delete unwanted files and try again.
+
+Maximum file size [$max_size KB] exceeded.
+
+Cannot upload $extension Files. Permission denied.
+
+Unable to upload File.  Either Maximum file size [$max_size KB] exceeded or Folder doesn't have write permission.
+
+Total Size : $max_foldersize_mb MB, Free Space: $free_space
+
+Please enter new name for this folder...
+
+Cut
+
+Copy
+
+Paste
+  
+Copy "$file" from "$dir" here
+
+Copy folder "$file" from "$dir" here
+
+Move "$file" from "$dir" here
+
+Move folder "$file" from "$dir" here
+
+  
+Source file/folder not found.
+
+Paste failed.\nMaybe folder doesn't have write permission.
+
+Could not create destination folder.
+
+Destination file/folder already exists.
+
+File pasted OK.
+
+Filesize:
