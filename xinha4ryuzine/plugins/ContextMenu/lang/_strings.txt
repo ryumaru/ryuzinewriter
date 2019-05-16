@@ -1,0 +1,90 @@
+Cut
+
+Copy
+
+Paste
+
+_Image Properties...
+
+Show the image properties dialog
+
+_Modify Link...
+
+Current URL is
+
+Chec_k Link...
+
+Opens this link in a new window
+
+_Remove Link...
+
+Please confirm that you want to unlink this element.
+
+Link points to:
+
+Unlink the current element
+
+C_ell Properties...
+
+Show the Table Cell Properties dialog
+
+Ro_w Properties...
+
+Show the Table Row Properties dialog
+
+I_nsert Row Before
+
+Insert a new row before the current one
+
+In_sert Row After
+
+Insert a new row after the current one
+
+_Delete Row
+
+Delete the current row
+
+_Table Properties...
+
+Show the Table Properties dialog
+
+Insert _Column Before
+
+Insert a new column before the current one
+
+Insert C_olumn After
+
+Insert a new column after the current one
+
+De_lete Column
+
+Delete the current column
+
+Justify Left
+
+Justify Center
+
+Justify Right
+
+Justify Full
+
+Make lin_k...
+
+Create a link
+
+Remove the $elem Element...
+
+Please confirm that you want to remove this element:
+
+Remove this node from the document
+
+Insert paragraph before
+
+Insert a paragraph before the current node
+
+Insert paragraph after
+
+Insert a paragraph after the current node
+
+How did you get here? (Please report!)
+

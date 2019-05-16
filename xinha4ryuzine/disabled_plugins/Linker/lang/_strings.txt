@@ -1,0 +1,27 @@
+You must select some text before making a new link.
+
+Are you sure you wish to remove this link?
+
+Remove Link
+
+URL Link
+
+Ordinary Link
+
+Same Window (jump out of frames)
+
+New Window
+
+Popup Window
+
+Email Link
+
+Email Address:
+
+Subject:
+
+Message Template:
+
+Size:
+
+Name:

@@ -1,0 +1,31 @@
+Page Manager
+
+Add Page
+
+Add Multiple Pages
+
+pages
+
+Delete Page
+
+Select All
+
+Deselect All
+
+Show Thumbnails
+
+Small Thumbnail
+
+Medium Thumbnail
+
+Large Thumbnail
+
+Single Pages
+
+Continuous View
+
+Facing Pages
+
+Right Binding
+
+Outline Elements

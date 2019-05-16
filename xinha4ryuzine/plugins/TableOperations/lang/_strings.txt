@@ -1,0 +1,149 @@
+Toggle Table Operations
+
+Align
+
+All four sides
+
+Background
+
+Baseline
+
+Border
+
+Borders
+
+Bottom
+
+Style [CSS]
+
+Caption
+
+Cell Properties
+
+Center
+
+Char
+
+Collapsed borders
+
+Color
+
+Description
+
+FG Color
+
+Float
+
+Frames
+
+Height
+
+How many columns would you like to merge?
+
+How many rows would you like to merge?
+
+Image URL
+
+Justify
+
+Layout
+
+Left
+
+Margin
+
+Middle
+
+No rules
+
+No sides
+
+None
+
+Padding
+
+Please click into some cell
+
+Right
+
+Row Properties
+
+Rules will appear between all rows and columns
+
+Rules will appear between columns only
+
+Rules will appear between rows only
+
+Rules
+
+Spacing and padding
+
+Spacing
+
+Summary
+
+Delete cell
+
+Insert cell after
+
+Insert cell before
+
+Merge cells
+
+Cell properties
+
+Split cell
+
+Delete column
+
+Insert column after
+
+Insert column before
+
+Split column
+
+Delete row
+
+Insert row before
+
+Insert row after
+
+Row properties
+
+Split row
+
+Table properties
+
+Table Properties
+
+Text align
+
+The bottom side only
+
+The left-hand side only
+
+The right and left sides only
+
+The right-hand side only
+
+The top and bottom sides only
+
+The top side only
+
+Top
+
+Unset color
+
+Vertical align
+
+Width
+
+Xinha cowardly refuses to delete the last cell in row.
+
+Xinha cowardly refuses to delete the last column in table.
+
+Xinha cowardly refuses to delete the last row in table.
+
+percent
+
+pixels

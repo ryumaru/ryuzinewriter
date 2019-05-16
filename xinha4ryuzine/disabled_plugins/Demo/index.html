@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Simple example of Xinha with CSSPicker plugin</title>
+
+<style type="text/css">
+.CSSPickerOption {
+	background-color: white;
+	border: 2px solid steelblue;
+	margin: 0.1em;
+	padding: 0.1em;
+}
+.CSSPickerOptionOver {
+	border: 2px solid red;
+}
+.CSSPickerOptionActive {
+	border: 2px solid orange;
+}
+</style>
+<link rel='stylesheet' href='sample.css' />
+
+<script type="text/javascript">
+var _editor_url  = './Xinha';
+var _editor_lang = "en";
+</script>
+
+<script type="text/javascript" src="Xinha/XinhaCore.js"></script>
+<script type="text/javascript">
+var xinha_plugins = ['CSSPicker'];
+var xinha_editors = ['myTextArea'];
+
+function xinha_init() {
+	if(!Xinha.loadPlugins(xinha_plugins, xinha_init)) return;
+	var xinha_config = new Xinha.Config();
+	
+	CSSPicker.cssList = {
+		'page_box'	: { 'wrapper':'div',	'name':'Page Box' },
+		'xinhaIssueNoticeGreen' : { 'wrapper':'div',	'name':'Green Notice Box' },
+		'XinhaSubHeadline'		: { 'wrapper':'div',	'name':'Sub-headline' },
+		'XinhaFancyText'		: { 'wrapper':'span',   'name':'Fancy Text' }
+	} 
+	
+	xinha_config.pageStyleSheets = ["sample.css"];
+	
+	xinha_editors = Xinha.makeEditors(xinha_editors, xinha_config, xinha_plugins);
+	Xinha.startEditors(xinha_editors);
+}
+Xinha.addOnloadHandler(xinha_init);
+</script>
+
+</head>
+<body>
+
+<textarea id="myTextArea" name="myTextArea" rows="25" cols="80">
+Test
+</textarea>
+
+</body>
+</html>
