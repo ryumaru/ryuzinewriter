@@ -4,9 +4,9 @@
 
 Ryuzine Writer is an authoring webapp for creating, editing, and previewing Ryuzine format publications and Ryuzine Rack newsstands.  
 
-If you’re not interested in contributing code to the Ryuzine project you should download the Ryuzine [Publishers Distribution Kit](http://www.ryumaru.com/ryuzine/downloads/) (PDK) instead of the GitHub source code.
+If you’re not interested in contributing code to the Ryuzine project you should download the stable Ryuzine [Publishers Distribution Kit](http://www.ryumaru.com/ryuzine/downloads/) (PDK) instead of the GitHub source code.
 
-Ryuzine Writer must be installed *inside* Ryuzine and run from a development web server. *Do not install it on a public web server* with PHP file operations enabled as it has only minimal security.  Ryuzine Writer is only intended for use over a local area network or on the same system running the development server.
+Ryuzine Writer must be installed *inside* a development folder with Ryuzine Reader/Rack and run from a development web server. *Do not install it on a public web server* with PHP file operations enabled as it has only minimal security.  Ryuzine Writer is only intended for use over a local area network or on the same system running the development server.
 
 ### SYSTEM REQUIREMENTS
 
@@ -17,7 +17,7 @@ Ryuzine Writer must be installed *inside* Ryuzine and run from a development web
 
 ### Some Assembly Required
 
-If you downloaded source code from GitHub all the component parts of the Ryuzine webapps are separated into different repositories and you’ll need to assemble the webapp like furniture from IKEA before you can use it:
+If you downloaded source code from GitHub all the component parts of the Ryuzine webapps are separated into different repositories and you’ll need to assemble the webapp like furniture from IKEA before you can use it (note that this is manually building what is inside the already-assembled PDK mentioned above):
 
 * you need a folder on your development server where you will work on Ryuzine publications (it doesn’t matter what you name the folder).
 * inside that development folder you need sub-folders to store the support files for your individual publications named as follows:
